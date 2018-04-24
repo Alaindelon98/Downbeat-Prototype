@@ -2,7 +2,8 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class BeatManager : MonoBehaviour {
+public class BeatManager : MonoBehaviour
+{
 
     public float bpm;
     public int beatUnit = 4;
@@ -11,29 +12,87 @@ public class BeatManager : MonoBehaviour {
     private float bps;
     AudioSource mySource;
     public AudioClip downBeat, offBeat;
-  
+
     public static int fourthNotesCounter;
-    public static float eighthNotesCounter;
-    public static bool OnBeat;
-  
-    public float nextFourthSample,nextEighthSample;
+    public static int eighthNotesCounter;
+    public static bool OnBeat, OnEighthBeat;
+
     public int delay;
-	// Use this for initialization
-	void Start ()
+    public float loopSampleRange;
+    private float firstBeatRange;
+
+    float nextFourthSample, nextEighthSample;
+
+    bool nextBeatIsOut;
+
+    void Start()
     {
         mySource = GetComponent<AudioSource>();
         fourthNotesCounter = barLength;
-        eighthNotesCounter = barLength*2;
+        eighthNotesCounter = barLength * 2;
         bps = bpm / 60;
 
-        nextFourthSample = delay;
+        nextFourthSample = delay * mySource.clip.frequency;
+        nextEighthSample = delay * mySource.clip.frequency;
         OnBeat = false;
+        OnEighthBeat = false;
+
+        firstBeatRange = (delay * mySource.clip.frequency) + (1 / bps * mySource.clip.frequency);
     }
 
-    // Update is called once per frame
+    void Update()
+    {
+        if (mySource.isPlaying)
+        {
+            if (nextBeatIsOut && mySource.timeSamples < firstBeatRange)
+            {
+                nextFourthSample = delay * mySource.clip.frequency;
+                nextEighthSample = delay * mySource.clip.frequency;
+
+
+                nextBeatIsOut = false;
+            }
+            if (mySource.timeSamples > nextFourthSample)
+            {
+                PlayFourthBeat();
+                PlayEighthBeat();
+                
+                OnBeat = true;
+                OnEighthBeat = true;
+            }
+            else if (mySource.timeSamples > nextEighthSample)
+            {
+                PlayEighthBeat();
+                OnBeat = false;
+                OnEighthBeat = true;
+
+            }
+            else
+            {
+                OnBeat = false;
+                OnEighthBeat = false;
+
+            }
+
+            if (Mathf.Abs(nextFourthSample - mySource.clip.samples) < loopSampleRange && !nextBeatIsOut)
+            {
+                nextBeatIsOut = true;
+            }
+
+            if (Mathf.Abs(nextEighthSample - mySource.clip.samples) < loopSampleRange && !nextBeatIsOut)
+            {
+                nextBeatIsOut = true;
+
+            }
+        }
+
+    }
+
     void PlayFourthBeat()
     {
-        mySource.PlayOneShot(offBeat);
+
+        nextFourthSample += 1 / bps * mySource.clip.frequency;
+
 
         if (fourthNotesCounter == barLength)
         {
@@ -44,20 +103,25 @@ public class BeatManager : MonoBehaviour {
             fourthNotesCounter++;
         }
 
-
-        switch (fourthNotesCounter)
+        if (fourthNotesCounter == 1)
         {
-            case 1:
-             
-                mySource.PlayOneShot(downBeat);
-
-            break;
-       
+            mySource.PlayOneShot(downBeat);
         }
 
+        else
+        {
+            mySource.PlayOneShot(offBeat);
+        }
 
+        /*switch (fourthNotesCounter)
+        {
+            case 1:
 
-       
+                mySource.PlayOneShot(downBeat);
+
+                break;
+
+        }*/
 
 
     }
@@ -65,8 +129,9 @@ public class BeatManager : MonoBehaviour {
     {
         nextEighthSample += 0.5f / bps * mySource.clip.frequency;
 
-        eighthNotesCounter++;
-        if (eighthNotesCounter == barLength)
+        //mySource.PlayOneShot(offBeat);
+
+        if (eighthNotesCounter == barLength*2)
         {
             eighthNotesCounter = 1;
         }
@@ -74,39 +139,7 @@ public class BeatManager : MonoBehaviour {
         {
             eighthNotesCounter++;
         }
-        
-    }
-    void Update ()
-    {
-      
-      
-        //Debug.Log(fourthNotesCounter);
-
-        if (mySource.isPlaying)
-        {
-            if (mySource.timeSamples > nextFourthSample)
-            {
-                PlayFourthBeat();
-                PlayEighthBeat();
-                nextFourthSample += 1 / bps * mySource.clip.frequency;
-                OnBeat = true;
-            }
-            else if (mySource.timeSamples > nextEighthSample)
-            {
-                PlayEighthBeat();
-                OnBeat = false;
-            }
-            else
-            {
-                OnBeat = false;
-            }
-        }
-        else
-        {
-            mySource.Play();
-            nextFourthSample = delay;
-        }
 
     }
+
 }
-

@@ -9,12 +9,12 @@ public class bulletScript : MonoBehaviour {
 
 	// Use this for initialization
 	void Start () {
-		
+        Destroy(this.gameObject, 10);
 	}
 	
 	// Update is called once per frame
 	void Update () {
-		Mov ();
+		Move ();
 	}
 
 	private void OnTriggerEnter2D(Collider2D col)
@@ -24,7 +24,7 @@ public class bulletScript : MonoBehaviour {
 		}
 	}
 
-	private void Mov()
+	private void Move()
 	{
 		transform.position += new Vector3 (directionH * speed * Time.deltaTime, directionV * speed * Time.deltaTime, 0);
 	}

@@ -6,38 +6,74 @@ public class torretaScript : MonoBehaviour {
 
 	public GameObject b;
 	public bool left, right, up, down;
-	public float maxCounter;
-	private float counter;
-	private GameObject bl, br, bu, bd;
+	public List<int> eighthBeatsList;
 
-	// Use this for initialization
+    private bool severalShots;
+    private int singleShotBeat;
+	private GameObject bl, br, bu, bd;
+    private AudioSource beatSource;
+    private bool shot = false;
+
 	void Start () 
 	{
-		
+        if (eighthBeatsList.Count > 1)
+        {
+            severalShots = true; 
+        }
+        else
+        {
+            singleShotBeat = eighthBeatsList[0];
+        }
 	}
 	
-	// Update is called once per frame
 	void Update () 
 	{
-		counter += Time.deltaTime;
-		if (counter >= maxCounter) {
-			if (left) {
-				Shootingleft ();
-			}
-			if (right) {
-				ShootingRight ();
-			}
-			if (up) {
-				ShootingUp ();
-			}
-			if (down) {
-				ShootingDown ();
-			}
-			counter = 0;
-		}
+        if (BeatManager.OnEighthBeat)
+        {
+            if (severalShots)
+            {
+                foreach (int i in eighthBeatsList)
+                {
+                    if (BeatManager.eighthNotesCounter == i && !shot)
+                    {
+                        Shoot();
+                        break;
+                    }
+                }
+            }
+            else if(BeatManager.eighthNotesCounter == singleShotBeat)
+            {
+                Shoot();
+            }
+        }
+        else if (!BeatManager.OnEighthBeat && shot)
+        {
+            shot = false;
+        }
 	}
 
-	public void Shootingleft ()
+    void Shoot()
+        {
+            if (left)
+            {
+                Shootingleft();
+            }
+            if (right)
+            {
+                ShootingRight();
+            }
+            if (up)
+            {
+                ShootingUp();
+            }
+            if (down)
+            {
+                ShootingDown();
+            }
+            shot = true;
+
+        }
+        public void Shootingleft ()
 	{
 		bl = Instantiate (b);
 		bl.transform.position = this.transform.position;

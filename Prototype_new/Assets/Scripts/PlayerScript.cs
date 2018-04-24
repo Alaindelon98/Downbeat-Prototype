@@ -46,11 +46,6 @@ public class PlayerScript : MonoBehaviour {
             move = Input.GetAxis("Horizontal") * (playerSpeed*2);
         }
 
-        
-
-
-
-       
 
         ManageJump();
 
@@ -91,7 +86,7 @@ public class PlayerScript : MonoBehaviour {
         {
             MakeJump(beatJumpVelocity);
             jumpTime = Time.time;
-            Debug.Log("Jump time: " + jumpTime);
+            //Debug.Log("Jump time: " + jumpTime);
         }
 
     }
