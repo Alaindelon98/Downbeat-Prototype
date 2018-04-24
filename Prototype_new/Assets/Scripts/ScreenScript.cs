@@ -32,7 +32,7 @@ public class ScreenScript : MonoBehaviour {
 		case "Right":
 			ChangeScreen (rightScreen);
 			break;
-		case "Up":
+		case "Top":
 			ChangeScreen (upScreen);
 			break;
 		case "Down":
@@ -43,18 +43,16 @@ public class ScreenScript : MonoBehaviour {
 
 	public void ChangeScreen(ScreenScript newScreen)
 	{
-        Camera.main.transform.position = newScreen.positionScreen;
-		Camera.main.orthographicSize= newScreen.sizeScreen;
-		
-        foreach (Transform child in newScreen.transform)
-        {
-            child.transform.gameObject.SetActive(false);
-        }
+        Vector3 newPos = newScreen.positionScreen;
+        newPos.z = -10;
+        Camera.main.transform.position = newPos;
 
-		foreach (Transform child in transform)
-		{
-			child.transform.gameObject.SetActive(false);
-		}
+		Camera.main.orthographicSize= newScreen.sizeScreen;
+
+        newScreen.gameObject.SetActive(true);
+        gameObject.SetActive(false);
+
+		
         GameManagerScript.actualScreen = newScreen;
 	}
 }

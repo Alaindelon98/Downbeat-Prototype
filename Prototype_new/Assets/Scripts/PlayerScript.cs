@@ -58,10 +58,10 @@ public class PlayerScript : MonoBehaviour {
 
     public void ManageJump()
     {
-        if (Input.GetKeyDown(KeyCode.Space))
+        if (Input.GetKeyDown(KeyCode.Space)||Input.GetButtonDown("Jump"))
         {
             jumpPressedTime = Time.time;
-            Debug.Log("Jump pressed time: " + jumpPressedTime);
+            //Debug.Log("Jump pressed time: " + jumpPressedTime);
 
             if (Mathf.Abs(jumpPressedTime - jumpTime) < afterErrorRange)
             {
