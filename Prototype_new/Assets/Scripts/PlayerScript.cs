@@ -18,7 +18,7 @@ public class PlayerScript : MonoBehaviour {
     float jumpPressedTime, jumpTime;
     float move;
 
-    Rigidbody2D rb;
+    public Rigidbody2D rb;
     // Use this for initialization
     void Start()
     {

@@ -35,6 +35,7 @@ public class GameManagerScript : MonoBehaviour {
             playerCheckPoint.myScreen.ChangeScreen(playerCheckPoint.myScreen);
 
         }
+        player.rb.velocity = Vector3.zero;
         player.transform.position = playerCheckPoint.transform.position;
         //player.gameObject.SetActive(true);
     }
