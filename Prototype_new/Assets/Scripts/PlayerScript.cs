@@ -37,16 +37,20 @@ public class PlayerScript : MonoBehaviour {
 
         //transform.position += new Vector3(Input.GetAxis("Horizontal")*playerSpeed*Time.deltaTime, 0, 0);
 
-        move = Input.GetAxis("Horizontal") * playerSpeed;
-
-
-
-        if ((BeatManager.fourthNotesCounter == 1 && BeatManager.OnBeat) && grounded)
+        if (grounded)
         {
-            MakeJump(beatJumpVelocity);
-            jumpTime = Time.time;
-            Debug.Log("Jump time: " + jumpTime);
+            move = Input.GetAxis("Horizontal") * playerSpeed;
         }
+        else
+        {
+            move = Input.GetAxis("Horizontal") * (playerSpeed*2);
+        }
+
+        
+
+
+
+       
 
         ManageJump();
 
@@ -82,6 +86,12 @@ public class PlayerScript : MonoBehaviour {
             MakeJump(normaljumpVelocity + beatJumpVelocity / 3 * 2);
 
             jumpSound.Play();
+        }
+        else if ((BeatManager.fourthNotesCounter == 1 && BeatManager.OnBeat) && grounded)
+        {
+            MakeJump(beatJumpVelocity);
+            jumpTime = Time.time;
+            Debug.Log("Jump time: " + jumpTime);
         }
 
     }

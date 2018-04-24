@@ -6,6 +6,7 @@ public class GameManagerScript : MonoBehaviour {
 
 
     public static ScreenScript actualScreen;
+
     public static PlayerScript player;
     public static CheckPointScript playerCheckPoint;
 

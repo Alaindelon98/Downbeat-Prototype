@@ -609,9 +609,9 @@ TilemapCollider2D:
   m_GameObject: {fileID: 1240640568}
   m_Enabled: 1
   m_Density: 1
-  m_Material: {fileID: 0}
+  m_Material: {fileID: 6200000, guid: 295af23af42c1ab4eb4e62ef7b86c018, type: 2}
   m_IsTrigger: 0
-  m_UsedByEffector: 0
+  m_UsedByEffector: 1
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0}
 --- !u!483693784 &1240640571
@@ -1671,8 +1671,8 @@ Tilemap:
       m_ColliderType: 1
   - first: {x: 6, y: 4, z: 0}
     second:
-      m_TileIndex: 2
-      m_TileSpriteIndex: 2
+      m_TileIndex: 1
+      m_TileSpriteIndex: 1
       m_TileMatrixIndex: 0
       m_TileColorIndex: 0
       m_ObjectToInstantiate: {fileID: 0}
@@ -1680,8 +1680,8 @@ Tilemap:
       m_ColliderType: 1
   - first: {x: 7, y: 4, z: 0}
     second:
-      m_TileIndex: 2
-      m_TileSpriteIndex: 2
+      m_TileIndex: 1
+      m_TileSpriteIndex: 1
       m_TileMatrixIndex: 0
       m_TileColorIndex: 0
       m_ObjectToInstantiate: {fileID: 0}
@@ -1689,8 +1689,17 @@ Tilemap:
       m_ColliderType: 1
   - first: {x: 8, y: 4, z: 0}
     second:
-      m_TileIndex: 2
-      m_TileSpriteIndex: 2
+      m_TileIndex: 1
+      m_TileSpriteIndex: 1
+      m_TileMatrixIndex: 0
+      m_TileColorIndex: 0
+      m_ObjectToInstantiate: {fileID: 0}
+      m_TileFlags: 1
+      m_ColliderType: 1
+  - first: {x: 9, y: 4, z: 0}
+    second:
+      m_TileIndex: 1
+      m_TileSpriteIndex: 1
       m_TileMatrixIndex: 0
       m_TileColorIndex: 0
       m_ObjectToInstantiate: {fileID: 0}
@@ -3068,19 +3077,19 @@ Tilemap:
   m_TileAssetArray:
   - m_RefCount: 0
     m_Data: {fileID: 0}
-  - m_RefCount: 47
+  - m_RefCount: 51
     m_Data: {fileID: 11400000, guid: faf6df9a30c5e2242b29b5b671da30d1, type: 2}
-  - m_RefCount: 220
+  - m_RefCount: 217
     m_Data: {fileID: 11400000, guid: eb58a57e20fbbac4db257f3da4891716, type: 2}
   m_TileSpriteArray:
   - m_RefCount: 0
     m_Data: {fileID: 0}
-  - m_RefCount: 47
+  - m_RefCount: 51
     m_Data: {fileID: 21300002, guid: 96abca43794c46348af806e42584a0e7, type: 3}
-  - m_RefCount: 220
+  - m_RefCount: 217
     m_Data: {fileID: 21300008, guid: 96abca43794c46348af806e42584a0e7, type: 3}
   m_TileMatrixArray:
-  - m_RefCount: 267
+  - m_RefCount: 268
     m_Data:
       e00: 1
       e01: 0
@@ -3099,7 +3108,7 @@ Tilemap:
       e32: 0
       e33: 1
   m_TileColorArray:
-  - m_RefCount: 267
+  - m_RefCount: 268
     m_Data: {r: 1, g: 1, b: 1, a: 1}
   - m_RefCount: 0
     m_Data: {r: 0, g: 0, b: 21.722155, a: 1e-45}
@@ -3147,8 +3156,8 @@ SurfaceEffector2D:
   m_Speed: 0
   m_SpeedVariation: 0
   m_ForceScale: 0
-  m_UseContactForce: 0
-  m_UseFriction: 0
+  m_UseContactForce: 1
+  m_UseFriction: 1
   m_UseBounce: 1
 --- !u!50 &1240640574
 Rigidbody2D:
@@ -3312,7 +3321,7 @@ Prefab:
     - target: {fileID: 114656836653688508, guid: 6c82f1583239f3144a27873cbe40d7c8,
         type: 2}
       propertyPath: previousErrorRange
-      value: 0.1
+      value: 0.5
       objectReference: {fileID: 0}
     - target: {fileID: 4796885006575242, guid: 6c82f1583239f3144a27873cbe40d7c8, type: 2}
       propertyPath: m_LocalScale.y
@@ -3323,6 +3332,31 @@ Prefab:
       propertyPath: m_Material
       value: 
       objectReference: {fileID: 6200000, guid: 295af23af42c1ab4eb4e62ef7b86c018, type: 2}
+    - target: {fileID: 114656836653688508, guid: 6c82f1583239f3144a27873cbe40d7c8,
+        type: 2}
+      propertyPath: normaljumpVelocity
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 114656836653688508, guid: 6c82f1583239f3144a27873cbe40d7c8,
+        type: 2}
+      propertyPath: beatJumpVelocity
+      value: 9.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 114656836653688508, guid: 6c82f1583239f3144a27873cbe40d7c8,
+        type: 2}
+      propertyPath: lowJumpMultiplier
+      value: 2.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 114656836653688508, guid: 6c82f1583239f3144a27873cbe40d7c8,
+        type: 2}
+      propertyPath: fallMultiplier
+      value: 5.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 61946001212823376, guid: 6c82f1583239f3144a27873cbe40d7c8,
+        type: 2}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 61656425000274934, guid: 6c82f1583239f3144a27873cbe40d7c8, type: 2}
   m_ParentPrefab: {fileID: 100100000, guid: 6c82f1583239f3144a27873cbe40d7c8, type: 2}

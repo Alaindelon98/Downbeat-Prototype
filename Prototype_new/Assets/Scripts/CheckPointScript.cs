@@ -5,6 +5,7 @@ using UnityEngine;
 public class CheckPointScript : MonoBehaviour
 {
     public ScreenScript myScreen;
+    public SpriteRenderer myrenderer;
     public bool checkPointActive;
 
 	// Use this for initialization
@@ -22,9 +23,21 @@ public class CheckPointScript : MonoBehaviour
         }
 		
 	}
-    void OnTriggerEnter2D()
+    void OnTriggerEnter2D(Collider2D col)
     {
-        checkPointActive = true;
-        GameManagerScript.playerCheckPoint = this;
+        if (col.gameObject.tag == "Player"&& !checkPointActive)
+        {
+            
+            checkPointActive = true;
+            GameManagerScript.playerCheckPoint = this;
+            ChangeSprite();
+        }
+        
+      
+
+    }
+    public void ChangeSprite(bool state)
+    {
+
     }
 }
