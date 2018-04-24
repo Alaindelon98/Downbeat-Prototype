@@ -9,6 +9,7 @@ public class enemyScript : MonoBehaviour {
     public Rigidbody2D myRigidbody;
 	private int direction=1;
     public SpriteRenderer sprite;
+    private bool grounded;
 
 	// Use this for initialization
 	void Start ()
@@ -19,10 +20,9 @@ public class enemyScript : MonoBehaviour {
 	// Update is called once per frame
 	void Update () 
 	{
-		Mov ();
+		Move ();
         if (BeatManager.OnBeat && BeatManager.fourthNotesCounter == 1) { Jump(); }
 	}
-
 	private void OnTriggerEnter2D(Collider2D col)
 	{
         if (col.gameObject.tag =="EnemyLimit")
@@ -30,16 +30,22 @@ public class enemyScript : MonoBehaviour {
             direction *= -1;
             transform.localScale *= -1;
         }
+       
       
 	}
+    private void OnCollisionEnter2D(Collision2D col)
+    {
+        grounded = true;
+    }
 
-	private void Mov()
+	private void Move()
 	{
-        myRigidbody.velocity = new Vector3(direction * speed, 0);
+        myRigidbody.velocity = new Vector2(direction * speed, myRigidbody.velocity.y );
 		//saltito 
 	}
     private void Jump()
     {
-        myRigidbody.velocity += new Vector2(0,jumpVelocity);
+        myRigidbody.velocity = Vector2.up * jumpVelocity;
+        grounded = false;
     }
 }
