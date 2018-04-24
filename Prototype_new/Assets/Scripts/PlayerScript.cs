@@ -66,11 +66,12 @@ public class PlayerScript : MonoBehaviour {
         {
             jumpPressedTime = Time.time;
             //Debug.Log("Jump pressed time: " + jumpPressedTime);
-
+            
             if (Mathf.Abs(jumpPressedTime - jumpTime) < afterErrorRange)
             {
-                if (!grounded)
-                    rb.velocity = Vector2.zero;
+
+
+                rb.velocity = Vector2.zero;
 
                 MakeJump(normaljumpVelocity + beatJumpVelocity / 3 * 2);
                 Debug.Log("Long jump AFTER");

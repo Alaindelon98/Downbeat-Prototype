@@ -5,7 +5,7 @@ using UnityEngine;
 public class enemyScript : MonoBehaviour {
 
 
-	public float speed;
+	public float speed,jumpVelocity;
     public Rigidbody2D myRigidbody;
 	private int direction=1;
     public SpriteRenderer sprite;
@@ -20,17 +20,26 @@ public class enemyScript : MonoBehaviour {
 	void Update () 
 	{
 		Mov ();
+        if (BeatManager.OnBeat && BeatManager.fourthNotesCounter == 1) { Jump(); }
 	}
 
 	private void OnTriggerEnter2D(Collider2D col)
 	{
-        direction *= -1;
-        transform.localScale *= -1;
+        if (col.gameObject.tag =="EnemyLimit")
+        {
+            direction *= -1;
+            transform.localScale *= -1;
+        }
+      
 	}
 
 	private void Mov()
 	{
-        myRigidbody.velocity = new Vector3(direction * speed * Time.deltaTime, 0);
+        myRigidbody.velocity = new Vector3(direction * speed, 0);
 		//saltito 
 	}
+    private void Jump()
+    {
+        myRigidbody.velocity += new Vector2(0,jumpVelocity);
+    }
 }

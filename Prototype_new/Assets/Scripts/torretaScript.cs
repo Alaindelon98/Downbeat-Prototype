@@ -5,6 +5,7 @@ using UnityEngine;
 public class torretaScript : MonoBehaviour {
 
 	public GameObject b;
+    public enum ShootDirection { left,right,up,down}
 	public bool left, right, up, down;
 	public float maxCounter;
 	private float counter;
