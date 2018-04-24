@@ -119,28 +119,16 @@ public class PlayerScript : MonoBehaviour {
         //}
     }
 
-    private void OnTriggerEnter2D(Collider2D col)
-    {
-        grounded = true;
-        
-		if (col.gameObject.tag == "Pantalla")
-		{
-			Camera.main.transform.position = col.gameObject.transform.position;
-		}
-    }
-	private void OnTriggerStay2D(Collider2D col)
-	{
-		if (col.gameObject.tag == "Pantalla")
-		{
-			Camera.main.transform.position = col.gameObject.transform.position;
-		}
-	}
 
     private void OnCollisionEnter2D(Collision2D col)
     {
         if(col.gameObject.tag == "Enemy")
         {
-            Debug.Log("OhShitAmDed");
+            GameManagerScript.PlayerDeath();
+        }
+        else
+        {
+            grounded = true;
         }
 	}
 

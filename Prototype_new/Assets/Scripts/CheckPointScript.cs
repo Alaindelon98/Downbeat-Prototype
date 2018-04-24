@@ -11,7 +11,13 @@ public class CheckPointScript : MonoBehaviour
 	// Use this for initialization
 	void Start ()
     {
+        ChangeSprite(checkPointActive);
 
+        if (checkPointActive)
+        {
+           
+            GameManagerScript.playerCheckPoint = this;
+        }
 		
 	}
 	
@@ -29,7 +35,7 @@ public class CheckPointScript : MonoBehaviour
         {
             
             checkPointActive = true;
-            GameManagerScript.playerCheckPoint = this;
+            GameManagerScript.ChangeCheckPoint(this);
             ChangeSprite(true);
         }
         
@@ -38,6 +44,13 @@ public class CheckPointScript : MonoBehaviour
     }
     public void ChangeSprite(bool state)
     {
-
+        if (state)
+        {
+            myrenderer.color = Color.green;
+        }
+        else
+        {
+            myrenderer.color = Color.gray;
+        }
     }
 }

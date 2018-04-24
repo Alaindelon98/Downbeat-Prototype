@@ -6,7 +6,7 @@ public class GameManagerScript : MonoBehaviour {
 
 
     public static ScreenScript actualScreen;
-
+    public float respawnTime;
     public static PlayerScript player;
     public static CheckPointScript playerCheckPoint;
 
@@ -37,5 +37,12 @@ public class GameManagerScript : MonoBehaviour {
         }
         player.transform.position = playerCheckPoint.transform.position;
         //player.gameObject.SetActive(true);
+    }
+    public static void ChangeCheckPoint(CheckPointScript newcheckPoint)
+    {
+        playerCheckPoint.checkPointActive = false;
+        playerCheckPoint.ChangeSprite(false);
+        playerCheckPoint = newcheckPoint;
+       
     }
 }
