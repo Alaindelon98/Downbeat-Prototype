@@ -30,7 +30,7 @@ public class CheckPointScript : MonoBehaviour
             
             checkPointActive = true;
             GameManagerScript.playerCheckPoint = this;
-            ChangeSprite();
+            ChangeSprite(true);
         }
         
       
