@@ -73,6 +73,7 @@ public class BeatChargeScript : MonoBehaviour {
     }
     IEnumerator ShakeFunction()
     {
+        Debug.Log("Hello");
         Vector3 originalPos = maxScaleObject.position;
         if (!isShaking)
         {

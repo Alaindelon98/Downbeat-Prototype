@@ -9,6 +9,7 @@ TagManager:
   - Left
   - Top
   - Down
+  - EnemyLimit
   layers:
   - Default
   - TransparentFX
