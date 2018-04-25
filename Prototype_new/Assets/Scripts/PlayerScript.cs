@@ -74,7 +74,7 @@ public class PlayerScript : MonoBehaviour {
             }
         }
 
-        if ((BeatManager.fourthNotesCounter == 1 && BeatManager.OnBeat) && Mathf.Abs(jumpPressedTime - Time.time) < previousErrorRange && grounded)
+        if ((/*BeatManager.fourthNotesCounter == 1 && BeatManager.OnBeat*/BeatManager.currentBeat == BeatManager.BeatType.DownBeat) && Mathf.Abs(jumpPressedTime - Time.time) < previousErrorRange && grounded)
         {
             if(!grounded)
                 rb.velocity = Vector2.zero;

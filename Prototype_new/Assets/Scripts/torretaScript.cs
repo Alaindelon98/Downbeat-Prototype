@@ -2,79 +2,172 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class torretaScript : MonoBehaviour {
+public class BeatActor : MonoBehaviour
+{
+
+    private AudioSource mySource;
+
+    public BeatManager.BeatType beatType;
+    public List<int> beatList;
+    public AudioClip actSound;
+    protected bool severalBeats;
+    protected int singleBeat;
+    protected bool actOnBeat = true;
+    
+
+    protected void SetBehavior()
+    {
+        mySource = GetComponent<AudioSource>();
+        if (beatType == BeatManager.BeatType.FourthBeat)
+        {
+            mySource.pitch = 2;
+        }
+        else if (beatType == BeatManager.BeatType.EighthBeat)
+        {
+            mySource.pitch = 4;
+        }
+        else if (beatType == BeatManager.BeatType.SixteenthBeat)
+        {
+            mySource.pitch = 8;
+        }
+
+        if (beatList.Count > 0)
+        {
+            if (beatList.Count > 1)
+            {
+                severalBeats = true;
+            }
+            else
+            {
+                singleBeat = beatList[0];
+            }
+        }
+        else
+        {
+            actOnBeat = false;
+        }
+    }
+
+    protected void PlaySound()
+    {
+        mySource.PlayOneShot(actSound);
+    }
+    
+
+    protected bool BeatListener()
+    {
+        if (BeatManager.currentBeat != BeatManager.BeatType.NoBeat)
+        {
+            if (severalBeats)
+            {
+                foreach (int i in beatList)
+                {
+                    if(CheckBeat(i))
+                    {
+                        return true;
+                    }
+                }
+            }
+            else if (CheckBeat(singleBeat))
+            {
+                return true;
+            }
+        }
+        
+        return false;
+    }
+
+    protected bool CheckBeat(int i)
+    {
+        if (beatType == BeatManager.BeatType.FourthBeat && BeatManager.currentBeat == BeatManager.BeatType.FourthBeat)
+        {
+            if (BeatManager.fourthNotesCounter == i)
+            {
+                return true;
+            }
+        }
+
+        else if (beatType == BeatManager.BeatType.EighthBeat && (BeatManager.currentBeat == BeatManager.BeatType.EighthBeat || BeatManager.currentBeat == BeatManager.BeatType.FourthBeat))
+        {
+            if (BeatManager.eighthNotesCounter == i)
+            {
+                return true;
+            }
+        }
+
+        else if (beatType == BeatManager.BeatType.SixteenthBeat && (BeatManager.currentBeat == BeatManager.BeatType.SixteenthBeat || BeatManager.currentBeat == BeatManager.BeatType.EighthBeat || BeatManager.currentBeat == BeatManager.BeatType.FourthBeat))
+        {
+            if (BeatManager.sixteenthNotesCounter == i)
+            {
+                return true;
+            }
+        }
+
+        return false;
+    }
+
+
+}
+
+public class torretaScript : BeatActor {
 
 	public GameObject b;
     public enum ShootDirection { left,right,up,down}
 	public bool left, right, up, down;
-	public List<int> eighthBeatsList;
 
-    private bool severalShots;
-    private int singleShotBeat;
 	private GameObject bl, br, bu, bd;
-    private AudioSource beatSource;
     private bool shot = false;
 
 	void Start () 
 	{
-        if (eighthBeatsList.Count > 1)
-        {
-            severalShots = true; 
-        }
-        else
-        {
-            singleShotBeat = eighthBeatsList[0];
-        }
+        SetBehavior();
 	}
 	
 	void Update () 
 	{
-        if (BeatManager.OnEighthBeat)
+        if(!actOnBeat)
         {
-            if (severalShots)
-            {
-                foreach (int i in eighthBeatsList)
-                {
-                    if (BeatManager.eighthNotesCounter == i && !shot)
-                    {
-                        Shoot();
-                        break;
-                    }
-                }
-            }
-            else if(BeatManager.eighthNotesCounter == singleShotBeat)
-            {
-                Shoot();
-            }
+            return;
         }
-        else if (!BeatManager.OnEighthBeat && shot)
+
+        if(BeatListener() && !shot)
         {
+            Shoot();
+            shot = true;
+        }
+        
+        if (shot && BeatManager.currentBeat == BeatManager.BeatType.NoBeat)
             shot = false;
-        }
-	}
+    }
 
     void Shoot()
+    {
+        if (left)
         {
-            if (left)
-            {
-                Shootingleft();
-            }
-            if (right)
-            {
-                ShootingRight();
-            }
-            if (up)
-            {
-                ShootingUp();
-            }
-            if (down)
-            {
-                ShootingDown();
-            }
-            shot = true;
-
+            Shootingleft();
         }
-        public void Shootingleft ()
+        if (right)
+        {
+            ShootingRight();
+        }
+        if (up)
+        {
+            ShootingUp();
+        }
+        if (down)
+        {
+            ShootingDown();
+        }
+        shot = true;
+
+        PlaySound();
+
+        if(beatType == BeatManager.BeatType.SixteenthBeat)
+        Debug.Log("Beat: "+ BeatManager.sixteenthNotesCounter);
+    }
+
+
+    public void Shootingleft ()
 	{
 		bl = Instantiate (b);
 		bl.transform.position = this.transform.position;
