@@ -135,7 +135,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   beatType: 0
   beatList: 
-  actSound: {fileID: 0}
+  actSound: {fileID: 8300000, guid: fc89a99954503b448bc367d585150d33, type: 3}
   b: {fileID: 1307767865894498, guid: 701815eb96a4dc1469254508669a28a6, type: 2}
   left: 1
   right: 1
