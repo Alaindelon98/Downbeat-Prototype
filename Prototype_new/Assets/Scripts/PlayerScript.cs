@@ -29,9 +29,9 @@ public class PlayerScript : MonoBehaviour {
     void Update()
     {
 
-        /*Vector3 testCameraPos = Camera.main.transform.position;
+        Vector3 testCameraPos = Camera.main.transform.position;
         testCameraPos.x = transform.position.x + 4;
-        Camera.main.transform.position = testCameraPos;*/
+        Camera.main.transform.position = testCameraPos;
 
         if (BeatManager.currentBeat == BeatManager.BeatType.FourthBeat || BeatManager.currentBeat == BeatManager.BeatType.DownBeat && grounded)
         { 
@@ -39,15 +39,16 @@ public class PlayerScript : MonoBehaviour {
         }
 
 
-        if (grounded)
-        {
-            move = Input.GetAxis("Horizontal") * playerSpeed;
-        }
-        else
-        {
-            move = Input.GetAxis("Horizontal") * (playerSpeed*2);
-        }
+        //if (grounded)
+        //{
+        //    move = Input.GetAxis("Horizontal") * playerSpeed;
+        //}
+        //else
+        //{
+        //    move = Input.GetAxis("Horizontal") * (playerSpeed * 2);
+        //}
 
+        move = Input.GetAxis("Horizontal") * (playerSpeed * 2);
 
         ManageJump();
 
