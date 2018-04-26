@@ -1531,7 +1531,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 4943809584504220, guid: 38425977e32680f4e87ad84240b2f532, type: 2}
       propertyPath: m_LocalPosition.x
-      value: 12.52
+      value: 19.52
       objectReference: {fileID: 0}
     - target: {fileID: 4943809584504220, guid: 38425977e32680f4e87ad84240b2f532, type: 2}
       propertyPath: m_LocalPosition.y
@@ -1676,7 +1676,7 @@ GameObject:
   - component: {fileID: 1240640575}
   m_Layer: 0
   m_Name: Tilemap
-  m_TagString: Untagged
+  m_TagString: Tilemap
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -10140,7 +10140,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 4257603997519262, guid: ad03ea5016c00384e9364cdb29425f42, type: 2}
       propertyPath: m_LocalPosition.y
-      value: 3.614128
+      value: 4.81
       objectReference: {fileID: 0}
     - target: {fileID: 4257603997519262, guid: ad03ea5016c00384e9364cdb29425f42, type: 2}
       propertyPath: m_LocalPosition.z
@@ -10165,16 +10165,6 @@ Prefab:
     - target: {fileID: 4257603997519262, guid: ad03ea5016c00384e9364cdb29425f42, type: 2}
       propertyPath: m_RootOrder
       value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 114351299421844710, guid: ad03ea5016c00384e9364cdb29425f42,
-        type: 2}
-      propertyPath: jumpVelocity
-      value: 6
-      objectReference: {fileID: 0}
-    - target: {fileID: 114351299421844710, guid: ad03ea5016c00384e9364cdb29425f42,
-        type: 2}
-      propertyPath: direction
-      value: -1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: ad03ea5016c00384e9364cdb29425f42, type: 2}
