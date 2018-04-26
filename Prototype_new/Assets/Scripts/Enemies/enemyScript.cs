@@ -7,7 +7,7 @@ public class enemyScript : MonoBehaviour {
 
 	public float speed,jumpVelocity;
     public Rigidbody2D myRigidbody;
-	private int direction=1;
+	public int direction=1;
     public SpriteRenderer sprite;
     private bool grounded;
 
