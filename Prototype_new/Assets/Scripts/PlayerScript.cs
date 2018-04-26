@@ -105,7 +105,6 @@ public class PlayerScript : MonoBehaviour {
         }*/
         if (Input.GetKeyDown(KeyCode.Space) || Input.GetButtonDown("Jump"))
         {
-            rb.velocity = Vector2.zero;
             jumpPressedTime = Time.time; 
         }
         if (jumpPressedTime != -1)
@@ -129,7 +128,7 @@ public class PlayerScript : MonoBehaviour {
             downBeatTime = Time.time;
             if(grounded)
             {
-                MakeJump(downBeatVelocity);
+                MakeJump(downBeatVelocity, false);
                 Debug.Log("Auto Down Beat");
 
             }
@@ -152,6 +151,7 @@ public class PlayerScript : MonoBehaviour {
         rb.velocity = Vector2.up * jumpVelocity;
         grounded = false;
 
+        if(fromPlayer)
         jumpSound.Play();
 
     }
