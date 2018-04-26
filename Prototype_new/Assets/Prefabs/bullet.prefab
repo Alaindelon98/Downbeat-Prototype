@@ -22,6 +22,7 @@ GameObject:
   - component: {fileID: 212516949595521170}
   - component: {fileID: 114340687756744656}
   - component: {fileID: 60969858866058726}
+  - component: {fileID: 50984107151851600}
   m_Layer: 0
   m_Name: bullet
   m_TagString: Enemy
@@ -36,12 +37,32 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1307767865894498}
   m_LocalRotation: {x: 0, y: 0.026176924, z: 0, w: 0.99965733}
-  m_LocalPosition: {x: 10.073416, y: 8.62, z: 0.0031627514}
+  m_LocalPosition: {x: 10.073416, y: 8.62, z: 0}
   m_LocalScale: {x: 0.4, y: 0.2, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 3.0000002, z: 0}
+--- !u!50 &50984107151851600
+Rigidbody2D:
+  serializedVersion: 4
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1307767865894498}
+  m_BodyType: 1
+  m_Simulated: 1
+  m_UseFullKinematicContacts: 0
+  m_UseAutoMass: 0
+  m_Mass: 1
+  m_LinearDrag: 0
+  m_AngularDrag: 0.05
+  m_GravityScale: 1
+  m_Material: {fileID: 0}
+  m_Interpolate: 0
+  m_SleepingMode: 1
+  m_CollisionDetection: 0
+  m_Constraints: 4
 --- !u!60 &60969858866058726
 PolygonCollider2D:
   m_ObjectHideFlags: 1
