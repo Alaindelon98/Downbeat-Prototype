@@ -2,20 +2,20 @@
 using System.Collections.Generic;
 using UnityEngine;
 
+
+
 public class ScreenScript : MonoBehaviour {
 
 
-	public float sizeScreen;
-	public Vector3 positionScreen;
+	
 	public ScreenScript upScreen, downScreen, leftScreen, rightScreen;
+    public ScreenSettings myScreenSettings;
 
 
 	// Use this for initialization
 	void Start () 
 	{
-        positionScreen = positionScreen;
-        sizeScreen = sizeScreen;
-
+      
     }
 	
 	// Update is called once per frame
@@ -55,14 +55,24 @@ public class ScreenScript : MonoBehaviour {
 	}
     public void TakeMesures()
     {
-        positionScreen = Camera.main.transform.position;
-        sizeScreen = Camera.main.orthographicSize;
+        myScreenSettings.positionScreen = Camera.main.transform.position;
+        myScreenSettings.sizeScreen = Camera.main.orthographicSize;
     }
     public void CallCamera()
     {
         
-        Camera.main.transform.position = positionScreen;
+        Camera.main.transform.position = myScreenSettings.positionScreen;
 
-        Camera.main.orthographicSize = sizeScreen;
+        Camera.main.orthographicSize = myScreenSettings.sizeScreen;
     }
 }
+
+[System.Serializable]
+
+public class ScreenSettings
+{
+    public float sizeScreen;
+    public Vector3 positionScreen;
+
+}
+
