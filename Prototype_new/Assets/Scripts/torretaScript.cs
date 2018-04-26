@@ -105,8 +105,6 @@ public class BeatActor : MonoBehaviour
 
         return false;
     }
-
-
 }
 
 public class torretaScript : BeatActor {
