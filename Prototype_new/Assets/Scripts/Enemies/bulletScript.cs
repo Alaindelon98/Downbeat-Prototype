@@ -6,6 +6,7 @@ public class bulletScript : MonoBehaviour {
 
 	public int directionH, directionV;
 	public float speed;
+    public Rigidbody2D rb;
 
 	// Use this for initialization
 	void Start () {
@@ -17,15 +18,18 @@ public class bulletScript : MonoBehaviour {
 		Move ();
 	}
 
-	private void OnTriggerEnter2D(Collider2D col)
-	{
-		if (col.gameObject.tag == "Tilemap") {
-			Destroy (this.gameObject);
-		}
+    private void OnTriggerEnter2D(Collider2D col)
+    {
+    }
+    private void OnCollisionEnter2D(Collision2D col)
+    {
+        Destroy(this.gameObject);
     }
 
-	private void Move()
+
+
+    private void Move()
 	{
-		transform.position += new Vector3 (directionH * speed * Time.deltaTime, directionV * speed * Time.deltaTime, 0);
+		 rb.velocity = new Vector3 (directionH * speed, directionV * speed, 0);
 	}
 }
