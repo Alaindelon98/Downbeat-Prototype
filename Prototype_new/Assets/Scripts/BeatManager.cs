@@ -146,11 +146,7 @@ public class BeatManager : MonoBehaviour
             fourthNotesCounter++;
         }
 
-        if (fourthNotesCounter == 1)
-        {
-            currentBeat = BeatType.DownBeat;
-            //mySource.PlayOneShot(downBeat);
-        }
+        
 
         /*else
         {

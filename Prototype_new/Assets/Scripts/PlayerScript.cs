@@ -39,14 +39,6 @@ public class PlayerScript : MonoBehaviour {
         }
 
 
-        //if (grounded)
-        //{
-        //    move = Input.GetAxis("Horizontal") * playerSpeed;
-        //}
-        //else
-        //{
-        //    move = Input.GetAxis("Horizontal") * (playerSpeed * 2);
-        //}
 
         move = Input.GetAxis("Horizontal") * (playerSpeed * 2);
 
@@ -60,50 +52,6 @@ public class PlayerScript : MonoBehaviour {
 
     public void ManageJump()
     {
-        /*if(BeatManager.currentBeat == BeatManager.BeatType.DownBeat || BeatManager.currentBeat == BeatManager.BeatType.FourthBeat)
-        {
-            jumpTime = Time.time;
-        }
-        if (Input.GetKeyDown(KeyCode.Space)||Input.GetButtonDown("Jump"))
-        {
-            jumpPressedTime = Time.time;
-            //Debug.Log("Jump pressed time: " + jumpPressedTime);
-            
-            if (Mathf.Abs(jumpPressedTime - jumpTime) < afterErrorRange && grounded)
-            {
-                rb.velocity = Vector2.zero;
-                if (BeatManager.fourthNotesCounter == 1)
-                {
-                    MakeJump(normaljumpVelocity + beatJumpVelocity / 3 * 2);
-                    Debug.Log("Long jump AFTER downBeat");
-
-                }
-                else
-                {
-                    MakeJump(normaljumpVelocity);
-                    Debug.Log("Long jump AFTER normalbeat");
-                }
-
-                jumpSound.Play();
-            }
-        }
-
-        if ((BeatManager.currentBeat == BeatManager.BeatType.DownBeat || BeatManager.currentBeat == BeatManager.BeatType.FourthBeat) && Mathf.Abs(jumpPressedTime - Time.time) < previousErrorRange && grounded)
-        {
-            if(!grounded)
-                rb.velocity = Vector2.zero;
-
-            MakeJump(normaljumpVelocity + beatJumpVelocity / 3 * 2);
-            Debug.Log("Long jump Before");
-
-            jumpSound.Play();
-        }
-
-        else if ((BeatManager.currentBeat == BeatManager.BeatType.DownBeat))
-        {
-            MakeJump(beatJumpVelocity);
-            //Debug.Log("Jump time: " + jumpTime);
-        }*/
         if (Input.GetKeyDown(KeyCode.Space) || Input.GetButtonDown("Jump"))
         {
             jumpPressedTime = Time.time; 
