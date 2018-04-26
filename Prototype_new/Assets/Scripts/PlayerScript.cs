@@ -29,9 +29,9 @@ public class PlayerScript : MonoBehaviour {
     void Update()
     {
 
-        Vector3 testCameraPos = Camera.main.transform.position;
-        testCameraPos.x = transform.position.x + 4;
-        Camera.main.transform.position = testCameraPos;
+        //Vector3 testCameraPos = Camera.main.transform.position;
+        //testCameraPos.x = transform.position.x + 4;
+        //Camera.main.transform.position = testCameraPos;
 
         if (BeatManager.currentBeat == BeatManager.BeatType.FourthBeat || BeatManager.currentBeat == BeatManager.BeatType.DownBeat && grounded)
         { 

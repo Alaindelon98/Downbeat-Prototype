@@ -27,7 +27,7 @@ public class BeatChargeScript : MonoBehaviour {
             {
                 case 1:
                     transform.localScale = maxScale;
-                    StartCoroutine("ShakeFunction");
+                    //StartCoroutine("ShakeFunction");
                     break;
                 case 2:
                     transform.localScale = maxScale/4;
@@ -59,13 +59,13 @@ public class BeatChargeScript : MonoBehaviour {
         //}
 
 
-        if (isShaking)
-        {
-            Vector3 newPos = maxScaleObject.position + (Random.insideUnitSphere * (Time.deltaTime * shakeAmount));
-            newPos.z = maxScaleObject.position.z;
-            newPos.y = maxScaleObject.position.y;
-            maxScaleObject.position = newPos;
-        }
+        //if (isShaking)
+        //{
+        //    Vector3 newPos = maxScaleObject.position + (Random.insideUnitSphere * (Time.deltaTime * shakeAmount));
+        //    newPos.z = maxScaleObject.position.z;
+        //    newPos.y = maxScaleObject.position.y;
+        //    maxScaleObject.position = newPos;
+        //}
 
       
         
