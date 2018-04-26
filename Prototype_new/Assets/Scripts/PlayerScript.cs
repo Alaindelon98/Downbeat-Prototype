@@ -65,7 +65,7 @@ public class PlayerScript : MonoBehaviour {
             }
             else if (Mathf.Abs(jumpPressedTime - normalBeatTime) < errorRange && grounded)
             {
-                rb.velocity = Vector2.zero;
+                //rb.velocity = Vector2.zero;
                 MakeJump(normaljumpVelocity);
                 Debug.Log("Normal Beat Jump");
             }
