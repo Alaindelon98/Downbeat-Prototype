@@ -81,6 +81,12 @@ public class BeatManager : MonoBehaviour
                 OnSixteenthBeat = true;
 
                 currentBeat = BeatType.FourthBeat;
+
+                if (fourthNotesCounter == 1)
+                {
+                    currentBeat = BeatType.DownBeat;
+                    //mySource.PlayOneShot(downBeat);
+                }
             }
             else if (mySource.timeSamples > nextEighthSample)
             {
