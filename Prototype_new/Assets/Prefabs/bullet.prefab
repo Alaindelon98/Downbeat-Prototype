@@ -21,8 +21,8 @@ GameObject:
   - component: {fileID: 4881976624883544}
   - component: {fileID: 212516949595521170}
   - component: {fileID: 114340687756744656}
-  - component: {fileID: 60969858866058726}
   - component: {fileID: 50984107151851600}
+  - component: {fileID: 61043379172354972}
   m_Layer: 0
   m_Name: bullet
   m_TagString: Enemy
@@ -50,7 +50,7 @@ Rigidbody2D:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1307767865894498}
-  m_BodyType: 1
+  m_BodyType: 2
   m_Simulated: 1
   m_UseFullKinematicContacts: 0
   m_UseAutoMass: 0
@@ -63,8 +63,8 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 4
---- !u!60 &60969858866058726
-PolygonCollider2D:
+--- !u!61 &61043379172354972
+BoxCollider2D:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
@@ -85,12 +85,9 @@ PolygonCollider2D:
     drawMode: 0
     adaptiveTiling: 0
   m_AutoTiling: 0
-  m_Points:
-    m_Paths:
-    - - {x: -0.5, y: -0.5}
-      - {x: -0.5, y: 0.5}
-      - {x: 0.5, y: 0.5}
-      - {x: 0.5, y: -0.5}
+  serializedVersion: 2
+  m_Size: {x: 1, y: 1}
+  m_EdgeRadius: 0
 --- !u!114 &114340687756744656
 MonoBehaviour:
   m_ObjectHideFlags: 1

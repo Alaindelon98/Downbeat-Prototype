@@ -19,7 +19,9 @@ public class bulletScript : MonoBehaviour {
 
 	private void OnTriggerEnter2D(Collider2D col)
 	{
-        Destroy(this.gameObject);
+		if (col.gameObject.tag == "Tilemap") {
+			Destroy (this.gameObject);
+		}
     }
 
 	private void Move()

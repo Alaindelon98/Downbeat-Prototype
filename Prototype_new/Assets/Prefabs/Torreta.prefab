@@ -136,6 +136,7 @@ MonoBehaviour:
   beatType: 4
   beatList: 0b0000000d0000000e00000010000000
   actSound: {fileID: 8300000, guid: fc89a99954503b448bc367d585150d33, type: 3}
+  offset: 1
   b: {fileID: 1307767865894498, guid: 701815eb96a4dc1469254508669a28a6, type: 2}
   left: 1
   right: 1

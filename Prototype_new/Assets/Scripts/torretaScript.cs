@@ -10,6 +10,7 @@ public class BeatActor : MonoBehaviour
     public BeatManager.BeatType beatType;
     public List<int> beatList;
     public AudioClip actSound;
+	public float offset;
     protected bool severalBeats;
     protected int singleBeat;
     protected bool actOnBeat = true;
@@ -168,21 +169,21 @@ public class torretaScript : BeatActor {
     public void Shootingleft ()
 	{
 		bl = Instantiate (b);
-		bl.transform.position = this.transform.position;
+		bl.transform.position = new Vector3 (this.transform.position.x-offset, this.transform.position.y, this.transform.position.z);
 		bl.GetComponent<bulletScript> ().directionH = -1;
 		bl.GetComponent<bulletScript> ().directionV = 0;
 	}
 	public void ShootingRight ()
 	{
 		br = Instantiate (b);
-		br.transform.position = this.transform.position;
+		br.transform.position = new Vector3 (this.transform.position.x+offset, this.transform.position.y, this.transform.position.z);
 		br.GetComponent<bulletScript> ().directionH = 1;
 		br.GetComponent<bulletScript> ().directionV = 0;
 	}
 	public void ShootingUp ()
 	{
 		bu = Instantiate (b);
-		bu.transform.position = this.transform.position;
+		bu.transform.position = new Vector3 (this.transform.position.x, this.transform.position.y+offset, this.transform.position.z);
 		bu.transform.Rotate (0,0,90);
 		bu.GetComponent<bulletScript> ().directionH = 0;
 		bu.GetComponent<bulletScript> ().directionV = 1;
@@ -191,7 +192,7 @@ public class torretaScript : BeatActor {
 	public void ShootingDown ()
 	{
 		bd = Instantiate (b);
-		bd.transform.position = this.transform.position;
+		bd.transform.position =  new Vector3 (this.transform.position.x, this.transform.position.y-offset, this.transform.position.z);
 		bd.transform.Rotate (0,0,-90);
 		bd.GetComponent<bulletScript> ().directionH = 0;
 		bd.GetComponent<bulletScript> ().directionV = -1;
