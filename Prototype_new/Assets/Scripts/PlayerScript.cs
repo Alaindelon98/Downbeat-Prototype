@@ -28,6 +28,10 @@ public class PlayerScript : MonoBehaviour {
     // Update is called once per frame
     void Update()
     {
+
+        Vector3 testCameraPos = Camera.main.transform.position;
+        testCameraPos.x = transform.position.x + 4;
+        Camera.main.transform.position = testCameraPos;
         //if (BeatManager.actualBeatType != BeatType.None && grounded ==true) { BeatAnimation.Play(); }
         if (BeatManager.OnBeat && grounded)
         { 
@@ -74,7 +78,7 @@ public class PlayerScript : MonoBehaviour {
             }
         }
 
-        if ((/*BeatManager.fourthNotesCounter == 1 && BeatManager.OnBeat*/BeatManager.currentBeat == BeatManager.BeatType.DownBeat) && Mathf.Abs(jumpPressedTime - Time.time) < previousErrorRange && grounded)
+        if ((BeatManager.fourthNotesCounter == 1 && BeatManager.OnBeat/*BeatManager.currentBeat == BeatManager.BeatType.DownBeat*/) && Mathf.Abs(jumpPressedTime - Time.time) < previousErrorRange && grounded)
         {
             if(!grounded)
                 rb.velocity = Vector2.zero;
@@ -83,7 +87,7 @@ public class PlayerScript : MonoBehaviour {
 
             jumpSound.Play();
         }
-        else if ((BeatManager.fourthNotesCounter == 1 && BeatManager.OnBeat) && grounded)
+        else if ((BeatManager.fourthNotesCounter == 1 && BeatManager.currentBeat == BeatManager.BeatType.FourthBeat) && grounded)
         {
             MakeJump(beatJumpVelocity);
             jumpTime = Time.time;

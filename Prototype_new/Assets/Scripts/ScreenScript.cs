@@ -24,7 +24,7 @@ public class ScreenScript : MonoBehaviour {
 
 	public void TypeScreen(string tagcol)
 	{
-		switch (tagcol) 
+		/*switch (tagcol) 
 		{
 		case "Left":
 			ChangeScreen (leftScreen);
@@ -38,7 +38,7 @@ public class ScreenScript : MonoBehaviour {
 		case "Down":
 			ChangeScreen (downScreen);
 			break;
-		}
+		}*/
 	}
 
 	public void ChangeScreen(ScreenScript newScreen)

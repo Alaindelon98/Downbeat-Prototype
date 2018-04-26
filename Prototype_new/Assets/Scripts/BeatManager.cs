@@ -121,6 +121,7 @@ public class BeatManager : MonoBehaviour
             }
         }
 
+        Debug.Log(currentBeat);
     }
 
     void CountFourthBeat()

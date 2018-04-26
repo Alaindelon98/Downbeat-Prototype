@@ -162,8 +162,8 @@ public class torretaScript : BeatActor {
 
         PlaySound();
 
-        if(beatType == BeatManager.BeatType.SixteenthBeat)
-        Debug.Log("Beat: "+ BeatManager.sixteenthNotesCounter);
+        //if(beatType == BeatManager.BeatType.SixteenthBeat)
+        //Debug.Log("Beat: "+ BeatManager.sixteenthNotesCounter);
     }
 
 
