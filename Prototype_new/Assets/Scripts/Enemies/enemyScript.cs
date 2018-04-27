@@ -63,5 +63,6 @@ public class enemyScript : BeatActor {
     {
         myRigidbody.velocity = Vector2.up * jumpVelocity;
         grounded = false;
+        PlaySound();
     }
 }

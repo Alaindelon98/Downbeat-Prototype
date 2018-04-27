@@ -85,7 +85,7 @@ public class BeatManager : MonoBehaviour
                 if (fourthNotesCounter == 1)
                 {
                     currentBeat = BeatType.DownBeat;
-                    //mySource.PlayOneShot(downBeat);
+                    mySource.PlayOneShot(downBeat);
                 }
             }
             else if (mySource.timeSamples > nextEighthSample)
@@ -128,11 +128,11 @@ public class BeatManager : MonoBehaviour
         }
 
         //if(currentBeat == BeatType.DownBeat)
-        Debug.Log(currentBeat);
-        Debug.Log(mySource.timeSamples);
-        Debug.Log(nextBeatIsOut);
-        Debug.Log("NextFourth:"+nextFourthSample);
-        Debug.Log("All samples: " + mySource.clip.samples);
+        //Debug.Log(currentBeat);
+        //Debug.Log(mySource.timeSamples);
+        //Debug.Log(nextBeatIsOut);
+        //Debug.Log("NextFourth:"+nextFourthSample);
+        //Debug.Log("All samples: " + mySource.clip.samples);
     }
 
     void CountFourthBeat()

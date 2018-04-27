@@ -28,7 +28,7 @@ public class PlayerScript : MonoBehaviour {
     // Update is called once per frame
     void Update()
     {
-        //Debug.Log("FPS: " + 1.0f / Time.deltaTime);
+        Debug.Log("FPS: " + 1.0f / Time.deltaTime);
         //Vector3 testCameraPos = Camera.main.transform.position;
         //testCameraPos.x = transform.position.x + 4;
         //Camera.main.transform.position = testCameraPos;

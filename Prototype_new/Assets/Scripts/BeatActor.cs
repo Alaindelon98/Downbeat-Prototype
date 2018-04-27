@@ -14,6 +14,7 @@ public class BeatActor : MonoBehaviour
     protected bool severalBeats;
     protected int singleBeat;
     protected bool actOnBeat = true;
+    //protected bool actOnDownBeat;
 
 
     protected void SetBehavior()
@@ -35,6 +36,7 @@ public class BeatActor : MonoBehaviour
             }
         }
 
+
         if (beatList.Count > 0)
         {
             if (beatList.Count > 1)
@@ -48,8 +50,13 @@ public class BeatActor : MonoBehaviour
         }
         else
         {
-            actOnBeat = false;
+            if (beatType != BeatManager.BeatType.DownBeat)
+            {
+                actOnBeat = false;
+            }
+
         }
+
     }
 
     protected void PlaySound()
@@ -83,7 +90,11 @@ public class BeatActor : MonoBehaviour
 
     protected bool CheckBeat(int i)
     {
-        if (beatType == BeatManager.BeatType.FourthBeat && BeatManager.currentBeat == BeatManager.BeatType.FourthBeat)
+        if (beatType == BeatManager.BeatType.DownBeat && BeatManager.currentBeat == BeatManager.BeatType.DownBeat)
+        {
+            return true;
+        }
+        else if (beatType == BeatManager.BeatType.FourthBeat && BeatManager.currentBeat == BeatManager.BeatType.FourthBeat)
         {
             if (BeatManager.fourthNotesCounter == i)
             {
