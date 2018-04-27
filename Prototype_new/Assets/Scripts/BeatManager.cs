@@ -127,8 +127,8 @@ public class BeatManager : MonoBehaviour
             }
         }
 
-        if(currentBeat == BeatType.DownBeat)
-        Debug.Log(currentBeat);
+        //if(currentBeat == BeatType.DownBeat)
+        //Debug.Log(currentBeat);
     }
 
     void CountFourthBeat()

@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class enemyScript : MonoBehaviour {
+public class enemyScript : BeatActor {
 
 
 	public float speed,jumpVelocity;
@@ -14,6 +14,7 @@ public class enemyScript : MonoBehaviour {
 	// Use this for initialization
 	void Start ()
     {
+        SetBehavior();
         sprite = this.GetComponent<SpriteRenderer>();
 	}
 	
@@ -21,8 +22,23 @@ public class enemyScript : MonoBehaviour {
 	void Update () 
 	{
 		Move ();
-        if (BeatManager.OnBeat && BeatManager.fourthNotesCounter == 1) { Jump(); }
-	}
+
+        if (!actOnBeat)
+        {
+            return;
+        }
+
+        if (BeatListener() && grounded)
+        {
+            Jump();
+        }
+
+        Debug.Log(grounded);
+
+        //if (shot && BeatManager.currentBeat == BeatManager.BeatType.NoBeat)
+        //    shot = false;
+        //if (BeatManager.currentBeat == BeatManager.BeatType.DownBeat) { Jump(); }
+    }
 	private void OnTriggerEnter2D(Collider2D col)
 	{
         if (col.gameObject.tag =="EnemyLimit")

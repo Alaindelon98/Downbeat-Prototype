@@ -11,6 +11,7 @@ TagManager:
   - Down
   - EnemyLimit
   - Tilemap
+  - Spike
   layers:
   - Default
   - TransparentFX
