@@ -33,7 +33,7 @@ public class enemyScript : BeatActor {
             Jump();
         }
 
-        Debug.Log(grounded);
+        //Debug.Log(grounded);
 
         //if (shot && BeatManager.currentBeat == BeatManager.BeatType.NoBeat)
         //    shot = false;
