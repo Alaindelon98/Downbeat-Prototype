@@ -32,7 +32,7 @@ public class GameManagerScript : MonoBehaviour {
     {
         if (!(actualScreen ==playerCheckPoint.myScreen))
         {
-            playerCheckPoint.myScreen.ChangeScreen(playerCheckPoint.myScreen);
+           actualScreen.ChangeScreen(playerCheckPoint.myScreen);
 
         }
         player.rb.velocity = Vector3.zero;
