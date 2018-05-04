@@ -4,15 +4,18 @@ using UnityEngine;
 
 public class PusherScript : BeatActor
 {
-    public float PushForce;
+    public float VerticalPushForce,HorizontalPushForce;
     public Animation BeatAnim;
-    private bool bumped;
+    private bool bump,bumped;
 
     
 
 	// Use this for initialization
 	void Start ()
     {
+        SetBehavior();
+
+        bump = false;
         bumped = false;
 		
 	}
@@ -20,25 +23,35 @@ public class PusherScript : BeatActor
 	// Update is called once per frame
 	void Update ()
     {
-        if (BeatListener()&&!bumped)
+        if (BeatListener())
         {
             BeatAnim.Play();
-            PlaySound();
-            bumped = true;
+            //PlaySound();
+            bump = true;
         }
 
-        if(BeatManager.currentBeat == BeatManager.BeatType.NoBeat)
+        if (BeatManager.currentBeat == BeatManager.BeatType.NoBeat)
         {
+            bump = false;
             bumped = false;
         }
     }
     private void OnTriggerStay2D(Collider2D col)
     {
+        Debug.Log(col.gameObject.tag);
         if (col.gameObject.tag=="Player"|| col.gameObject.tag == "Enemy")
         {
-            if (BeatListener()&&!bumped)
+            Debug.Log(col.gameObject.tag+"inside");
+
+            if (bump && !bumped)
             {
-                col.GetComponent<Rigidbody2D>().velocity += Vector2.up * PushForce;
+
+                Rigidbody2D colRb = col.gameObject.GetComponent<Rigidbody2D>();
+                colRb.velocity = new Vector2(colRb.velocity.x+ HorizontalPushForce, VerticalPushForce);
+             
+                bump = false;
+                Debug.Log("Impulsed");
+                bumped = true;
                 
             }
         }

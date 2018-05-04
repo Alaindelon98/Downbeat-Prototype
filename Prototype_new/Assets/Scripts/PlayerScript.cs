@@ -28,7 +28,7 @@ public class PlayerScript : MonoBehaviour {
     // Update is called once per frame
     void Update()
     {
-        Debug.Log("FPS: " + 1.0f / Time.deltaTime);
+        //Debug.Log("FPS: " + 1.0f / Time.deltaTime);
         //Vector3 testCameraPos = Camera.main.transform.position;
         //testCameraPos.x = transform.position.x + 4;
         //Camera.main.transform.position = testCameraPos;
@@ -56,7 +56,7 @@ public class PlayerScript : MonoBehaviour {
         if (Input.GetKeyDown(KeyCode.Space) || Input.GetButtonDown("Jump"))
         {
             jumpPressedTime = Time.time;
-            Debug.Log("Jump press: " + jumpPressedTime);
+            //Debug.Log("Jump press: " + jumpPressedTime);
         }
         if (jumpPressedTime != -1)
         {
