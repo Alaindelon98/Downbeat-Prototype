@@ -983,7 +983,7 @@ GameObject:
   - component: {fileID: 857888032}
   m_Layer: 0
   m_Name: pinchos
-  m_TagString: Enemy
+  m_TagString: Spike
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -3869,7 +3869,7 @@ AudioSource:
   m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
-  m_audioClip: {fileID: 8300000, guid: ac6ca5d016675a34ab872d18baf9c2a2, type: 3}
+  m_audioClip: {fileID: 8300000, guid: c88d39f5d6f5d684b8fba7a9ee2dba56, type: 3}
   m_PlayOnAwake: 1
   m_Volume: 1
   m_Pitch: 1
@@ -3951,7 +3951,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: df8cf35ae77b30a4ead799d2605e9203, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  bpm: 120
+  bpm: 140
   beatUnit: 4
   barLength: 4
   strongBeat: 1
@@ -22409,6 +22409,10 @@ Prefab:
         type: 2}
       propertyPath: m_Volume
       value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 1924789007693546, guid: 6c82f1583239f3144a27873cbe40d7c8, type: 2}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 6c82f1583239f3144a27873cbe40d7c8, type: 2}
