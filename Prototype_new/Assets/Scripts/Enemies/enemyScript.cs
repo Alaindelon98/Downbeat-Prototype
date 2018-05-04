@@ -39,19 +39,15 @@ public class enemyScript : BeatActor {
         //    shot = false;
         //if (BeatManager.currentBeat == BeatManager.BeatType.DownBeat) { Jump(); }
     }
-	private void OnTriggerEnter2D(Collider2D col)
-	{
-        if (col.gameObject.tag =="EnemyLimit")
-        {
-            direction *= -1;
-            transform.localScale *= -1;
-        }
-       
-      
-	}
+	
     private void OnCollisionEnter2D(Collision2D col)
     {
         grounded = true;
+
+        if (col.gameObject.tag == "Spike")
+        {
+            Destroy(this.gameObject);
+        }
     }
 
 	private void Move()
