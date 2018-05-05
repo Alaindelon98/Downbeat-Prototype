@@ -360,7 +360,7 @@ MonoBehaviour:
   fallMultiplier: 5.5
   playerSpeed: 4
   lowJumpMultiplier: 2.5
-  errorRange: 0.17
+  errorRange: 0.12
   rb: {fileID: 0}
 --- !u!114 &114875641800922484
 MonoBehaviour:
