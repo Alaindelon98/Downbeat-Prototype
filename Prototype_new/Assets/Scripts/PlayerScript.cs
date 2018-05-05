@@ -9,6 +9,7 @@ public class PlayerScript : MonoBehaviour {
     public bool grounded;
     public AudioSource jumpSound;
     public Animation BeatAnimation;
+    private bool manageDownBeat,JumpedOnDownBeat,JumpedWhenGrounded;
 
     public float fallMultiplier = 2.5f;
     public float playerSpeed = 5f;
@@ -22,12 +23,16 @@ public class PlayerScript : MonoBehaviour {
     // Use this for initialization
     void Start()
     {
+        JumpedWhenGrounded = false;
+        manageDownBeat = false;
+        JumpedOnDownBeat = false;
         rb = GetComponent<Rigidbody2D>();
     }
     
     // Update is called once per frame
     void Update()
     {
+        if (!grounded && rb.velocity.y == 0) { Debug.Log(transform.position); }
         //Debug.Log("FPS: " + 1.0f / Time.deltaTime);
         //Vector3 testCameraPos = Camera.main.transform.position;
         //testCameraPos.x = transform.position.x + 4;
@@ -53,19 +58,73 @@ public class PlayerScript : MonoBehaviour {
 
     public void ManageJump()
     {
+        if (BeatManager.currentBeat == BeatManager.BeatType.DownBeat)
+        {
+            JumpedWhenGrounded = false;
+            JumpedOnDownBeat = false;
+            //rb.velocity = Vector2.zero;
+            downBeatTime = Time.time;
+            manageDownBeat = true;
+            if (grounded) { MakeJump(downBeatVelocity, false); JumpedWhenGrounded = true; }
+            //Debug.Log("Down beat: " + downBeatTime);
+
+
+        }
+        else if (BeatManager.currentBeat == BeatManager.BeatType.FourthBeat)
+        {
+
+            
+            
+            //MakeJump(normaljumpVelocity);
+            manageDownBeat = false;
+            normalBeatTime = Time.time;
+            //Debug.Log("Normal Beat: " + normalBeatTime);
+            
+        }
+
+
         if (Input.GetKeyDown(KeyCode.Space) || Input.GetButtonDown("Jump"))
         {
             jumpPressedTime = Time.time;
             //Debug.Log("Jump press: " + jumpPressedTime);
         }
-        if (jumpPressedTime != -1)
+
+        if (manageDownBeat)
         {
-            if (Mathf.Abs(jumpPressedTime - downBeatTime) < errorRange)
+            if (jumpPressedTime != -1 && Mathf.Abs(jumpPressedTime - downBeatTime) < errorRange && !JumpedOnDownBeat && JumpedWhenGrounded)
             {
-                MakeJump(downBeatJumpVelocity);
+                float actualYVelocity = 0;
+                if (jumpPressedTime <= downBeatTime)
+                {
+                    actualYVelocity = downBeatJumpVelocity-rb.velocity.y;
+                }
+                else
+                {
+                   
+
+                    actualYVelocity = (downBeatJumpVelocity + (Physics.gravity.y * (Time.time - downBeatTime)))- rb.velocity.y;
+                }
+
+                
+
+                //if (!grounded) { rb.velocity = new Vector2(rb.velocity.x, 0); }
+                //Debug.Log(downBeatJumpVelocity);
+                if (actualYVelocity < 0) { actualYVelocity = 0; }
+               
+                //Debug.Log(actualYVelocity);
+
+                MakeJump(actualYVelocity);
+
+                JumpedOnDownBeat = true;
+
                 //Debug.Log("DOWN BEAT JUMP");
+
             }
-            else if (Mathf.Abs(jumpPressedTime - normalBeatTime) < errorRange && grounded)
+           
+        }
+        else
+        {
+            if (jumpPressedTime != -1 && Mathf.Abs(jumpPressedTime - normalBeatTime) < errorRange && grounded)
             {
                 //rb.velocity = Vector2.zero;
                 MakeJump(normaljumpVelocity);
@@ -73,38 +132,21 @@ public class PlayerScript : MonoBehaviour {
             }
         }
 
-
-        if (BeatManager.currentBeat == BeatManager.BeatType.DownBeat)
-        {
-            //rb.velocity = Vector2.zero;
-            downBeatTime = Time.time;
-            if(grounded)
-            {
-                MakeJump(downBeatVelocity, false);
-                //Debug.Log("Auto Down Beat");
-            }
-            //Debug.Log("Down beat: " + downBeatTime);
-
-
-        }
-        else if(BeatManager.currentBeat == BeatManager.BeatType.FourthBeat)
-        {
-            //MakeJump(normaljumpVelocity);
-            normalBeatTime = Time.time;
-            //Debug.Log("Normal Beat: " + normalBeatTime);
-
-        }
-
+        
+            
     }
 
     public void MakeJump(float jumpVelocity, bool fromPlayer = true)
     {
-        rb.velocity = Vector2.zero;
+
+        //rb.velocity = Vector2.zero;
+        Debug.Log("InJUMP  " + (Vector2.up * jumpVelocity));
 
         if (fromPlayer)
             jumpPressedTime = -1;
+        //Debug.Log("RESULT: " + (rb.velocity+ Vector2.up * jumpVelocity));
 
-        rb.velocity = Vector2.up * jumpVelocity;
+        rb.velocity += Vector2.up * jumpVelocity;
         grounded = false;
 
         if(fromPlayer)
