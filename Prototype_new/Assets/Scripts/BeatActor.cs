@@ -11,9 +11,16 @@ public class BeatActor : MonoBehaviour
     public List<int> beatList;
     public AudioClip actSound;
     public float offset;
+    public int waitBarInterval = 1;
+
     protected bool severalBeats;
     protected int singleBeat;
     protected bool actOnBeat = true;
+
+    private int waitBarCounter = 0;
+    private bool actOnBar;
+    private bool waitForBars;
+
     //protected bool actOnDownBeat;
 
 
@@ -57,6 +64,11 @@ public class BeatActor : MonoBehaviour
 
         }
 
+        if (waitBarInterval > 1)
+        {
+            waitForBars = true;
+        }
+
     }
 
     protected void PlaySound()
@@ -69,19 +81,40 @@ public class BeatActor : MonoBehaviour
     {
         if (BeatManager.currentBeat != BeatManager.BeatType.NoBeat)
         {
-            if (severalBeats)
-            {
-                foreach (int i in beatList)
+            if(waitForBars) {
+                if (BeatManager.currentBeat == BeatManager.BeatType.DownBeat)
                 {
-                    if (CheckBeat(i))
+                    waitBarCounter++;
+
+                    if (waitBarCounter >= waitBarInterval)
                     {
-                        return true;
+                        actOnBar = true;
+                        waitBarCounter = 0;
+                    }
+                    else
+                    {
+                        if (actOnBar)
+                            actOnBar = false;
                     }
                 }
             }
-            else if (CheckBeat(singleBeat))
+
+            if (!waitForBars || (waitForBars && actOnBar))
             {
-                return true;
+                if (severalBeats)
+                {
+                    foreach (int i in beatList)
+                    {
+                        if (CheckBeat(i))
+                        {
+                            return true;
+                        }
+                    }
+                }
+                else if (CheckBeat(singleBeat))
+                {
+                    return true;
+                }
             }
         }
 
