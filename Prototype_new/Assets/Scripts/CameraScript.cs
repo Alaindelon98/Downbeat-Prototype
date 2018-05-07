@@ -17,7 +17,6 @@ public class CameraScript : BeatActor {
 	// Update is called once per frame
 	void Update () {
 		if (BeatListener()) {
-			print ("shakeando");
 			StartCoroutine (Shake(duration, mag));
 		}
 	}
