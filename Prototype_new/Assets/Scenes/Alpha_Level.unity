@@ -4995,7 +4995,7 @@ AudioSource:
   m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
-  m_audioClip: {fileID: 8300000, guid: ac6ca5d016675a34ab872d18baf9c2a2, type: 3}
+  m_audioClip: {fileID: 8300000, guid: c88d39f5d6f5d684b8fba7a9ee2dba56, type: 3}
   m_PlayOnAwake: 1
   m_Volume: 1
   m_Pitch: 1
@@ -5077,7 +5077,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: df8cf35ae77b30a4ead799d2605e9203, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  bpm: 120
+  bpm: 140
   beatUnit: 4
   barLength: 4
   strongBeat: 1
@@ -31915,41 +31915,6 @@ Prefab:
       propertyPath: m_Camera
       value: 
       objectReference: {fileID: 332926370}
-    - target: {fileID: 114656836653688508, guid: 6c82f1583239f3144a27873cbe40d7c8,
-        type: 2}
-      propertyPath: errorRange
-      value: 0.17
-      objectReference: {fileID: 0}
-    - target: {fileID: 114656836653688508, guid: 6c82f1583239f3144a27873cbe40d7c8,
-        type: 2}
-      propertyPath: normaljumpVelocity
-      value: 8
-      objectReference: {fileID: 0}
-    - target: {fileID: 114656836653688508, guid: 6c82f1583239f3144a27873cbe40d7c8,
-        type: 2}
-      propertyPath: downBeatVelocity
-      value: 12
-      objectReference: {fileID: 0}
-    - target: {fileID: 82764393230016928, guid: 6c82f1583239f3144a27873cbe40d7c8,
-        type: 2}
-      propertyPath: spreadCustomCurve.m_RotationOrder
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 114656836653688508, guid: 6c82f1583239f3144a27873cbe40d7c8,
-        type: 2}
-      propertyPath: downBeatJumpVelocity
-      value: 14
-      objectReference: {fileID: 0}
-    - target: {fileID: 82764393230016928, guid: 6c82f1583239f3144a27873cbe40d7c8,
-        type: 2}
-      propertyPath: m_audioClip
-      value: 
-      objectReference: {fileID: 8300000, guid: ad410aeed73c06448824377c3b4da134, type: 3}
-    - target: {fileID: 82764393230016928, guid: 6c82f1583239f3144a27873cbe40d7c8,
-        type: 2}
-      propertyPath: m_Volume
-      value: 0.5
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 6c82f1583239f3144a27873cbe40d7c8, type: 2}
   m_IsPrefabParent: 0
