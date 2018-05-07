@@ -8,7 +8,7 @@ public class GameManagerScript : MonoBehaviour {
     public static ScreenScript actualScreen;
     public float respawnTime;
     public static PlayerScript player;
-    public static CheckPointScript playerCheckPoint;
+ 
 
 	// Use this for initialization
 	void Start ()
@@ -24,26 +24,16 @@ public class GameManagerScript : MonoBehaviour {
     {
         actualScreen = _actualScreen;
         player = _player;
-        playerCheckPoint = _originalCheckPoint;
+        player.playerCheckPoint = _originalCheckPoint;
     }
 	// Update is called once per frame
 
-    public static void PlayerDeath()
-    {
-        if (!(actualScreen ==playerCheckPoint.myScreen))
-        {
-           actualScreen.ChangeScreen(playerCheckPoint.myScreen);
-
-        }
-        player.rb.velocity = Vector3.zero;
-        player.transform.position = playerCheckPoint.transform.position;
-        //player.gameObject.SetActive(true);
-    }
+    
     public static void ChangeCheckPoint(CheckPointScript newcheckPoint)
     {
-        playerCheckPoint.checkPointActive = false;
-        playerCheckPoint.ChangeSprite(false);
-        playerCheckPoint = newcheckPoint;
+      player.playerCheckPoint.checkPointActive = false;
+      player.playerCheckPoint.ChangeSprite(false);
+      player.playerCheckPoint = newcheckPoint;
        
     }
 }

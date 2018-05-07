@@ -16,7 +16,7 @@ public class CheckPointScript : MonoBehaviour
         if (checkPointActive)
         {
            
-            GameManagerScript.playerCheckPoint = this;
+            GameManagerScript.player.playerCheckPoint = this;
         }
 		
 	}

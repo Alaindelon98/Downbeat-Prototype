@@ -11,6 +11,7 @@ public class ScreenScript : MonoBehaviour {
 	public ScreenScript upScreen, downScreen, leftScreen, rightScreen;
     public ScreenSettings myScreenSettings;
 
+    public GameObject LevelEndingDoor;
 
 	// Use this for initialization
 	void Start () 

@@ -11,15 +11,25 @@ public class PlayerScript : MonoBehaviour {
     public Animation BeatAnimation;
     private bool manageDownBeat,JumpedOnDownBeat,JumpedWhenGrounded;
 
+    public enum PlayerStates { alive,dying,dead};
+    public PlayerStates actualPlayerState;
+
+    public float respawnTime,diyingTime;
+
     public float fallMultiplier = 2.5f;
     public float playerSpeed = 5f;
     public float lowJumpMultiplier = 2f;
     public float errorRange;
 
+    
+
     float jumpPressedTime = -1, downBeatTime, normalBeatTime;
     float move;
 
     public Rigidbody2D rb;
+    public SpriteRenderer myrenderer;
+    public CheckPointScript playerCheckPoint;
+
     // Use this for initialization
     void Start()
     {
@@ -27,33 +37,102 @@ public class PlayerScript : MonoBehaviour {
         manageDownBeat = false;
         JumpedOnDownBeat = false;
         rb = GetComponent<Rigidbody2D>();
+        myrenderer = GetComponent<SpriteRenderer>();
+        ChangePlayerState(PlayerStates.alive);
+
     }
     
     // Update is called once per frame
     void Update()
     {
-        if (!grounded && rb.velocity.y == 0) { Debug.Log(transform.position); }
-        //Debug.Log("FPS: " + 1.0f / Time.deltaTime);
         //Vector3 testCameraPos = Camera.main.transform.position;
         //testCameraPos.x = transform.position.x + 4;
         //Camera.main.transform.position = testCameraPos;
 
-        if (BeatManager.currentBeat == BeatManager.BeatType.FourthBeat || BeatManager.currentBeat == BeatManager.BeatType.DownBeat && grounded)
-        { 
-            BeatAnimation.Play();
+        switch (actualPlayerState)
+        {
+            case PlayerStates.alive:
+
+                move = Input.GetAxis("Horizontal") * (playerSpeed * 2);
+
+                ManageJump();
+
+                ManagePlayerFall();
+
+                rb.velocity = new Vector2(move, rb.velocity.y);
+
+                break;
+
+            case PlayerStates.dying:
+
+
+                break;
+
+            case PlayerStates.dead:
+
+                break;
+
+        }
+
+        
+      
+      
+
+        //if (BeatManager.currentBeat == BeatManager.BeatType.FourthBeat || BeatManager.currentBeat == BeatManager.BeatType.DownBeat && grounded)
+        //{ 
+        //    BeatAnimation.Play();
+        //}
+
+
+
+       
+
+        //Debug.Log(grounded);
+    }
+
+    public void ChangePlayerState(PlayerStates newState)
+    {
+
+        switch (newState)
+        {
+            case PlayerStates.alive:
+
+                myrenderer.enabled = true;
+                rb.isKinematic = false;
+
+                if (!(GameManagerScript.actualScreen == playerCheckPoint.myScreen))
+                {
+                    GameManagerScript.actualScreen.ChangeScreen(playerCheckPoint.myScreen);
+                }
+
+
+
+                break;
+
+            case PlayerStates.dying:
+
+                rb.velocity = Vector3.zero;
+                rb.isKinematic = true;
+                StartCoroutine(PlayerCounter(diyingTime, PlayerStates.dead));
+
+                break;
+
+            case PlayerStates.dead:
+
+                myrenderer.enabled = false;
+
+  
+
+                transform.position = playerCheckPoint.transform.position;
+
+                StartCoroutine(PlayerCounter(respawnTime, PlayerStates.alive));
+
+                break;
+
         }
 
 
-
-        move = Input.GetAxis("Horizontal") * (playerSpeed * 2);
-
-        ManageJump();
-
-        ManagePlayerFall();
-
-        rb.velocity = new Vector2(move, rb.velocity.y);
-
-        //Debug.Log(grounded);
+        actualPlayerState = newState;
     }
 
     public void ManageJump()
@@ -180,16 +259,30 @@ public class PlayerScript : MonoBehaviour {
     {
         if(col.gameObject.tag == "Enemy"||col.gameObject.tag == "Spike")
         {
-            GameManagerScript.PlayerDeath();
+            ChangePlayerState(PlayerStates.dying);
         }
+        
         else
         {
             grounded = true;
         }
 	}
 
-    /*private void OnTriggerEnter2D(Collider2D collision)
+    IEnumerator PlayerCounter (float TotalTime,PlayerStates nextState)
     {
-        if(collision.gameObject.tag == "Spike")
-    }*/
+        yield return new WaitForSeconds(TotalTime);
+
+        ChangePlayerState(nextState);
+
+      
+    }
+
+
+    private void OnTriggerEnter2D(Collider2D collision)
+    {
+        if (col.gameObject.tag == "Crystal")
+        {
+            GameManagerScript.actualScreen.LevelEndingDoor.SetActive(false);
+        }
+    }
 }
