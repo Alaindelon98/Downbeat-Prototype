@@ -27,6 +27,7 @@ public class BeatManager : MonoBehaviour
     public static int sixteenthNotesCounter;
     public static bool OnBeat, OnEighthBeat, OnSixteenthBeat;
     public static BeatType currentBeat;
+    public static float barDuration;
 
     public int delay;
     public float loopSampleRange;
@@ -37,7 +38,7 @@ public class BeatManager : MonoBehaviour
     bool nextBeatIsOut;
 
 
-    void Start()
+    void Awake()
     {
         mySource = GetComponent<AudioSource>();
         fourthNotesCounter = barLength;
@@ -54,6 +55,7 @@ public class BeatManager : MonoBehaviour
         OnSixteenthBeat = false;
         currentBeat = BeatType.NoBeat;
 
+        barDuration = 1 / bps * barLength;
         firstBeatRange = (delay * mySource.clip.frequency) + (1 / bps * mySource.clip.frequency);
     }
 

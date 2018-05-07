@@ -140,7 +140,7 @@ public class PlayerScript : MonoBehaviour {
     {
 
         //rb.velocity = Vector2.zero;
-        Debug.Log("InJUMP  " + (Vector2.up * jumpVelocity));
+        //Debug.Log("InJUMP  " + (Vector2.up * jumpVelocity));
 
         if (fromPlayer)
             jumpPressedTime = -1;

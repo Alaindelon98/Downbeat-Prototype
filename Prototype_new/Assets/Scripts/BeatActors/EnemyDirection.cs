@@ -11,6 +11,8 @@ public class EnemyDirection : MonoBehaviour
 	
     private void OnCollisionEnter2D(Collision2D col)
     {
+        //Debug.Log("COLLISION");
+        //Debug.Log(myEnemy.direction);
         myEnemy.direction *= -1;
     }
 }

@@ -10,7 +10,7 @@ public class BeatActor : MonoBehaviour
     public BeatManager.BeatType beatType;
     public List<int> beatList;
     public AudioClip actSound;
-    public float offset;
+    //public float offset;
     public int waitBarInterval = 1;
 
     protected bool severalBeats;
@@ -31,15 +31,15 @@ public class BeatActor : MonoBehaviour
         {
             if (beatType == BeatManager.BeatType.FourthBeat)
             {
-                mySource.pitch = 2;
+                mySource.pitch = 1;
             }
             else if (beatType == BeatManager.BeatType.EighthBeat)
             {
-                mySource.pitch = 4;
+                mySource.pitch = 2;
             }
             else if (beatType == BeatManager.BeatType.SixteenthBeat)
             {
-                mySource.pitch = 8;
+                mySource.pitch = 4;
             }
         }
 
@@ -76,6 +76,19 @@ public class BeatActor : MonoBehaviour
         mySource.PlayOneShot(actSound);
     }
 
+    protected void StopSound()
+    {
+        mySource.loop = false;
+        mySource.Stop();
+    }
+
+    protected void LoopSound()
+    {
+        mySource.loop = true;
+        mySource.clip = actSound;
+        mySource.Play();
+    }
+
 
     protected bool BeatListener()
     {
@@ -96,6 +109,8 @@ public class BeatActor : MonoBehaviour
                         if (actOnBar)
                             actOnBar = false;
                     }
+
+
                 }
             }
 

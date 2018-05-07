@@ -9,9 +9,12 @@ public class torretaScript : BeatActor {
 	public GameObject b;
     public enum ShootDirection { left,right,up,down}
 	public bool left, right, up, down;
+    public float offset;
 
 	private GameObject bl, br, bu, bd;
     private bool shot = false;
+
+
 
 	void Start () 
 	{
