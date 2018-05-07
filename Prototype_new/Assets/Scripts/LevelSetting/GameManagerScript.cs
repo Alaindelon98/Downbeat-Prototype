@@ -17,7 +17,7 @@ public class GameManagerScript : MonoBehaviour {
 	}
     void Update()
     {
-
+		
     }
 
     public static void LevelSetup(ScreenScript _actualScreen, PlayerScript _player, CheckPointScript _originalCheckPoint)

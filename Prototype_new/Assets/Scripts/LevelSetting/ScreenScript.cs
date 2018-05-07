@@ -13,10 +13,11 @@ public class ScreenScript : MonoBehaviour {
 
     public GameObject LevelEndingDoor;
 
+
 	// Use this for initialization
 	void Start () 
 	{
-      
+		
     }
 	
 	// Update is called once per frame
