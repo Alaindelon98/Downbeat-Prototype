@@ -280,7 +280,7 @@ public class PlayerScript : MonoBehaviour {
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        if (col.gameObject.tag == "Crystal")
+        if (collision.gameObject.tag == "Crystal")
         {
             GameManagerScript.actualScreen.LevelEndingDoor.SetActive(false);
         }
