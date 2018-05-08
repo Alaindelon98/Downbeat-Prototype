@@ -432,8 +432,8 @@ MonoBehaviour:
   beatList: 00000000
   actSound: {fileID: 0}
   waitBarInterval: 1
-  duration: 0.15
-  mag: 0.5
+  duration: 0.1
+  mag: 0.15
 --- !u!1001 &357489155
 Prefab:
   m_ObjectHideFlags: 0
