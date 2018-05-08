@@ -5,35 +5,71 @@ using UnityEngine;
 public class PlayerScript : MonoBehaviour {
 
     // Use this for initialization
-    public float normaljumpVelocity, downBeatVelocity, downBeatJumpVelocity;
+    
+
+    [HideInInspector]
+
     public bool grounded;
+
+    [Header("AudioSources")]
+
     public AudioSource jumpSound;
+
+    [Header("Animations")]
+
     public Animation BeatAnimation;
     private bool manageDownBeat,JumpedOnDownBeat,JumpedWhenGrounded;
+
+    [Header("Player Particles")]
+
     public ParticleSystem myStream;
     public GameObject DeadParticles;
 
+    [HideInInspector]
+
     public enum PlayerStates { alive,dying,dead};
+
+    [HideInInspector]
+
     public PlayerStates actualPlayerState;
 
     public float respawnTime,diyingTime;
 
+    [Header("Speed Settings")]
+    public float normaljumpVelocity;
+    public float downBeatVelocity;
+    public float downBeatJumpVelocity;
     public float fallMultiplier = 2.5f;
     public float playerSpeed = 5f;
     public float lowJumpMultiplier = 2f;
-    public float errorRange;
+    
     public float shakeAmt;
 
     private Vector3 originalPlayerPos;
 
-    float jumpPressedTime = -1, downBeatTime, normalBeatTime;
-    float move;
+    [Header("Player Beat Settings")]
+
+    public float errorRange;
+
+    private float jumpPressedTime = -1, downBeatTime, normalBeatTime;
+    private float move;
+    
+    [HideInInspector]
 
     public Rigidbody2D rb;
+
+    [HideInInspector]
+
     public SpriteRenderer myrenderer;
+
+    [HideInInspector]
+
     public CheckPointScript playerCheckPoint;
 
+
+
     // Use this for initialization
+    
     void Start()
     {
         JumpedWhenGrounded = false;
