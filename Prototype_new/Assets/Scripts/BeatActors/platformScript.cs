@@ -7,28 +7,41 @@ public class platformScript : BeatActor {
     bool isMoving = false;
 
     public int beatsDuration;
-    public float travelAmount;
-    public Vector2 direction;
+    //public float travelAmount;
+    public List<Vector2> positionsList;
+    public List<Vector2> directionsList;
 
+    private Vector2 direction;
+
+    private Vector2 vDir;
+    private float scalar;
     private Vector2 destination;
+    private int destIdx;
     private float speed, movingTime, moveTimer;
 	void Start () {
         SetBehavior();
 
-        speed = SetSpeed(out movingTime);
-        Debug.Log("Speed: " + speed);
-
-        destination = (Vector2)transform.position + direction * travelAmount;
-
         moveTimer = movingTime;
+
+        positionsList.Insert(0, (Vector2)transform.position);
+        destination = positionsList[1];
+        destIdx = 1;
+
+        scalar = transform.position.x;
+
+        direction = destination - (Vector2)transform.position;
+        vDir = direction / scalar;
+
+        speed = SetSpeed(out movingTime);
+        //Debug.Log("Speed: " + speed);
     }
 
     void Update () {
         //Debug.Log(isMoving);
-        Debug.Log(destination);
+       // Debug.Log(destination);
         if(BeatListener() && !isMoving)
         {
-            Debug.Log("Beat Listener and not moving");
+            //Debug.Log("Beat Listener and not moving");
             isMoving = true;
             LoopSound();
             Move();
@@ -44,25 +57,42 @@ public class platformScript : BeatActor {
     private void Move()
     {
         moveTimer -= Time.deltaTime;
-        
-        transform.position += ((Vector3)direction * travelAmount) * speed * Time.deltaTime;
+
+        //transform.position += ((Vector3)direction * travelAmount) * speed * Time.deltaTime;
+        transform.position += (Vector3)vDir * speed * Time.deltaTime;
         //Debug.Log("Add position: " + ((Vector3)direction * travelAmount) * Mathf.Abs(speed) * Time.deltaTime);
 
-
-
-        if (moveTimer <= 0)//(Vector2.SqrMagnitude((Vector2)transform.position - destination) <= 0.1f)
+        if /*(moveTimer <= 0)*/(Vector2.SqrMagnitude((Vector2)transform.position - destination) <= 0.05f)
         {
+
+            //Debug.Log("Arrived");
             moveTimer = movingTime;
             isMoving = false;
             StopSound();
-            direction *= -1;
 
-            transform.position = new Vector3(Mathf.Round(transform.position.x), Mathf.Round(transform.position.y), 0);
+            transform.position = destination;
+            //Debug.Log("Count: " + positionsList.Count);
+            //Debug.Log("Index: "+destIdx);
 
-            destination = (Vector2)transform.position + (direction * travelAmount);
+            if (positionsList.Count - 1 > destIdx)
+            {
+               // Debug.Log("SUM");
+                destIdx++;
+            }
+            else
+            {
+               // Debug.Log("ZERO");
+                destIdx = 0;
+            }
 
+            destination = positionsList[destIdx];
 
-            //Debug.Log("Change Direction");
+            direction = destination - (Vector2)transform.position;
+            vDir = direction / scalar;
+
+           /* speed = SetSpeed(out movingTime);
+            Debug.Log("Speed: " + speed);*/
+
         }
     }
 
@@ -89,8 +119,8 @@ public class platformScript : BeatActor {
         }
 
         time = BeatManager.barDuration / division * beatsDuration;
-        
-        return (direction.x / time) + (direction.y / time);
+
+        return Mathf.Abs((direction.x / time) + (direction.y / time));
 
     }
 }
