@@ -10,6 +10,8 @@ public class PlayerScript : MonoBehaviour {
     public AudioSource jumpSound;
     public Animation BeatAnimation;
     private bool manageDownBeat,JumpedOnDownBeat,JumpedWhenGrounded;
+    public ParticleSystem myStream;
+    public GameObject DeadParticles;
 
     public enum PlayerStates { alive,dying,dead};
     public PlayerStates actualPlayerState;
@@ -20,8 +22,9 @@ public class PlayerScript : MonoBehaviour {
     public float playerSpeed = 5f;
     public float lowJumpMultiplier = 2f;
     public float errorRange;
+    public float shakeAmt;
 
-    
+    private Vector3 originalPlayerPos;
 
     float jumpPressedTime = -1, downBeatTime, normalBeatTime;
     float move;
@@ -65,6 +68,10 @@ public class PlayerScript : MonoBehaviour {
 
             case PlayerStates.dying:
 
+                Vector3 newPos = originalPlayerPos + (Random.insideUnitSphere * (Time.deltaTime * shakeAmt));
+                newPos.y = transform.position.y;
+                newPos.z = transform.position.z;
+                transform.position = newPos;
 
                 break;
 
@@ -97,6 +104,7 @@ public class PlayerScript : MonoBehaviour {
         {
             case PlayerStates.alive:
 
+                myStream.Play();
                 myrenderer.enabled = true;
                 rb.isKinematic = false;
 
@@ -111,6 +119,8 @@ public class PlayerScript : MonoBehaviour {
 
             case PlayerStates.dying:
 
+                originalPlayerPos = transform.position;
+                myStream.Stop();
                 rb.velocity = Vector3.zero;
                 rb.isKinematic = true;
                 StartCoroutine(PlayerCounter(diyingTime, PlayerStates.dead));
@@ -120,6 +130,10 @@ public class PlayerScript : MonoBehaviour {
             case PlayerStates.dead:
 
                 myrenderer.enabled = false;
+
+                transform.position = originalPlayerPos;
+
+                Instantiate(DeadParticles, transform.position, transform.rotation);
 
   
 
