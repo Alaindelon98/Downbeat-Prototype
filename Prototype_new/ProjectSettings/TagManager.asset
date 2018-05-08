@@ -47,6 +47,9 @@ TagManager:
   - 
   - 
   m_SortingLayers:
+  - name: BackPlayer
+    uniqueID: 3037191935
+    locked: 0
   - name: Default
     uniqueID: 0
     locked: 0
