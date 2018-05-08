@@ -344,6 +344,7 @@ GameObject:
   m_Component:
   - component: {fileID: 332926371}
   - component: {fileID: 332926370}
+  - component: {fileID: 332926372}
   - component: {fileID: 332926369}
   - component: {fileID: 332926368}
   m_Layer: 0
@@ -416,6 +417,23 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &332926372
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 332926367}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5eb827ce5c67ae2499e5ee0f8190a167, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  beatType: 1
+  beatList: 00000000
+  actSound: {fileID: 0}
+  waitBarInterval: 1
+  duration: 0.15
+  mag: 0.5
 --- !u!1001 &357489155
 Prefab:
   m_ObjectHideFlags: 0
@@ -918,7 +936,7 @@ Prefab:
         type: 2}
       propertyPath: myScreen
       value: 
-      objectReference: {fileID: 981393590}
+      objectReference: {fileID: 935661665}
     - target: {fileID: 1870207766067792, guid: 67c9a77d4dcac9541aab1008c4fa83b5, type: 2}
       propertyPath: m_Name
       value: CheckPointPrefab_I
@@ -5705,7 +5723,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 4894592671352450, guid: abcc1189ecf994a46abcec7f4dd61e1b, type: 2}
       propertyPath: m_LocalPosition.x
-      value: 4.290001
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 4856995560112412, guid: abcc1189ecf994a46abcec7f4dd61e1b, type: 2}
       propertyPath: m_LocalPosition.x
@@ -5724,6 +5742,11 @@ Prefab:
       propertyPath: rightScreen
       value: 
       objectReference: {fileID: 1830904351}
+    - target: {fileID: 114480587494415128, guid: abcc1189ecf994a46abcec7f4dd61e1b,
+        type: 2}
+      propertyPath: upScreen
+      value: 
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: abcc1189ecf994a46abcec7f4dd61e1b, type: 2}
   m_IsPrefabParent: 0
