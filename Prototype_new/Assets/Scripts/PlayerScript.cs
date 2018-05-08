@@ -14,6 +14,8 @@ public class PlayerScript : MonoBehaviour {
     [Header("AudioSources")]
 
     public AudioSource jumpSound;
+    public AudioSource explosionSound;
+    public AudioSource diyingSound;
 
     [Header("Animations")]
 
@@ -154,7 +156,7 @@ public class PlayerScript : MonoBehaviour {
                 break;
 
             case PlayerStates.dying:
-
+                diyingSound.Play();
                 originalPlayerPos = transform.position;
                 myStream.Stop();
                 rb.velocity = Vector3.zero;
@@ -164,6 +166,8 @@ public class PlayerScript : MonoBehaviour {
                 break;
 
             case PlayerStates.dead:
+
+                explosionSound.Play();
 
                 myrenderer.enabled = false;
 

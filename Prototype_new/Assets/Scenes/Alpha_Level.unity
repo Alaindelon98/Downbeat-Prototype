@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.44657898, g: 0.4964133, b: 0.5748178, a: 1}
+  m_IndirectSpecularColor: {r: 0.44657844, g: 0.49641222, b: 0.57481694, a: 1}
 --- !u!157 &3
 LightmapSettings:
   m_ObjectHideFlags: 0
@@ -922,33 +922,15 @@ Prefab:
       propertyPath: m_RootOrder
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 61757537293598000, guid: 67c9a77d4dcac9541aab1008c4fa83b5,
-        type: 2}
-      propertyPath: m_Size.y
-      value: 3.0935984
-      objectReference: {fileID: 0}
-    - target: {fileID: 61757537293598000, guid: 67c9a77d4dcac9541aab1008c4fa83b5,
-        type: 2}
-      propertyPath: m_Offset.y
-      value: 1.0467992
+    - target: {fileID: 1870207766067792, guid: 67c9a77d4dcac9541aab1008c4fa83b5, type: 2}
+      propertyPath: m_Name
+      value: CheckPointPrefab_I
       objectReference: {fileID: 0}
     - target: {fileID: 114405359239828156, guid: 67c9a77d4dcac9541aab1008c4fa83b5,
         type: 2}
       propertyPath: myScreen
       value: 
       objectReference: {fileID: 935661665}
-    - target: {fileID: 1870207766067792, guid: 67c9a77d4dcac9541aab1008c4fa83b5, type: 2}
-      propertyPath: m_Name
-      value: CheckPointPrefab_I
-      objectReference: {fileID: 0}
-    - target: {fileID: 4258847097787810, guid: 67c9a77d4dcac9541aab1008c4fa83b5, type: 2}
-      propertyPath: m_LocalScale.x
-      value: 0.57556
-      objectReference: {fileID: 0}
-    - target: {fileID: 4258847097787810, guid: 67c9a77d4dcac9541aab1008c4fa83b5, type: 2}
-      propertyPath: m_LocalScale.y
-      value: 1.6234
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 67c9a77d4dcac9541aab1008c4fa83b5, type: 2}
   m_IsPrefabParent: 0
