@@ -311,7 +311,7 @@ public class PlayerScript : MonoBehaviour {
 
     private void OnCollisionEnter2D(Collision2D col)
     {
-        if(col.gameObject.tag == "Enemy"||col.gameObject.tag == "Spike")
+        if((col.gameObject.tag == "Enemy"||col.gameObject.tag == "Spike")&& actualPlayerState == PlayerStates.alive)
         {
             ChangePlayerState(PlayerStates.dying);
         }
@@ -334,6 +334,11 @@ public class PlayerScript : MonoBehaviour {
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
+        if ((collision.gameObject.tag == "Enemy" || collision.gameObject.tag == "Spike")&&actualPlayerState==PlayerStates.alive)
+        {
+            ChangePlayerState(PlayerStates.dying);
+        }
+
         if (collision.gameObject.tag == "Crystal")
         {
             GameManagerScript.actualScreen.LevelEndingDoor.SetActive(false);
