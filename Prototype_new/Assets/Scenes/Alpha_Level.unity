@@ -40073,11 +40073,11 @@ Prefab:
     m_Modifications:
     - target: {fileID: 4796885006575242, guid: 6c82f1583239f3144a27873cbe40d7c8, type: 2}
       propertyPath: m_LocalPosition.x
-      value: 75.9
+      value: 9.7
       objectReference: {fileID: 0}
     - target: {fileID: 4796885006575242, guid: 6c82f1583239f3144a27873cbe40d7c8, type: 2}
       propertyPath: m_LocalPosition.y
-      value: -55.1
+      value: 1.4
       objectReference: {fileID: 0}
     - target: {fileID: 4796885006575242, guid: 6c82f1583239f3144a27873cbe40d7c8, type: 2}
       propertyPath: m_LocalPosition.z
@@ -41064,7 +41064,7 @@ Prefab:
     - target: {fileID: 114405359239828156, guid: 67c9a77d4dcac9541aab1008c4fa83b5,
         type: 2}
       propertyPath: checkPointActive
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 67c9a77d4dcac9541aab1008c4fa83b5, type: 2}
