@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.44657844, g: 0.49641222, b: 0.57481694, a: 1}
+  m_IndirectSpecularColor: {r: 0.44657898, g: 0.4964133, b: 0.5748178, a: 1}
 --- !u!157 &3
 LightmapSettings:
   m_ObjectHideFlags: 0
@@ -316,6 +316,7 @@ GameObject:
   - component: {fileID: 332926369}
   - component: {fileID: 332926368}
   - component: {fileID: 332926372}
+  - component: {fileID: 332926373}
   m_Layer: 0
   m_Name: Main Camera
   m_TagString: MainCamera
@@ -404,6 +405,25 @@ MonoBehaviour:
   waitBarInterval: 1
   duration: 0.1
   mag: 0.1
+  minZoom: 0
+  maxZoom: 0
+  actualState: 0
+  zoom: {fileID: 332926373}
+--- !u!111 &332926373
+Animation:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 332926367}
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Animation: {fileID: 7400000, guid: 83aca70cab12dfe4bb57b74b884e575c, type: 2}
+  m_Animations:
+  - {fileID: 7400000, guid: 83aca70cab12dfe4bb57b74b884e575c, type: 2}
+  m_WrapMode: 0
+  m_PlayAutomatically: 1
+  m_AnimatePhysics: 0
+  m_CullingType: 0
 --- !u!1 &378206083
 GameObject:
   m_ObjectHideFlags: 0

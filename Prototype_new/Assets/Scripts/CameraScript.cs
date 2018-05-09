@@ -5,6 +5,9 @@ using UnityEngine;
 public class CameraScript : BeatActor {
 
 	public float duration, mag;
+	//public float minZoom, maxZoom;
+
+	public Animation zoom;
 
 	Vector3 originalPos;
 
@@ -16,8 +19,25 @@ public class CameraScript : BeatActor {
 	
 	// Update is called once per frame
 	void Update () {
-		if (BeatListener()) {
-			StartCoroutine (Shake(duration, mag));
+		if (BeatListener ()) 
+		{
+			zoom.Stop ();
+			StartCoroutine (Shake (duration, mag));
+		} 
+		else if(BeatManager.fourthNotesCounter == 2)
+		{
+			zoom.Play ();
+
+			//Camera.main.orthographicSize = minZoom;
+			//Camera.main.orthographicSize = maxZoom;
+		}
+		else if(BeatManager.fourthNotesCounter == 3)
+		{
+			zoom.Play ();
+		}
+		else if (BeatManager.fourthNotesCounter == 4)
+		{
+			zoom.Play ();
 		}
 	}
 
