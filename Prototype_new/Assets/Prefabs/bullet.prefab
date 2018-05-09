@@ -101,7 +101,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   directionH: 0
   directionV: -1
-  speed: 10
+  speed: 9.5
   rb: {fileID: 50984107151851600}
 --- !u!212 &212516949595521170
 SpriteRenderer:
