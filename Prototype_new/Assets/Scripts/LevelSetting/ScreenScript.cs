@@ -4,7 +4,8 @@ using UnityEngine;
 
 
 
-public class ScreenScript : MonoBehaviour {
+public class ScreenScript : MonoBehaviour
+{
 
 
 	
@@ -13,17 +14,36 @@ public class ScreenScript : MonoBehaviour {
 
     public GameObject LevelEndingDoor;
 
-
+    public List<FallingRockScript> FallingRocks;
+    private bool HasRocks;
+    private int rockIndex = 0;
 	// Use this for initialization
 	void Start () 
 	{
-		
+        if (FallingRocks.Count > 0)
+        {
+            HasRocks = true;
+        }
     }
 	
 	// Update is called once per frame
 	void Update () 
 	{
-		
+        if (HasRocks)
+        {
+            if(BeatManager.currentBeat==BeatManager.BeatType.FourthBeat|| BeatManager.currentBeat == BeatManager.BeatType.DownBeat)
+            {
+                FallingRockScript actualRock = FallingRocks[rockIndex];
+
+                actualRock.SumBeats();
+
+                if (actualRock.BeatCount == actualRock.BeatsToFall)
+                {
+                    rockIndex++;
+                }
+
+            }
+        }
 	}
 
 	public void TypeScreen(string tagcol)

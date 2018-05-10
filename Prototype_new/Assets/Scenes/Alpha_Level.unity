@@ -49757,6 +49757,14 @@ CompositeCollider2D:
         Y: -110000000
       - X: 710000000
         Y: -110000000
+    - - X: 240000000
+        Y: -410000000
+      - X: 220000000
+        Y: -410000000
+      - X: 220000000
+        Y: -420000000
+      - X: 240000000
+        Y: -420000000
     - - X: 190000000
         Y: -410000000
       - X: 160000000
@@ -49772,14 +49780,6 @@ CompositeCollider2D:
       - X: 110000000
         Y: -420000000
       - X: 130000000
-        Y: -420000000
-    - - X: 240000000
-        Y: -410000000
-      - X: 220000000
-        Y: -410000000
-      - X: 220000000
-        Y: -420000000
-      - X: 240000000
         Y: -420000000
     - - X: 1180000000
         Y: -550000000
@@ -50285,10 +50285,6 @@ CompositeCollider2D:
       - {x: 68, y: -10}
       - {x: 68, y: -11}
       - {x: 71, y: -11}
-    - - {x: 24, y: -41}
-      - {x: 22, y: -41}
-      - {x: 22, y: -42}
-      - {x: 24, y: -42}
     - - {x: 13, y: -41}
       - {x: 11, y: -41}
       - {x: 11, y: -42}
@@ -50297,6 +50293,10 @@ CompositeCollider2D:
       - {x: 16, y: -41}
       - {x: 16, y: -42}
       - {x: 19, y: -42}
+    - - {x: 24, y: -41}
+      - {x: 22, y: -41}
+      - {x: 22, y: -42}
+      - {x: 24, y: -42}
     - - {x: 118, y: -55}
       - {x: 119, y: -55}
       - {x: 119, y: -54}
@@ -50563,7 +50563,7 @@ Prefab:
       objectReference: {fileID: 777915507}
     - target: {fileID: 1045806790492094, guid: abcc1189ecf994a46abcec7f4dd61e1b, type: 2}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 114480587494415128, guid: abcc1189ecf994a46abcec7f4dd61e1b,
         type: 2}
@@ -51644,6 +51644,16 @@ Prefab:
     - target: {fileID: 1660612286635276, guid: ad03ea5016c00384e9364cdb29425f42, type: 2}
       propertyPath: m_IsActive
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 114351299421844710, guid: ad03ea5016c00384e9364cdb29425f42,
+        type: 2}
+      propertyPath: jumpVelocity
+      value: 14
+      objectReference: {fileID: 0}
+    - target: {fileID: 114351299421844710, guid: ad03ea5016c00384e9364cdb29425f42,
+        type: 2}
+      propertyPath: speed
+      value: 3.5
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: ad03ea5016c00384e9364cdb29425f42, type: 2}
@@ -53420,6 +53430,11 @@ Prefab:
     - target: {fileID: 1660612286635276, guid: ad03ea5016c00384e9364cdb29425f42, type: 2}
       propertyPath: m_IsActive
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 114351299421844710, guid: ad03ea5016c00384e9364cdb29425f42,
+        type: 2}
+      propertyPath: jumpVelocity
+      value: 10
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: ad03ea5016c00384e9364cdb29425f42, type: 2}

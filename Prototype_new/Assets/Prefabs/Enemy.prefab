@@ -293,7 +293,7 @@ MonoBehaviour:
   actSound: {fileID: 8300000, guid: e77eaf1e490aa5a4cbc26408793f32b7, type: 3}
   waitBarInterval: 2
   speed: 1
-  jumpVelocity: 3
+  jumpVelocity: 6
   myRigidbody: {fileID: 50300262572974254}
   direction: -1
   sprite: {fileID: 212285833441718128}
