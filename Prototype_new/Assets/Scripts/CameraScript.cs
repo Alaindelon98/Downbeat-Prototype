@@ -5,8 +5,9 @@ using UnityEngine;
 public class CameraScript : BeatActor {
 
 	public float duration, mag;
-	//public float minZoom, maxZoom;
+	public float minZoom, maxZoom;
 
+	private bool zoomActive = false;
 	public Animation zoom;
 
 	Vector3 originalPos;
@@ -24,20 +25,62 @@ public class CameraScript : BeatActor {
 			zoom.Stop ();
 			StartCoroutine (Shake (duration, mag));
 		} 
-		else if(BeatManager.fourthNotesCounter == 2)
+		else if(BeatManager.fourthNotesCounter == 2 && !zoomActive)
 		{
-			zoom.Play ();
+			print ("2 IN");
+			//print ("ANTES "+Camera.main.orthographicSize);
+			ZoomIn ();
+			zoomActive = true;
+			//print ("ENTRE "+Camera.main.orthographicSize);
+			//ZoomOut ();
+			//print ("DESPUES "+Camera.main.orthographicSize);
+			//zoom.Play ();
 
 			//Camera.main.orthographicSize = minZoom;
 			//Camera.main.orthographicSize = maxZoom;
+			 
 		}
-		else if(BeatManager.fourthNotesCounter == 3)
+
+		else if(BeatManager.fourthNotesCounter == 3 && !zoomActive)
 		{
-			zoom.Play ();
+			print ("3 IN");
+			ZoomIn ();
+			//ZoomOut ();
+
+			//zoom.Play ();
 		}
-		else if (BeatManager.fourthNotesCounter == 4)
+		/*else if(BeatManager.fourthNotesCounter == 3 && zoomActive)
 		{
-			zoom.Play ();
+			print ("3 OUT");
+			ZoomOut ();
+		}
+		else if (BeatManager.fourthNotesCounter == 4 && !zoomActive)
+		{
+			print ("4 IN");
+			ZoomIn ();
+			//ZoomOut ();
+
+			//zoom.Play ();
+		}
+		else if(BeatManager.fourthNotesCounter == 4 && zoomActive)
+		{
+			print ("4 OUT");
+			ZoomOut ();
+		}*/
+	}
+
+	public void ZoomIn()
+	{
+		while (Camera.main.orthographicSize > minZoom)
+		{
+			Camera.main.orthographicSize -= 0.01f;
+		}
+	}
+	public void ZoomOut()
+	{
+		while(Camera.main.orthographicSize < maxZoom)
+		{
+			Camera.main.orthographicSize += 0.01f;
 		}
 	}
 
