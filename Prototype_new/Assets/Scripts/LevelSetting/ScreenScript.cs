@@ -19,10 +19,7 @@ public class ScreenScript : MonoBehaviour
 	// Use this for initialization
 	void Start () 
 	{
-        if (FallingRocks.Count > 0)
-        {
-            HasRocks = true;
-        }
+       
 
 		maxSize = Camera.main.orthographicSize;
 		minSize = maxSize - 0.2f;
@@ -31,21 +28,7 @@ public class ScreenScript : MonoBehaviour
 	// Update is called once per frame
 	void Update () 
 	{
-        if (HasRocks)
-        {
-            if(BeatManager.currentBeat==BeatManager.BeatType.FourthBeat|| BeatManager.currentBeat == BeatManager.BeatType.DownBeat)
-            {
-                FallingRockScript actualRock = FallingRocks[rockIndex];
-
-                actualRock.SumBeats();
-
-                if (actualRock.BeatCount == actualRock.BeatsToFall)
-                {
-                    rockIndex++;
-                }
-
-            }
-        }
+        
 	}
 
 	public void TypeScreen(string tagcol)

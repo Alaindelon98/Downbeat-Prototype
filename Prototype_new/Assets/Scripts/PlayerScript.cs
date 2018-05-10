@@ -137,7 +137,7 @@ public class PlayerScript : MonoBehaviour {
 
        
 
-        Debug.Log(grounded);
+        
     }
 
     public void ChangePlayerState(PlayerStates newState)
@@ -323,7 +323,12 @@ public class PlayerScript : MonoBehaviour {
 
     public void ManageMove()
     {
-        move = Input.GetAxis("Horizontal") * (playerSpeed * 2);
+        
+        float axis=Input.GetAxis("Horizontal");
+
+       
+
+        move = axis * (playerSpeed * 2);
 
         if (grounded)
         {
@@ -339,7 +344,7 @@ public class PlayerScript : MonoBehaviour {
 
         vel.x *= 1 - drag;
 
-        if (Mathf.Abs(vel.x) <= playerSpeed * 2 && Input.GetAxis("Horizontal") != 0)
+        if (Mathf.Abs(vel.x) <= playerSpeed * 2 && axis != 0)
         {
             vel.x = move;
         }
