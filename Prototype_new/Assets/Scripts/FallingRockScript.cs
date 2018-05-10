@@ -38,9 +38,6 @@ public class FallingRockScript : MonoBehaviour
                 falling = false;
             }
         }
-
-
-
     }
     public void SetToFall()
     {
