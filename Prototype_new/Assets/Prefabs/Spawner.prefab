@@ -38,7 +38,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1234483750033208}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 15.13, y: -1.81, z: 0}
+  m_LocalPosition: {x: 22.92, y: -1.81, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -158,7 +158,7 @@ MonoBehaviour:
   beatType: 1
   beatList: 01000000
   actSound: {fileID: 0}
-  waitBarInterval: 1
+  waitBarInterval: 2
   spawnDirection: {x: 0, y: -1}
   shootStrength: 3
   enemyPrefab: {fileID: 1660612286635276, guid: ad03ea5016c00384e9364cdb29425f42,
@@ -179,7 +179,7 @@ MonoBehaviour:
   actSound: {fileID: 8300000, guid: e77eaf1e490aa5a4cbc26408793f32b7, type: 3}
   waitBarInterval: 1
   speed: 5
-  jumpVelocity: 5
+  jumpVelocity: 10
   myRigidbody: {fileID: 0}
   direction: 1
   sprite: {fileID: 0}

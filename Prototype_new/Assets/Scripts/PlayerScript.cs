@@ -137,7 +137,7 @@ public class PlayerScript : MonoBehaviour {
 
        
 
-        //Debug.Log(grounded);
+        Debug.Log(grounded);
     }
 
     public void ChangePlayerState(PlayerStates newState)
@@ -287,6 +287,9 @@ public class PlayerScript : MonoBehaviour {
         rb.velocity += Vector2.up * jumpVelocity;
         grounded = false;
 
+        if (transform.parent != null)
+            transform.parent = null;
+
         if(fromPlayer)
         jumpSound.Play();
 
@@ -297,6 +300,10 @@ public class PlayerScript : MonoBehaviour {
         if (rb.velocity.y != 0)
         {
             grounded = false;
+
+            if (transform.parent != null)
+                transform.parent = null;
+
             if (rb.velocity.y < 0)
             {
                 rb.velocity += Vector2.up * Physics2D.gravity.y * (fallMultiplier - 1) * Time.deltaTime;
@@ -347,10 +354,10 @@ public class PlayerScript : MonoBehaviour {
             ChangePlayerState(PlayerStates.dying);
         }
         
-        else
+        /*else
         {
             grounded = true;
-        }
+        }*/
 	}
 
     IEnumerator PlayerCounter (float TotalTime,PlayerStates nextState)
@@ -370,9 +377,20 @@ public class PlayerScript : MonoBehaviour {
             ChangePlayerState(PlayerStates.dying);
         }
 
-        if (collision.gameObject.tag == "Crystal")
+        else if (collision.gameObject.tag == "Crystal")
         {
             GameManagerScript.actualScreen.LevelEndingDoor.SetActive(false);
+        }
+
+        else if (collision.gameObject.tag == "Platform")
+        {
+            transform.parent = collision.gameObject.transform;
+        }
+
+        else
+
+        {
+            grounded = true;
         }
     }
 }

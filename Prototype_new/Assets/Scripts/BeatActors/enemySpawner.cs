@@ -39,7 +39,7 @@ public class enemySpawner : BeatActor {
         if (BeatListener())
         {
             SpawnEnemy();
-            Debug.Log("Spawn");
+            //Debug.Log("Spawn");
         }
     }
 

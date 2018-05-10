@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.44657844, g: 0.49641222, b: 0.57481694, a: 1}
+  m_IndirectSpecularColor: {r: 0.44657898, g: 0.4964133, b: 0.5748178, a: 1}
 --- !u!157 &3
 LightmapSettings:
   m_ObjectHideFlags: 0
@@ -4057,26 +4057,6 @@ CompositeCollider2D:
         Y: -520000000
       - X: -34531248
         Y: -520000000
-    - - X: 790000000
-        Y: -530937504
-      - X: 790000000
-        Y: -530468736
-      - X: 794687488
-        Y: -540000000
-      - X: 795468736
-        Y: -540000000
-      - X: 800000000
-        Y: -530937504
-      - X: 800000000
-        Y: -530000000
-      - X: 780000000
-        Y: -530000000
-      - X: 780000000
-        Y: -530468736
-      - X: 784687488
-        Y: -540000000
-      - X: 785468736
-        Y: -540000000
     - - X: 700000000
         Y: -530937504
       - X: 700000000
@@ -4104,6 +4084,26 @@ CompositeCollider2D:
       - X: 694687488
         Y: -540000000
       - X: 695468736
+        Y: -540000000
+    - - X: 790000000
+        Y: -530937504
+      - X: 790000000
+        Y: -530468736
+      - X: 794687488
+        Y: -540000000
+      - X: 795468736
+        Y: -540000000
+      - X: 800000000
+        Y: -530937504
+      - X: 800000000
+        Y: -530000000
+      - X: 780000000
+        Y: -530000000
+      - X: 780000000
+        Y: -530468736
+      - X: 784687488
+        Y: -540000000
+      - X: 785468736
         Y: -540000000
     - - X: 1670000000
         Y: -579218752
@@ -4881,16 +4881,6 @@ CompositeCollider2D:
       - {x: -4, y: -51.046875}
       - {x: -3.53125, y: -52}
       - {x: -3.4531248, y: -52}
-    - - {x: 79, y: -53.09375}
-      - {x: 79, y: -53.046875}
-      - {x: 79.46875, y: -54}
-      - {x: 79.546875, y: -54}
-      - {x: 80, y: -53.09375}
-      - {x: 80, y: -53}
-      - {x: 78, y: -53}
-      - {x: 78, y: -53.046875}
-      - {x: 78.46875, y: -54}
-      - {x: 78.546875, y: -54}
     - - {x: 70, y: -53.09375}
       - {x: 70, y: -53.046875}
       - {x: 70.46875, y: -54}
@@ -4905,6 +4895,16 @@ CompositeCollider2D:
       - {x: 69, y: -53.046875}
       - {x: 69.46875, y: -54}
       - {x: 69.546875, y: -54}
+    - - {x: 79, y: -53.09375}
+      - {x: 79, y: -53.046875}
+      - {x: 79.46875, y: -54}
+      - {x: 79.546875, y: -54}
+      - {x: 80, y: -53.09375}
+      - {x: 80, y: -53}
+      - {x: 78, y: -53}
+      - {x: 78, y: -53.046875}
+      - {x: 78.46875, y: -54}
+      - {x: 78.546875, y: -54}
     - - {x: 167, y: -57.921875}
       - {x: 166.53125, y: -57}
       - {x: 166.46875, y: -57}
@@ -51119,7 +51119,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 4796885006575242, guid: 6c82f1583239f3144a27873cbe40d7c8, type: 2}
       propertyPath: m_LocalPosition.y
-      value: -3.1
+      value: 4.48
       objectReference: {fileID: 0}
     - target: {fileID: 4796885006575242, guid: 6c82f1583239f3144a27873cbe40d7c8, type: 2}
       propertyPath: m_LocalPosition.z
@@ -51144,16 +51144,6 @@ Prefab:
     - target: {fileID: 4796885006575242, guid: 6c82f1583239f3144a27873cbe40d7c8, type: 2}
       propertyPath: m_RootOrder
       value: 7
-      objectReference: {fileID: 0}
-    - target: {fileID: 223153409295358956, guid: 6c82f1583239f3144a27873cbe40d7c8,
-        type: 2}
-      propertyPath: m_Camera
-      value: 
-      objectReference: {fileID: 0}
-    - target: {fileID: 114656836653688508, guid: 6c82f1583239f3144a27873cbe40d7c8,
-        type: 2}
-      propertyPath: normaljumpVelocity
-      value: 9.5
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 6c82f1583239f3144a27873cbe40d7c8, type: 2}

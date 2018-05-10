@@ -13,6 +13,7 @@ TagManager:
   - Tilemap
   - Spike
   - Crystal
+  - Platform
   layers:
   - Default
   - TransparentFX

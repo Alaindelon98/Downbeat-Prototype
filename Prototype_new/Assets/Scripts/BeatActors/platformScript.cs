@@ -9,7 +9,7 @@ public class platformScript : BeatActor {
     public int beatsDuration;
     //public float travelAmount;
     public List<Vector2> positionsList;
-    public List<Vector2> directionsList;
+    //public List<Vector2> directionsList;
 
     private Vector2 direction;
 
