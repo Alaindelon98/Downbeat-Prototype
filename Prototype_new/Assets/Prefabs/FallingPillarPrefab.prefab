@@ -54,15 +54,15 @@ Rigidbody2D:
   m_Simulated: 1
   m_UseFullKinematicContacts: 0
   m_UseAutoMass: 0
-  m_Mass: 1
+  m_Mass: 5
   m_LinearDrag: 0
   m_AngularDrag: 0.05
   m_GravityScale: 1
   m_Material: {fileID: 0}
   m_Interpolate: 0
   m_SleepingMode: 1
-  m_CollisionDetection: 0
-  m_Constraints: 0
+  m_CollisionDetection: 1
+  m_Constraints: 4
 --- !u!61 &61923453117722754
 BoxCollider2D:
   m_ObjectHideFlags: 1
@@ -103,7 +103,10 @@ MonoBehaviour:
   shakeAmt: 0.5
   BeatsToFall: 3
   BeatCount: 0
+  falling: 0
+  shaking: 0
   myRb: {fileID: 50847371081360312}
+  myCol: {fileID: 0}
 --- !u!212 &212765280310486342
 SpriteRenderer:
   m_ObjectHideFlags: 1
