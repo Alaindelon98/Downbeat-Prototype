@@ -148,7 +148,7 @@ public class PlayerScript : MonoBehaviour {
             case PlayerStates.alive:
 
                 myStream.Play();
-                myrenderer.enabled = true;
+                //myrenderer.enabled = true;
                 rb.isKinematic = false;
 
                 if (!(GameManagerScript.actualScreen == playerCheckPoint.myScreen))
@@ -174,7 +174,7 @@ public class PlayerScript : MonoBehaviour {
 
                 explosionSound.Play();
 
-                myrenderer.enabled = false;
+                //myrenderer.enabled = false;
 
                 transform.position = originalPlayerPos;
 
