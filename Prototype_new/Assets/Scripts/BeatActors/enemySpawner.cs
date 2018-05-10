@@ -4,11 +4,10 @@ using UnityEngine;
 
 public class enemySpawner : BeatActor {
 
-    enemyScript enemySettings;
+    enemyScript enemySettings, spawnerSettings;
 
-    public float enemySpeed, enemyJumpVel;
-    public int enemyDirection = 1;
-
+    //public float enemySpeed, enemyJumpVel;
+    public Vector2 spawnDirection = new Vector2(1, 0);
     public float shootStrength;
 
     public GameObject enemyPrefab;
@@ -17,10 +16,17 @@ public class enemySpawner : BeatActor {
 
 
 
-       /* enemySettings = enemyPrefab.GetComponent<enemyScript>();
-        enemySettings.speed = enemySpeed;
-        enemySettings.jumpVelocity = enemyJumpVel;
-        enemySettings.direction = enemyDirection;*/
+        enemySettings = enemyPrefab.GetComponent<enemyScript>();
+        spawnerSettings = GetComponent<enemyScript>();
+
+        enemySettings.speed = spawnerSettings.speed;
+        enemySettings.jumpVelocity = spawnerSettings.jumpVelocity;
+        enemySettings.direction = spawnerSettings.direction;
+        enemySettings.beatType = spawnerSettings.beatType;
+        enemySettings.beatList = spawnerSettings.beatList;
+        enemySettings.actSound = spawnerSettings.actSound;
+        enemySettings.waitBarInterval = spawnerSettings.waitBarInterval;
+        
     }
 	
 	// Update is called once per frame
@@ -40,19 +46,12 @@ public class enemySpawner : BeatActor {
     void SpawnEnemy()
     {
         Vector3 spawnPos = transform.position;
-        spawnPos.x += 0.5f * enemyDirection;
+        //spawnPos.x += 0.5f * enemySettings.direction;
         GameObject newEnemy = Instantiate(enemyPrefab, spawnPos, Quaternion.identity);
-        //newEnemy.GetComponent<enemyScript>().GetCopyOf(GetComponent<enemyScript>());
 
-        //enemyScript newEnemyScript = newEnemy.AddComponent<enemyScript>(GetComponent<enemyScript>());
-
-       /* enemyScript newEnemyScript = newEnemy.GetComponent<enemyScript>();
-        enemySettings = GetComponent<enemyScript>();
-        newEnemyScript.GetCopyOf(enemySettings);*/
         Rigidbody2D rb = newEnemy.GetComponent<Rigidbody2D>();
-        //newEnemy.GetComponent<enemyScript>().myRigidbody = rb;
 
 
-        rb.AddForce(new Vector2(enemyDirection * shootStrength, 0));
+        rb.AddForce(spawnDirection * shootStrength);
     }
 }

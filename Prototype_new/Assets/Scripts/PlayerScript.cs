@@ -5,11 +5,11 @@ using UnityEngine;
 public class PlayerScript : MonoBehaviour {
 
     // Use this for initialization
-    
+
 
     [HideInInspector]
 
-    public bool grounded;
+    public bool grounded, impulsed;
 
     [Header("AudioSources")]
 
@@ -69,6 +69,8 @@ public class PlayerScript : MonoBehaviour {
     public CheckPointScript playerCheckPoint;
 
 
+    private float drag = 0.01f;
+
 
     // Use this for initialization
     
@@ -94,13 +96,38 @@ public class PlayerScript : MonoBehaviour {
         {
             case PlayerStates.alive:
 
-                move = Input.GetAxis("Horizontal") * (playerSpeed * 2);
+                if (!impulsed)
+                {
+                    move = Input.GetAxis("Horizontal") * (playerSpeed * 2);
+                }
+                else
+                {
+                    Debug.Log("Impulsed");
+
+                    var vel = rb.velocity;
+
+                    vel.x *= 1 - drag;
+
+                    rb.velocity = vel;
+
+                    if (vel.x <= playerSpeed)
+                    {
+                        Debug.Log("not fast enough");
+                        impulsed = false;
+                    }
+                }
 
                 ManageJump();
 
                 ManagePlayerFall();
 
+                if (!impulsed)
                 rb.velocity = new Vector2(move, rb.velocity.y);
+
+                else
+                {
+                    
+                }
 
                 break;
 

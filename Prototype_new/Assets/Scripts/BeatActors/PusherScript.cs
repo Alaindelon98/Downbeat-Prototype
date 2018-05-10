@@ -38,19 +38,22 @@ public class PusherScript : BeatActor
     }
     private void OnTriggerStay2D(Collider2D col)
     {
-        Debug.Log(col.gameObject.tag);
+       // Debug.Log(col.gameObject.tag);
         if (col.gameObject.tag=="Player"|| col.gameObject.tag == "Enemy")
         {
-            Debug.Log(col.gameObject.tag+"inside");
+            //Debug.Log(col.gameObject.tag+"inside");
 
             if (bump && !bumped)
             {
 
                 Rigidbody2D colRb = col.gameObject.GetComponent<Rigidbody2D>();
-                colRb.velocity = new Vector2(colRb.velocity.x+ HorizontalPushForce, VerticalPushForce);
+                //colRb.velocity = new Vector2(colRb.velocity.x+ HorizontalPushForce, VerticalPushForce);
+
+                colRb.AddForce(new Vector2(HorizontalPushForce,VerticalPushForce));
+                col.gameObject.GetComponent<PlayerScript>().impulsed = true;
              
                 bump = false;
-                Debug.Log("Impulsed");
+               // Debug.Log("Impulsed");
                 bumped = true;
                 
             }

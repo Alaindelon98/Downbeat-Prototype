@@ -9,8 +9,9 @@ public class enemyScript : BeatActor {
     public Rigidbody2D myRigidbody;
 	public int direction=1;
     public SpriteRenderer sprite;
+    public bool onSpawner;
     private bool grounded;
-    private float drag = 0.05f;
+    private float drag = 0.005f;
 
 	// Use this for initialization
 	void Start ()
@@ -19,25 +20,36 @@ public class enemyScript : BeatActor {
         sprite = this.GetComponent<SpriteRenderer>();
         myRigidbody = GetComponent<Rigidbody2D>();
 
+        if(!onSpawner)
         myRigidbody.AddForce(new Vector2(direction * speed, 0));
 	}
 
     private void FixedUpdate()
     {
-        Move();
+        if (!onSpawner)
+        {
+            Move();
+
+        }
+
+
     }
 
     // Update is called once per frame
     void Update () 
 	{
-        if (!actOnBeat)
+        if (!onSpawner)
         {
-            return;
-        }
+            if (!actOnBeat)
+            {
+                return;
+            }
 
-        if (BeatListener() && grounded)
-        {
-            Jump();
+
+            if (BeatListener() && grounded)
+            {
+                Jump();
+            }
         }
 
         //Debug.Log(grounded);
@@ -64,7 +76,7 @@ public class enemyScript : BeatActor {
 
         vel.x *= 1 - drag;
 
-        if (Mathf.Abs(vel.x) < Mathf.Abs(direction * speed))
+        if (Mathf.Abs(vel.x) < Mathf.Abs(direction * speed) && grounded)
             vel.x = direction * speed;
 
 
@@ -78,7 +90,11 @@ public class enemyScript : BeatActor {
 	}
     private void Jump()
     {
-        myRigidbody.velocity = Vector2.up * jumpVelocity;
+        var vel = myRigidbody.velocity;
+
+        vel.y = jumpVelocity;
+        //myRigidbody.velocity = Vector2.up * jumpVelocity;
+        myRigidbody.velocity = vel;
         grounded = false;
         PlaySound();
     }
