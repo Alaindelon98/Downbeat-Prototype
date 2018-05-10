@@ -97,7 +97,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1828795555214898}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 9.9, y: -3.1, z: 13.322981}
+  m_LocalPosition: {x: 9.9, y: 4.48, z: 13.322981}
   m_LocalScale: {x: 1, y: 1.25, z: 1}
   m_Children:
   - {fileID: 224362658932141484}
@@ -527,7 +527,7 @@ MonoBehaviour:
   actualPlayerState: 0
   respawnTime: 1
   diyingTime: 0.5
-  lowJumpVelocity: 8
+  lowJumpVelocity: 9.5
   normalJumpVelocity: 12
   highJumpVelocity: 14
   fallMultiplier: 6
