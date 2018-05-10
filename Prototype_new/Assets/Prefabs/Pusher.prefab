@@ -38,7 +38,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1672090783345768}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 15.149868, y: -6.174676, z: 0}
+  m_LocalPosition: {x: 5.07, y: -7.96, z: 0}
   m_LocalScale: {x: 1.5, y: 1.5, z: 1.5}
   m_Children: []
   m_Father: {fileID: 0}
@@ -108,8 +108,9 @@ MonoBehaviour:
   beatType: 2
   beatList: 03000000
   actSound: {fileID: 8300000, guid: cd0e1583fa6e4e04bb61d168109c8644, type: 3}
-  offset: 0
-  PushForce: 8
+  waitBarInterval: 1
+  VerticalPushForce: 12
+  HorizontalPushForce: 0
   BeatAnim: {fileID: 111305256813411110}
 --- !u!212 &212052610530290746
 SpriteRenderer:

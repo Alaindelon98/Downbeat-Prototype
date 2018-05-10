@@ -38,9 +38,9 @@ public class PlayerScript : MonoBehaviour {
     public float respawnTime,diyingTime;
 
     [Header("Speed Settings")]
-    public float normaljumpVelocity;
-    public float downBeatVelocity;
-    public float downBeatJumpVelocity;
+    public float lowJumpVelocity;
+    public float normalJumpVelocity;
+    public float highJumpVelocity;
     public float fallMultiplier = 2.5f;
     public float playerSpeed = 5f;
     public float lowJumpMultiplier = 2f;
@@ -69,7 +69,7 @@ public class PlayerScript : MonoBehaviour {
     public CheckPointScript playerCheckPoint;
 
 
-    private float drag = 0.01f;
+    public float drag = 0.01f;
 
 
     // Use this for initialization
@@ -96,38 +96,16 @@ public class PlayerScript : MonoBehaviour {
         {
             case PlayerStates.alive:
 
-                if (!impulsed)
-                {
-                    move = Input.GetAxis("Horizontal") * (playerSpeed * 2);
-                }
-                else
-                {
-                    Debug.Log("Impulsed");
-
-                    var vel = rb.velocity;
-
-                    vel.x *= 1 - drag;
-
-                    rb.velocity = vel;
-
-                    if (vel.x <= playerSpeed)
-                    {
-                        Debug.Log("not fast enough");
-                        impulsed = false;
-                    }
-                }
-
+                ManageMove();
                 ManageJump();
 
                 ManagePlayerFall();
 
-                if (!impulsed)
-                rb.velocity = new Vector2(move, rb.velocity.y);
 
-                else
-                {
-                    
-                }
+
+                //Debug.Log(rb.velocity);
+
+
 
                 break;
 
@@ -225,7 +203,7 @@ public class PlayerScript : MonoBehaviour {
             //rb.velocity = Vector2.zero;
             downBeatTime = Time.time;
             manageDownBeat = true;
-            if (grounded) { MakeJump(downBeatVelocity, false); JumpedWhenGrounded = true; }
+            if (grounded) { MakeJump(normalJumpVelocity, false); JumpedWhenGrounded = true; }
             //Debug.Log("Down beat: " + downBeatTime);
 
 
@@ -256,13 +234,13 @@ public class PlayerScript : MonoBehaviour {
                 float actualYVelocity = 0;
                 if (jumpPressedTime <= downBeatTime)
                 {
-                    actualYVelocity = downBeatJumpVelocity-rb.velocity.y;
+                    actualYVelocity = highJumpVelocity-rb.velocity.y;
                 }
                 else
                 {
                    
 
-                    actualYVelocity = (downBeatJumpVelocity + (Physics.gravity.y * (Time.time - downBeatTime)))- rb.velocity.y;
+                    actualYVelocity = (highJumpVelocity + (Physics.gravity.y * (Time.time - downBeatTime)))- rb.velocity.y;
                 }
 
                 
@@ -287,7 +265,7 @@ public class PlayerScript : MonoBehaviour {
             if (jumpPressedTime != -1 && Mathf.Abs(jumpPressedTime - normalBeatTime) < errorRange && grounded)
             {
                 //rb.velocity = Vector2.zero;
-                MakeJump(normaljumpVelocity);
+                MakeJump(lowJumpVelocity);
                 //Debug.Log("Normal Beat Jump");
             }
         }
@@ -334,6 +312,32 @@ public class PlayerScript : MonoBehaviour {
         {
             grounded = true;
         }
+    }
+
+    public void ManageMove()
+    {
+        move = Input.GetAxis("Horizontal") * (playerSpeed * 2);
+
+        if (grounded)
+        {
+            drag = 0.5f;
+        }
+
+        else
+        {
+            drag = 0.01f;
+        }
+
+        var vel = rb.velocity;
+
+        vel.x *= 1 - drag;
+
+        if (Mathf.Abs(vel.x) <= playerSpeed * 2 && Input.GetAxis("Horizontal") != 0)
+        {
+            vel.x = move;
+        }
+
+        rb.velocity = vel;
     }
 
     private void OnCollisionEnter2D(Collision2D col)

@@ -15,12 +15,12 @@ public class EnemyDirection : MonoBehaviour
         //Debug.Log(myEnemy.direction);
         if (myEnemy.direction == 1)
         {
-            Debug.Log("Go left");
+            //Debug.Log("Go left");
             myEnemy.direction = -1;
         }
         else
         {
-            Debug.Log("Go right");
+            //Debug.Log("Go right");
             myEnemy.direction = 1;
         }
     }

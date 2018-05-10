@@ -47,9 +47,9 @@ public class PusherScript : BeatActor
             {
 
                 Rigidbody2D colRb = col.gameObject.GetComponent<Rigidbody2D>();
-                //colRb.velocity = new Vector2(colRb.velocity.x+ HorizontalPushForce, VerticalPushForce);
+                colRb.velocity = new Vector2(HorizontalPushForce, VerticalPushForce);
 
-                colRb.AddForce(new Vector2(HorizontalPushForce,VerticalPushForce));
+                //colRb.AddForce(new Vector2(HorizontalPushForce,VerticalPushForce));
                 col.gameObject.GetComponent<PlayerScript>().impulsed = true;
              
                 bump = false;
