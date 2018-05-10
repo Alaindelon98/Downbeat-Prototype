@@ -5,7 +5,6 @@ using UnityEngine;
 public class CameraScript : BeatActor {
 
 	public float duration, mag;
-	public float minZoom, maxZoom;
 
 	private bool zoomActive = false;
 	public Animation zoom;
@@ -20,56 +19,73 @@ public class CameraScript : BeatActor {
 	
 	// Update is called once per frame
 	void Update () {
-		if (BeatListener ()) 
-		{
-			zoom.Stop ();
+		if (BeatManager.currentBeat == BeatManager.BeatType.DownBeat) {
 			StartCoroutine (Shake (duration, mag));
 		} 
-		else if(BeatManager.fourthNotesCounter == 2 && !zoomActive)
+		/*else if (BeatManager.fourthNotesCounter == 2) 
 		{
-			print ("2 IN");
-			//print ("ANTES "+Camera.main.orthographicSize);
-			ZoomIn ();
-			zoomActive = true;
-			//print ("ENTRE "+Camera.main.orthographicSize);
+			if (BeatListener () && !zoomActive) {
+				StartCoroutine (ZoomIn ());
+
+				print ("aiiix");
+				zoom.Stop ();
+				//StartCoroutine (Shake (duration, mag));
+			} else if (BeatListener () && zoomActive) {
+				StartCoroutine (ZoomOut ());
+			}
+		}*/
+
+		/*else if(BeatManager.fourthNotesCounter == 2 && !zoomActive)
+		{
+			print ("uuuuuuuuh");
+			//ZoomIn ();
+			//zoomActive = true;
 			//ZoomOut ();
-			//print ("DESPUES "+Camera.main.orthographicSize);
 			//zoom.Play ();
 
 			//Camera.main.orthographicSize = minZoom;
 			//Camera.main.orthographicSize = maxZoom;
 			 
+			StartCoroutine (ZoomIn());
 		}
+		else if(BeatManager.fourthNotesCounter == 2 && zoomActive)
+		{
+			StartCoroutine (ZoomOut());
 
+		}
 		else if(BeatManager.fourthNotesCounter == 3 && !zoomActive)
 		{
-			print ("3 IN");
-			ZoomIn ();
+			StartCoroutine (ZoomIn());
+
+			//ZoomIn ();
 			//ZoomOut ();
 
 			//zoom.Play ();
 		}
-		/*else if(BeatManager.fourthNotesCounter == 3 && zoomActive)
+		else if(BeatManager.fourthNotesCounter == 3 && zoomActive)
 		{
-			print ("3 OUT");
-			ZoomOut ();
+			StartCoroutine (ZoomOut());
+
+			//ZoomOut ();
 		}
 		else if (BeatManager.fourthNotesCounter == 4 && !zoomActive)
 		{
-			print ("4 IN");
-			ZoomIn ();
+			StartCoroutine (ZoomIn());
+
+			//ZoomIn ();
 			//ZoomOut ();
 
 			//zoom.Play ();
 		}
 		else if(BeatManager.fourthNotesCounter == 4 && zoomActive)
 		{
-			print ("4 OUT");
-			ZoomOut ();
+			StartCoroutine (ZoomOut());
+
+			//ZoomOut ();
 		}*/
 	}
 
-	public void ZoomIn()
+	/*public void ZoomIn()
 	{
 		while (Camera.main.orthographicSize > minZoom)
 		{
@@ -82,7 +98,7 @@ public class CameraScript : BeatActor {
 		{
 			Camera.main.orthographicSize += 0.01f;
 		}
-	}
+	}*/
 
 	IEnumerator Shake (float duration, float mag)
 	{
@@ -103,4 +119,23 @@ public class CameraScript : BeatActor {
 		transform.position = GameManagerScript.actualScreen.myScreenSettings.positionScreen;
 	}
 
+	IEnumerator ZoomIn()
+	{
+		while (Camera.main.orthographicSize > GameManagerScript.actualScreen.minSize)
+		{
+			Camera.main.orthographicSize -= 0.01f;
+			yield return null;
+		}
+		zoomActive = true;
+	}
+
+	IEnumerator ZoomOut()
+	{
+		while(Camera.main.orthographicSize < GameManagerScript.actualScreen.maxSize)
+		{
+			Camera.main.orthographicSize += 0.01f;
+			yield return null;
+		}
+		zoomActive = false;
+	}
 }

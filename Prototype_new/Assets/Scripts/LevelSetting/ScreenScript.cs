@@ -6,11 +6,10 @@ using UnityEngine;
 
 public class ScreenScript : MonoBehaviour
 {
-
-
-	
 	public ScreenScript upScreen, downScreen, leftScreen, rightScreen;
     public ScreenSettings myScreenSettings;
+	public float maxSize, minSize;
+
 
     public GameObject LevelEndingDoor;
 
@@ -24,6 +23,9 @@ public class ScreenScript : MonoBehaviour
         {
             HasRocks = true;
         }
+
+		maxSize = Camera.main.orthographicSize;
+		minSize = maxSize - 0.2f;
     }
 	
 	// Update is called once per frame
