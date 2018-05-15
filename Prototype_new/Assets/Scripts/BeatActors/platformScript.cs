@@ -62,40 +62,43 @@ public class platformScript : BeatActor {
         transform.position += (Vector3)vDir * speed * Time.deltaTime;
         //Debug.Log("Add position: " + ((Vector3)direction * travelAmount) * Mathf.Abs(speed) * Time.deltaTime);
 
-        if /*(moveTimer <= 0)*/(Vector2.SqrMagnitude((Vector2)transform.position - destination) <= 0.05f)
+        if (Vector2.SqrMagnitude((Vector2)transform.position - destination) <= 0.05f)
         {
+            Arrive();            
+        }
 
-            //Debug.Log("Arrived");
-            moveTimer = movingTime;
-            isMoving = false;
-            StopSound();
-
-            transform.position = destination;
-            //Debug.Log("Count: " + positionsList.Count);
-            //Debug.Log("Index: "+destIdx);
-
-            if (positionsList.Count - 1 > destIdx)
+        else if (Vector2.SqrMagnitude((Vector2)transform.position - destination) > 0.05f)
+        {
+            Vector2 nextPos = transform.position + (Vector3)vDir * speed * Time.deltaTime;
+            if (Vector2.SqrMagnitude((Vector2)nextPos - destination) > Vector2.SqrMagnitude((Vector2)transform.position - destination))
             {
-               // Debug.Log("SUM");
-                destIdx++;
+                Arrive();
             }
-            else
-            {
-               // Debug.Log("ZERO");
-                destIdx = 0;
-            }
-
-            destination = positionsList[destIdx];
-
-            direction = destination - (Vector2)transform.position;
-            vDir = direction / scalar;
-
-           /* speed = SetSpeed(out movingTime);
-            Debug.Log("Speed: " + speed);*/
-
         }
     }
+    private void Arrive()
+    {
+        moveTimer = movingTime;
+        isMoving = false;
+        StopSound();
 
+        transform.position = destination;
+
+
+        if (positionsList.Count - 1 > destIdx)
+        {
+            destIdx++;
+        }
+        else
+        {
+            destIdx = 0;
+        }
+
+        destination = positionsList[destIdx];
+
+        direction = destination - (Vector2)transform.position;
+        vDir = direction / scalar;
+    }
     private float SetSpeed(out float time)
     {
         float division = 0;
@@ -119,14 +122,14 @@ public class platformScript : BeatActor {
                 break;
         }
 
-        Debug.Log("Bar duration: "+BeatManager.barDuration);
+        //Debug.Log("Bar duration: "+BeatManager.barDuration);
         
 
 
 
         time = BeatManager.barDuration / division * beatsDuration / division;
-        Debug.Log("Time: " + time);
-        Debug.Log("Speed: " + Mathf.Abs((direction.x / time) + (direction.y / time)));
+        //Debug.Log("Time: " + time);
+        //Debug.Log("Speed: " + Mathf.Abs((direction.x / time) + (direction.y / time)));
 
 
         return Mathf.Abs((direction.x / time) + (direction.y / time));

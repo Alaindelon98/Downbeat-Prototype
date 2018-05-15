@@ -4,31 +4,78 @@ using UnityEngine;
 
 public class FallingRockScript : BeatActor
 {
-    public float initialFallSpeeed = 1, shakeAmt;
-    public int BeatsToFall, BeatCount;
-    private bool falling, shaking;
+    public float fallSpeed = 1;//, shakeAmt;
+    //public int BeatsToFall, BeatCount;
+    //private bool falling, shaking;
     private Vector3 originalPos;
     public Rigidbody2D myRb;
 
     public Vector2 firstPosition;
     public float listLength;
-    public BeatManager.BeatType beatInterval;
+    //public BeatManager.BeatType beatInterval;
+    public GameObject rockPrefab;
+    public int initialWaitBars = 1;
+    public List<individualRockScript> rocksList;
+    private bool canFall;
 
-    private GameObject debrisList;
-
+    private int currentBar;
+    private int currentRock = 0;
 
 
     // Use this for initialization
     void Start()
     {
+        SetBehavior();
 
-        falling = false;
+        rocksList = new List<individualRockScript>();
+        //falling = false;
+
+        for (int i = 0; i < listLength; i++)
+        {
+            GameObject rock = Instantiate(rockPrefab, rockPrefab.transform.position, Quaternion.identity); 
+            if (i == 0)
+            {
+                rock.transform.position = firstPosition; 
+            } 
+            else
+            {
+                Vector2 rockPosition = rock.transform.position = rocksList[i - 1].transform.position;
+                rockPosition.x += 1;
+                rock.transform.position = rockPosition;
+
+            }
+
+            rock.transform.parent = transform;
+            individualRockScript rockScript = rock.GetComponent<individualRockScript>();
+            rockScript.rockManager = this;
+            rocksList.Add(rockScript);
+            //Instantiate(rock, rock.transform.position, Quaternion.identity);
+        }
 
     }
 
     // Update is called once per frame
     void Update()
     {
+        if(!canFall)
+        {
+            if (BeatManager.currentBeat == BeatManager.BeatType.DownBeat)
+            {
+                currentBar += 1;
+            }
+
+            if (currentBar == initialWaitBars)
+            {
+                canFall = true;
+            }
+
+            return;
+        }
+        if (BeatListener())
+        {
+            DropRocks();
+            //Debug.Log("Drop Rock");
+        }
         /*if (!falling)
         {
             if (shaking)
@@ -75,14 +122,24 @@ public class FallingRockScript : BeatActor
         originalPos = transform.position;
 
     }*/
-    private void OnCollisionEnter2D(Collision2D col)
+
+    private void DropRocks()
     {
-        if (col.gameObject.tag == "Player" && falling)
+        rocksList[currentRock].Drop(fallSpeed);
+        currentRock++;
+        //rocksList.RemoveAt(0);
+    }
+
+    public void ResetRocks()
+    {
+        currentRock = 0;
+        canFall = false;
+        currentBar = 0;
+        foreach (individualRockScript r in rocksList)
         {
-            if (myRb.velocity.y > 0)
-            {
-                GameManagerScript.player.ChangePlayerState(PlayerScript.PlayerStates.dying);
-            }
+            r.RestoreCollider();
+            
         }
     }
+
 }

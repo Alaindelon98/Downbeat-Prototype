@@ -135,6 +135,7 @@ public class BeatManager : MonoBehaviour
         //Debug.Log(nextBeatIsOut);
         //Debug.Log("NextFourth:"+nextFourthSample);
         //Debug.Log("All samples: " + mySource.clip.samples);
+        //Debug.Log(fourthNotesCounter);
     }
 
     void CountFourthBeat()

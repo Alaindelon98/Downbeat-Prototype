@@ -27,22 +27,6 @@ public class BeatActor : MonoBehaviour
     protected void SetBehavior()
     {
         mySource = GetComponent<AudioSource>();
-        if (mySource)
-        {
-            if (beatType == BeatManager.BeatType.FourthBeat)
-            {
-                mySource.pitch = 1;
-            }
-            else if (beatType == BeatManager.BeatType.EighthBeat)
-            {
-                mySource.pitch = 2;
-            }
-            else if (beatType == BeatManager.BeatType.SixteenthBeat)
-            {
-                mySource.pitch = 4;
-            }
-        }
-
 
         if (beatList.Count > 0)
         {
@@ -69,6 +53,25 @@ public class BeatActor : MonoBehaviour
             waitForBars = true;
         }
 
+    }
+
+    protected void SetPitch()
+    {
+        if (mySource)
+        {
+            if (beatType == BeatManager.BeatType.FourthBeat)
+            {
+                mySource.pitch = 1;
+            }
+            else if (beatType == BeatManager.BeatType.EighthBeat)
+            {
+                mySource.pitch = 2;
+            }
+            else if (beatType == BeatManager.BeatType.SixteenthBeat)
+            {
+                mySource.pitch = 4;
+            }
+        }
     }
 
     protected void PlaySound()
@@ -142,15 +145,18 @@ public class BeatActor : MonoBehaviour
         {
             return true;
         }
-        else if (beatType == BeatManager.BeatType.FourthBeat && BeatManager.currentBeat == BeatManager.BeatType.FourthBeat)
+        else if (beatType == BeatManager.BeatType.FourthBeat && (BeatManager.currentBeat == BeatManager.BeatType.FourthBeat || BeatManager.currentBeat == BeatManager.BeatType.DownBeat))
         {
+            //Debug.Log("current Beat" + BeatManager.fourthNotesCounter);
+           // Debug.Log("my beat: " + i);
             if (BeatManager.fourthNotesCounter == i)
             {
+                //Debug.Log("let's goo");
                 return true;
             }
         }
 
-        else if (beatType == BeatManager.BeatType.EighthBeat && (BeatManager.currentBeat == BeatManager.BeatType.EighthBeat || BeatManager.currentBeat == BeatManager.BeatType.FourthBeat))
+        else if (beatType == BeatManager.BeatType.EighthBeat && (BeatManager.currentBeat == BeatManager.BeatType.EighthBeat || BeatManager.currentBeat == BeatManager.BeatType.FourthBeat || BeatManager.currentBeat == BeatManager.BeatType.DownBeat))
         {
             if (BeatManager.eighthNotesCounter == i)
             {
@@ -158,7 +164,7 @@ public class BeatActor : MonoBehaviour
             }
         }
 
-        else if (beatType == BeatManager.BeatType.SixteenthBeat && (BeatManager.currentBeat == BeatManager.BeatType.SixteenthBeat || BeatManager.currentBeat == BeatManager.BeatType.EighthBeat || BeatManager.currentBeat == BeatManager.BeatType.FourthBeat))
+        else if (beatType == BeatManager.BeatType.SixteenthBeat && (BeatManager.currentBeat == BeatManager.BeatType.SixteenthBeat || BeatManager.currentBeat == BeatManager.BeatType.EighthBeat || BeatManager.currentBeat == BeatManager.BeatType.FourthBeat || BeatManager.currentBeat == BeatManager.BeatType.DownBeat))
         {
             if (BeatManager.sixteenthNotesCounter == i)
             {
