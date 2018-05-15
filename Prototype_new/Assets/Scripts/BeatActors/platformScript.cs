@@ -6,7 +6,7 @@ public class platformScript : BeatActor {
 
     bool isMoving = false;
 
-    public int beatsDuration;
+    public float beatsDuration;
     //public float travelAmount;
     public List<Vector2> positionsList;
     //public List<Vector2> directionsList;
@@ -105,6 +105,7 @@ public class platformScript : BeatActor {
             case BeatManager.BeatType.DownBeat:
                 division = 4;
                 break;
+
             case BeatManager.BeatType.FourthBeat:
                 division = 4;
 
@@ -118,7 +119,15 @@ public class platformScript : BeatActor {
                 break;
         }
 
-        time = BeatManager.barDuration / division * beatsDuration;
+        Debug.Log("Bar duration: "+BeatManager.barDuration);
+        
+
+
+
+        time = BeatManager.barDuration / division * beatsDuration / division;
+        Debug.Log("Time: " + time);
+        Debug.Log("Speed: " + Mathf.Abs((direction.x / time) + (direction.y / time)));
+
 
         return Mathf.Abs((direction.x / time) + (direction.y / time));
 

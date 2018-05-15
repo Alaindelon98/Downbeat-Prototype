@@ -2,13 +2,21 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class FallingRockScript : MonoBehaviour
+public class FallingRockScript : BeatActor
 {
     public float initialFallSpeeed = 1, shakeAmt;
     public int BeatsToFall, BeatCount;
     private bool falling, shaking;
     private Vector3 originalPos;
     public Rigidbody2D myRb;
+
+    public Vector2 firstPosition;
+    public float listLength;
+    public BeatManager.BeatType beatInterval;
+
+    private GameObject debrisList;
+
+
 
     // Use this for initialization
     void Start()
@@ -21,7 +29,7 @@ public class FallingRockScript : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (!falling)
+        /*if (!falling)
         {
             if (shaking)
             {
@@ -37,9 +45,9 @@ public class FallingRockScript : MonoBehaviour
             {
                 falling = false;
             }
-        }
+        }*/
     }
-    public void SetToFall()
+    /*public void SetToFall()
     {
         transform.position = originalPos;
         falling = true;
@@ -66,7 +74,7 @@ public class FallingRockScript : MonoBehaviour
         shaking = true;
         originalPos = transform.position;
 
-    }
+    }*/
     private void OnCollisionEnter2D(Collision2D col)
     {
         if (col.gameObject.tag == "Player" && falling)
@@ -76,7 +84,5 @@ public class FallingRockScript : MonoBehaviour
                 GameManagerScript.player.ChangePlayerState(PlayerScript.PlayerStates.dying);
             }
         }
-
-        
     }
 }
