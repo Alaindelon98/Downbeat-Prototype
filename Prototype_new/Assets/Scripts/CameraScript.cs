@@ -23,30 +23,30 @@ public class CameraScript : BeatActor {
 			StartCoroutine (Shake (duration, mag));
 		}
 
-		if(BeatManager.eighthNotesCounter == 3)
-		{
-			StartCoroutine (ZoomIn ());
-		}
-		if(BeatManager.eighthNotesCounter == 4)
-		{
-			StartCoroutine (ZoomOut ());
-		}
-		if(BeatManager.eighthNotesCounter == 5)
-		{
-			StartCoroutine (ZoomIn ());
-		}
-		if(BeatManager.eighthNotesCounter == 6)
-		{
-			StartCoroutine (ZoomOut ());
-		}
-		if(BeatManager.eighthNotesCounter == 7)
-		{
-			StartCoroutine (ZoomIn ());
-		}
-		if(BeatManager.eighthNotesCounter == 8)
-		{
-			StartCoroutine (ZoomOut ());
-		}
+		//if(BeatManager.eighthNotesCounter == 3)
+		//{
+		//	StartCoroutine (ZoomIn ());
+		//}
+		//if(BeatManager.eighthNotesCounter == 4)
+		//{
+		//	StartCoroutine (ZoomOut ());
+		//}
+		//if(BeatManager.eighthNotesCounter == 5)
+		//{
+		//	StartCoroutine (ZoomIn ());
+		//}
+		//if(BeatManager.eighthNotesCounter == 6)
+		//{
+		//	StartCoroutine (ZoomOut ());
+		//}
+		//if(BeatManager.eighthNotesCounter == 7)
+		//{
+		//	StartCoroutine (ZoomIn ());
+		//}
+		//if(BeatManager.eighthNotesCounter == 8)
+		//{
+		//	StartCoroutine (ZoomOut ());
+		//}
 	}
 
 	IEnumerator Shake (float duration, float mag)
