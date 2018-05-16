@@ -93,7 +93,7 @@ Animation:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1772351539367632}
-  m_Enabled: 1
+  m_Enabled: 0
   serializedVersion: 3
   m_Animation: {fileID: 7400000, guid: 83aca70cab12dfe4bb57b74b884e575c, type: 2}
   m_Animations:
@@ -113,8 +113,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5eb827ce5c67ae2499e5ee0f8190a167, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  beatType: 1
-  beatList: 00000000
+  beatType: 2
+  beatList: 01000000
   actSound: {fileID: 0}
   waitBarInterval: 1
   duration: 0.1
