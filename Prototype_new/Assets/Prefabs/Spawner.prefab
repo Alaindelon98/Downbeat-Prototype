@@ -178,7 +178,7 @@ MonoBehaviour:
   beatList: 03000000
   actSound: {fileID: 8300000, guid: e77eaf1e490aa5a4cbc26408793f32b7, type: 3}
   waitBarInterval: 1
-  speed: 5
+  speed: 3
   jumpVelocity: 10
   myRigidbody: {fileID: 0}
   direction: 1

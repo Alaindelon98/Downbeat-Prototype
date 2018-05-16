@@ -288,15 +288,16 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a2ff8bac0f21777499ac1f466121d81a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  beatType: 4
-  beatList: 0f000000
+  beatType: 2
+  beatList: 03000000
   actSound: {fileID: 8300000, guid: e77eaf1e490aa5a4cbc26408793f32b7, type: 3}
-  waitBarInterval: 2
-  speed: 1
-  jumpVelocity: 6
+  waitBarInterval: 1
+  speed: 3
+  jumpVelocity: 10
   myRigidbody: {fileID: 50300262572974254}
-  direction: -1
+  direction: 1
   sprite: {fileID: 212285833441718128}
+  onSpawner: 0
 --- !u!114 &114451390070671038
 MonoBehaviour:
   m_ObjectHideFlags: 1
