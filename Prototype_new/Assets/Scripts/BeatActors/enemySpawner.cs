@@ -22,7 +22,7 @@ public class enemySpawner : BeatActor {
         spawnerSettings = GetComponent<enemyScript>();
 
         enemySettings.speed = spawnerSettings.speed;
-        enemySettings.jumpVelocity = spawnerSettings.jumpVelocity;
+        
         enemySettings.direction = spawnerSettings.direction;
         enemySettings.beatType = spawnerSettings.beatType;
         enemySettings.beatList = spawnerSettings.beatList;

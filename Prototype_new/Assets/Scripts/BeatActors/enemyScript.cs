@@ -5,13 +5,13 @@ using UnityEngine;
 public class enemyScript : BeatActor {
 
 
-	public float speed,jumpVelocity;
+    public float speed;
     public Rigidbody2D myRigidbody;
 	public int direction=1;
     public SpriteRenderer sprite;
     public bool onSpawner;
     private bool grounded;
-    private float drag = 0.005f;
+    public float drag ;
 
 	// Use this for initialization
 	void Start ()
@@ -20,16 +20,16 @@ public class enemyScript : BeatActor {
         sprite = this.GetComponent<SpriteRenderer>();
         myRigidbody = GetComponent<Rigidbody2D>();
 
-        if(!onSpawner)
-        myRigidbody.AddForce(new Vector2(direction * speed, 0));
+        if (!onSpawner) { }
+        
 	}
 
     private void FixedUpdate()
     {
         if (!onSpawner)
         {
-            Move();
 
+            GestionateMovement();
         }
 
 
@@ -45,10 +45,14 @@ public class enemyScript : BeatActor {
                 return;
             }
 
+            
 
-            if (BeatListener() && grounded)
+            if (BeatListener())
             {
-                Jump();
+                Move(speed);
+
+                PlaySound();
+
             }
         }
 
@@ -61,7 +65,7 @@ public class enemyScript : BeatActor {
 	
     private void OnCollisionEnter2D(Collision2D col)
     {
-        grounded = true;
+      
 
         if (col.gameObject.tag == "Spike")
         {
@@ -69,34 +73,43 @@ public class enemyScript : BeatActor {
         }
     }
 
-	private void Move()
+	private void Move(float speedMove)
 	{
+        myRigidbody.velocity = Vector2.right * speedMove *direction;
+       
 
-        var vel = myRigidbody.velocity;
+        //var vel = myRigidbody.velocity;
 
-        vel.x *= 1 - drag;
+        //vel.x *= 1 - drag;
 
-        if (Mathf.Abs(vel.x) < Mathf.Abs(direction * speed) && grounded)
-            vel.x = direction * speed;
+        //if (Mathf.Abs(vel.x) < Mathf.Abs(direction * speed) && grounded)
+        //    vel.x = direction * speed;
 
 
-        myRigidbody.velocity = vel;
+        //myRigidbody.velocity = vel;
 
         //myRigidbody.velocity = new Vector2(direction * speed, myRigidbody.velocity.y);
 
         //saltito 
 
         //Debug.Log(myRigidbody.velocity);
-	}
-    private void Jump()
+    }
+    private void GestionateMovement()
     {
-        var vel = myRigidbody.velocity;
+        if ((Mathf.Abs(myRigidbody.velocity.x)) > 0)
+        {
+            float xVel = Mathf.Abs( myRigidbody.velocity.x);
+            xVel -= drag;
+            Move(xVel);
+        }
 
-        vel.y = jumpVelocity;
+        Debug.Log("actspeed"+myRigidbody.velocity.x);
+
+        Debug.Log("dir" + direction);
         //myRigidbody.velocity = Vector2.up * jumpVelocity;
-        myRigidbody.velocity = vel;
-        grounded = false;
-        PlaySound();
+
+
+
     }
 
    

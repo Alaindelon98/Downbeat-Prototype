@@ -29,9 +29,9 @@ public class PusherScript : BeatActor
         if (BeatListener())
         {
             BeatTime = Time.time;
-
+            PlaySound();
             BeatAnim.Play();
-            //PlaySound();
+            
             bump = true;
         }
 
@@ -57,6 +57,7 @@ public class PusherScript : BeatActor
 
                 //colRb.AddForce(new Vector2(HorizontalPushForce,VerticalPushForce));
                 GameManagerScript.player.impulsed = true;
+                GameManagerScript.player.jumpSound.Play();
              
                 bump = false;
                // Debug.Log("Impulsed");

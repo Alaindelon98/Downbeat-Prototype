@@ -11,17 +11,16 @@ public class EnemyDirection : MonoBehaviour
 	
     private void OnCollisionEnter2D(Collision2D col)
     {
+        if (col.gameObject.tag != "Player")
+        {
+           
+                //Debug.Log("Go left");
+                myEnemy.direction *=-1;
+            
+     
+        }
         //Debug.Log("COLLISION");
         //Debug.Log(myEnemy.direction);
-        if (myEnemy.direction == 1)
-        {
-            //Debug.Log("Go left");
-            myEnemy.direction = -1;
-        }
-        else
-        {
-            //Debug.Log("Go right");
-            myEnemy.direction = 1;
-        }
+       
     }
 }

@@ -178,12 +178,12 @@ MonoBehaviour:
   beatList: 03000000
   actSound: {fileID: 8300000, guid: e77eaf1e490aa5a4cbc26408793f32b7, type: 3}
   waitBarInterval: 1
-  speed: 3
-  jumpVelocity: 10
+  speed: 35
   myRigidbody: {fileID: 0}
   direction: 1
   sprite: {fileID: 0}
   onSpawner: 1
+  drag: 5
 --- !u!212 &212099176335297980
 SpriteRenderer:
   m_ObjectHideFlags: 1
