@@ -21,9 +21,9 @@ GameObject:
   - component: {fileID: 4705143074478032}
   - component: {fileID: 212099176335297980}
   - component: {fileID: 114791345370772682}
+  - component: {fileID: 114825886084021266}
   - component: {fileID: 82756218953484966}
   - component: {fileID: 50207274601930508}
-  - component: {fileID: 114825886084021266}
   m_Layer: 0
   m_Name: Spawner
   m_TagString: Untagged
@@ -38,7 +38,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1234483750033208}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 22.92, y: -1.81, z: 0}
+  m_LocalPosition: {x: 49.48, y: -27.5, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -158,7 +158,7 @@ MonoBehaviour:
   beatType: 1
   beatList: 01000000
   actSound: {fileID: 0}
-  waitBarInterval: 2
+  waitBarInterval: 4
   spawnDirection: {x: 0, y: -1}
   shootStrength: 3
   enemyPrefab: {fileID: 1660612286635276, guid: ad03ea5016c00384e9364cdb29425f42,
