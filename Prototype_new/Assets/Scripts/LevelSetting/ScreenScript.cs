@@ -9,6 +9,7 @@ public class ScreenScript : MonoBehaviour
 	public ScreenScript upScreen, downScreen, leftScreen, rightScreen;
     public ScreenSettings myScreenSettings;
 	public float maxSize, minSize;
+	public float zoomVariation=0.05f;
 
 
     public GameObject LevelEndingDoor;
@@ -22,7 +23,7 @@ public class ScreenScript : MonoBehaviour
        
 
 		maxSize = Camera.main.orthographicSize;
-		minSize = maxSize - 0.2f;
+		minSize = maxSize - zoomVariation;
     }
 	
 	// Update is called once per frame
