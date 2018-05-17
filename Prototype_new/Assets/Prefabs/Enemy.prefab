@@ -58,7 +58,7 @@ Transform:
   m_GameObject: {fileID: 1660612286635276}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: -24.616547, y: -6.798374, z: 9.785369}
-  m_LocalScale: {x: 1.25, y: 0.8, z: 1}
+  m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 4682508935532116}
   m_Father: {fileID: 0}
@@ -120,7 +120,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 0.4, y: 2.87}
+  m_Size: {x: 0.4, y: 1}
   m_EdgeRadius: 0
 --- !u!61 &61470257064683158
 BoxCollider2D:
@@ -138,7 +138,7 @@ BoxCollider2D:
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 1, y: 1}
+    oldSize: {x: 1.378, y: 1.206}
     newSize: {x: 1, y: 1}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
@@ -163,14 +163,14 @@ BoxCollider2D:
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 1, y: 1}
+    oldSize: {x: 1.378, y: 1.206}
     newSize: {x: 1, y: 1}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 1, y: 1}
+  m_Size: {x: 0.8, y: 0.6}
   m_EdgeRadius: 0
 --- !u!61 &61915247786339842
 BoxCollider2D:
@@ -195,7 +195,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 0.4, y: 2.87}
+  m_Size: {x: 0.4, y: 1}
   m_EdgeRadius: 0
 --- !u!82 &82101333700553526
 AudioSource:
@@ -289,12 +289,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   beatType: 2
-  beatList: 02000000
+  beatList: 03000000
   actSound: {fileID: 8300000, guid: e77eaf1e490aa5a4cbc26408793f32b7, type: 3}
   waitBarInterval: 1
   speed: 35
   myRigidbody: {fileID: 50300262572974254}
-  direction: -1
+  direction: 1
   sprite: {fileID: 212285833441718128}
   onSpawner: 0
   drag: 5
@@ -344,8 +344,8 @@ SpriteRenderer:
   m_SortingLayerID: 417895005
   m_SortingLayer: 2
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: b0ebc36c74ca9dc4c9e2690c7e643885, type: 3}
-  m_Color: {r: 1, g: 0, b: 0, a: 1}
+  m_Sprite: {fileID: 21300010, guid: 8c7c636ee06a0cd40b7b759dab4f4418, type: 3}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
