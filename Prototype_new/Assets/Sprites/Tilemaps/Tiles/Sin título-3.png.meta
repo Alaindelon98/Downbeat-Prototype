@@ -1,26 +1,26 @@
 fileFormatVersion: 2
-guid: 8497423911e0e6143ac146e1408fc793
-timeCreated: 1526595143
+guid: e214bd1061ff5904180a7ffbceb8e710
+timeCreated: 1526596378
 licenseType: Free
 TextureImporter:
   fileIDToRecycleName:
-    21300000: tilesetbo2bo_0
-    21300002: tilesetbo2bo_1
-    21300004: tilesetbo2bo_2
-    21300006: tilesetbo2bo_3
-    21300008: tilesetbo2bo_5
-    21300010: tilesetbo2bo_8
-    21300012: tilesetbo2bo_11
-    21300014: tilesetbo2bo_16
-    21300016: tilesetbo2bo_17
-    21300018: tilesetbo2bo_18
-    21300020: tilesetbo2bo_19
-    21300022: tilesetbo2bo_37
-    21300024: tilesetbo2bo_38
-    21300026: tilesetbo2bo_42
-    21300028: tilesetbo2bo_43
-    21300030: tilesetbo2bo_50
-    21300032: tilesetbo2bo_51
+    21300000: "Sin t\xEDtulo-3_0"
+    21300002: "Sin t\xEDtulo-3_1"
+    21300004: "Sin t\xEDtulo-3_2"
+    21300006: "Sin t\xEDtulo-3_3"
+    21300008: "Sin t\xEDtulo-3_5"
+    21300010: "Sin t\xEDtulo-3_6"
+    21300012: "Sin t\xEDtulo-3_7"
+    21300014: "Sin t\xEDtulo-3_8"
+    21300016: "Sin t\xEDtulo-3_9"
+    21300018: "Sin t\xEDtulo-3_10"
+    21300020: "Sin t\xEDtulo-3_11"
+    21300022: "Sin t\xEDtulo-3_17"
+    21300024: "Sin t\xEDtulo-3_18"
+    21300026: "Sin t\xEDtulo-3_21"
+    21300028: "Sin t\xEDtulo-3_22"
+    21300030: "Sin t\xEDtulo-3_25"
+    21300032: "Sin t\xEDtulo-3_26"
   externalObjects: {}
   serializedVersion: 4
   mipmaps:
@@ -97,7 +97,7 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: tilesetbo2bo_0
+      name: "Sin t\xEDtulo-3_0"
       rect:
         serializedVersion: 2
         x: 0
@@ -111,7 +111,7 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
     - serializedVersion: 2
-      name: tilesetbo2bo_1
+      name: "Sin t\xEDtulo-3_1"
       rect:
         serializedVersion: 2
         x: 100
@@ -125,7 +125,7 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
     - serializedVersion: 2
-      name: tilesetbo2bo_2
+      name: "Sin t\xEDtulo-3_2"
       rect:
         serializedVersion: 2
         x: 200
@@ -139,7 +139,7 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
     - serializedVersion: 2
-      name: tilesetbo2bo_3
+      name: "Sin t\xEDtulo-3_3"
       rect:
         serializedVersion: 2
         x: 300
@@ -153,7 +153,7 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
     - serializedVersion: 2
-      name: tilesetbo2bo_5
+      name: "Sin t\xEDtulo-3_5"
       rect:
         serializedVersion: 2
         x: 500
@@ -167,7 +167,7 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
     - serializedVersion: 2
-      name: tilesetbo2bo_8
+      name: "Sin t\xEDtulo-3_6"
       rect:
         serializedVersion: 2
         x: 0
@@ -181,7 +181,7 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
     - serializedVersion: 2
-      name: tilesetbo2bo_11
+      name: "Sin t\xEDtulo-3_7"
       rect:
         serializedVersion: 2
         x: 300
@@ -195,7 +195,7 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
     - serializedVersion: 2
-      name: tilesetbo2bo_16
+      name: "Sin t\xEDtulo-3_8"
       rect:
         serializedVersion: 2
         x: 0
@@ -209,7 +209,7 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
     - serializedVersion: 2
-      name: tilesetbo2bo_17
+      name: "Sin t\xEDtulo-3_9"
       rect:
         serializedVersion: 2
         x: 100
@@ -223,7 +223,7 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
     - serializedVersion: 2
-      name: tilesetbo2bo_18
+      name: "Sin t\xEDtulo-3_10"
       rect:
         serializedVersion: 2
         x: 200
@@ -237,7 +237,7 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
     - serializedVersion: 2
-      name: tilesetbo2bo_19
+      name: "Sin t\xEDtulo-3_11"
       rect:
         serializedVersion: 2
         x: 300
@@ -251,7 +251,7 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
     - serializedVersion: 2
-      name: tilesetbo2bo_37
+      name: "Sin t\xEDtulo-3_17"
       rect:
         serializedVersion: 2
         x: 500
@@ -265,7 +265,7 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
     - serializedVersion: 2
-      name: tilesetbo2bo_38
+      name: "Sin t\xEDtulo-3_18"
       rect:
         serializedVersion: 2
         x: 600
@@ -279,7 +279,7 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
     - serializedVersion: 2
-      name: tilesetbo2bo_42
+      name: "Sin t\xEDtulo-3_21"
       rect:
         serializedVersion: 2
         x: 200
@@ -293,7 +293,7 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
     - serializedVersion: 2
-      name: tilesetbo2bo_43
+      name: "Sin t\xEDtulo-3_22"
       rect:
         serializedVersion: 2
         x: 300
@@ -307,7 +307,7 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
     - serializedVersion: 2
-      name: tilesetbo2bo_50
+      name: "Sin t\xEDtulo-3_25"
       rect:
         serializedVersion: 2
         x: 200
@@ -321,7 +321,7 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
     - serializedVersion: 2
-      name: tilesetbo2bo_51
+      name: "Sin t\xEDtulo-3_26"
       rect:
         serializedVersion: 2
         x: 300
