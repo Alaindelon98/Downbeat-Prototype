@@ -4,18 +4,16 @@ using UnityEngine;
 
 public class FallingRockScript : BeatActor
 {
-    public float fallSpeed = 1;//, shakeAmt;
-    //public int BeatsToFall, BeatCount;
-    //private bool falling, shaking;
+    public float fallSpeed = 1;
     private Vector3 originalPos;
     public Rigidbody2D myRb;
 
-    public Vector2 firstPosition;
-    public float listLength;
-    //public BeatManager.BeatType beatInterval;
+    private Vector2 firstPosition;
+    private float listLength;
     public GameObject rockPrefab;
     public int initialWaitBars = 1;
     public List<individualRockScript> rocksList;
+    public ScreenScript myScreen;
     private bool canFall;
 
     private int currentBar;
@@ -27,6 +25,15 @@ public class FallingRockScript : BeatActor
     {
         SetBehavior();
 
+        myScreen = GetComponentInParent<ScreenScript>();
+        Vector3 rockScale = rockPrefab.transform.localScale;
+        rockScale.y = transform.parent.position.y + myScreen.myScreenSettings.sizeScreen * 2;
+        rockPrefab.transform.localScale = rockScale;
+        firstPosition.x = transform.parent.position.x - myScreen.myScreenSettings.sizeScreen * 1.8f + 0.5f;
+        //firstPosition.y = transform.parent.position.y + myScreen.myScreenSettings.sizeScreen;
+        firstPosition.y = transform.parent.position.y + myScreen.myScreenSettings.sizeScreen *2;
+
+        listLength = myScreen.myScreenSettings.sizeScreen * 1.8f * 2;
         rocksList = new List<individualRockScript>();
         //falling = false;
 
@@ -49,7 +56,6 @@ public class FallingRockScript : BeatActor
             individualRockScript rockScript = rock.GetComponent<individualRockScript>();
             rockScript.rockManager = this;
             rocksList.Add(rockScript);
-            //Instantiate(rock, rock.transform.position, Quaternion.identity);
         }
 
     }
@@ -94,40 +100,13 @@ public class FallingRockScript : BeatActor
             }
         }*/
     }
-    /*public void SetToFall()
-    {
-        transform.position = originalPos;
-        falling = true;
-        myRb.isKinematic = false;
-        myRb.velocity = Vector2.down * initialFallSpeeed;
-
-    }
-    public void SumBeats()
-    {
-        BeatCount++;
-
-        if (BeatCount == BeatsToFall)
-        {
-            shaking = false;
-            SetToFall();
-        }
-        if (BeatCount == (BeatsToFall - 1))
-        {
-            SetToShake();
-        }
-    }
-    public void SetToShake()
-    {
-        shaking = true;
-        originalPos = transform.position;
-
-    }*/
+    
 
     private void DropRocks()
     {
-        rocksList[currentRock].Drop(fallSpeed);
+        //rocksList[currentRock].Drop(fallSpeed);
+        rocksList[currentRock].Drop(fallSpeed, transform.parent.position.y);
         currentRock++;
-        //rocksList.RemoveAt(0);
     }
 
     public void ResetRocks()
