@@ -47,6 +47,8 @@ public class individualRockScript : MonoBehaviour {
     {
         if (col.gameObject.tag == "Player" && isFalling && !killedPlayer)
         {
+            Debug.Log("Die");
+                
            GameManagerScript.player.ChangePlayerState(PlayerScript.PlayerStates.dying);
             killedPlayer = true;
             rockManager.ResetRocks();

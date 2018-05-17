@@ -14,7 +14,7 @@ public class ScreenScript : MonoBehaviour
 
     public GameObject LevelEndingDoor;
 
-    public List<FallingRockScript> FallingRocks;
+   // public List<FallingRockScript> FallingRocks;
     private bool HasRocks;
     private int rockIndex = 0;
 	// Use this for initialization
