@@ -49,7 +49,6 @@ public class ScreenScript : MonoBehaviour
             case "Down":
                 ChangeScreen(downScreen);
                 break;
-
             case "End":
                 ChangeLevel();
                 break;
@@ -71,10 +70,11 @@ public class ScreenScript : MonoBehaviour
 		
         GameManagerScript.actualScreen = newScreen;
 	}
-    public void TakeMesures()
+    public void TakeMeasures()
     {
         myScreenSettings.positionScreen = Camera.main.transform.position;
         myScreenSettings.sizeScreen = Camera.main.orthographicSize;
+        //transform.position = Camera.main.transform.position;
     }
     public void CallCamera()
     {

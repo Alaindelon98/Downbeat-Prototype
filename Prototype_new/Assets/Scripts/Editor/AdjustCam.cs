@@ -24,7 +24,7 @@ public class AdjustCam : Editor
         {
             this.serializedObject.Update();
            
-            screen.TakeMesures();
+            screen.TakeMeasures();
 
             EditorUtility.SetDirty(target);
 
