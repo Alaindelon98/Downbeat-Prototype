@@ -82,23 +82,12 @@ public class FallingRockScript : BeatActor
             DropRocks();
             //Debug.Log("Drop Rock");
         }
-        /*if (!falling)
+
+        if (GameManagerScript.player.actualPlayerState == PlayerScript.PlayerStates.dead)
         {
-            if (shaking)
-            {
-                Vector3 newPos = originalPos + (Random.insideUnitSphere * (Time.deltaTime * shakeAmt));
-                newPos.y = transform.position.y;
-                newPos.z = transform.position.z;
-                transform.position = newPos;
-            }
+            ResetRocks(); 
         }
-        else
-        {
-            if (myRb.velocity.y <= 0)
-            {
-                falling = false;
-            }
-        }*/
+
     }
     
 

@@ -50,6 +50,8 @@ public class individualRockScript : MonoBehaviour {
                 fallen = true;
             }
         }
+
+
 	}
 
     public void Drop(float _fallSpeed, float _endPos)
