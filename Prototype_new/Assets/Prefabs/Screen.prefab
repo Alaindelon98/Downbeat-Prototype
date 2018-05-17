@@ -293,6 +293,11 @@ MonoBehaviour:
   myScreenSettings:
     sizeScreen: 7
     positionScreen: {x: 13.5, y: -7, z: -10}
+  maxSize: 0
+  minSize: 0
+  zoomVariation: 0.05
+  LevelEndingDoor: {fileID: 0}
+  FallingRocks: []
 --- !u!114 &114629917725083122
 MonoBehaviour:
   m_ObjectHideFlags: 1

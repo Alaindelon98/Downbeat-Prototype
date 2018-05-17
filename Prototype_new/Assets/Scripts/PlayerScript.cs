@@ -72,6 +72,8 @@ public class PlayerScript : MonoBehaviour {
     public float drag = 0.01f;
 
 
+	public SpriteRenderer run;
+
     // Use this for initialization
     
     void Start()
@@ -325,7 +327,7 @@ public class PlayerScript : MonoBehaviour {
     {
         
         float axis=Input.GetAxis("Horizontal");
-
+		FlipAnimation (axis);
        
 
         move = axis * (playerSpeed * 2);
@@ -351,6 +353,19 @@ public class PlayerScript : MonoBehaviour {
 
         rb.velocity = vel;
     }
+
+	private void FlipAnimation(float axis)
+	{
+		if(axis > 0) 
+		{
+			run.flipX = false;	
+		}
+		if(axis<0)
+		{
+			run.flipX = true;
+		}
+	}
+
 
     private void OnCollisionEnter2D(Collision2D col)
     {
