@@ -68,9 +68,11 @@ public class PlayerScript : MonoBehaviour {
 
     public CheckPointScript playerCheckPoint;
 
+	[HideInInspector]
+
+	public Animator Anim;
 
     public float drag = 0.01f;
-
 
 	//public SpriteRenderer run;
 
@@ -84,7 +86,7 @@ public class PlayerScript : MonoBehaviour {
         rb = GetComponent<Rigidbody2D>();
         myrenderer = GetComponent<SpriteRenderer>();
         ChangePlayerState(PlayerStates.alive);
-
+		Anim = GetComponent<Animator> ();
     }
     
     // Update is called once per frame
@@ -93,6 +95,8 @@ public class PlayerScript : MonoBehaviour {
         //Vector3 testCameraPos = Camera.main.transform.position;
         //testCameraPos.x = transform.position.x + 4;
         //Camera.main.transform.position = testCameraPos;
+
+
 
         switch (actualPlayerState)
         {
@@ -111,21 +115,25 @@ public class PlayerScript : MonoBehaviour {
 
                 break;
 
-            case PlayerStates.dying:
+		case PlayerStates.dying:
 
-                Vector3 newPos = originalPlayerPos + (Random.insideUnitSphere * (Time.deltaTime * shakeAmt));
-                newPos.y = transform.position.y;
-                newPos.z = transform.position.z;
-                transform.position = newPos;
-
+			Vector3 newPos = originalPlayerPos + (Random.insideUnitSphere * (Time.deltaTime * shakeAmt));
+			newPos.y = transform.position.y;
+			newPos.z = transform.position.z;
+			transform.position = newPos;
+			Anim.SetBool ("dying", true);
                 break;
 
             case PlayerStates.dead:
-
+			Anim.SetBool ("dying", false);
                 break;
 
         }
+			
 
+		Anim.SetBool ("grounded", grounded);
+		Anim.SetFloat ("speedX", rb.velocity.x);
+		Anim.SetFloat ("speedY", rb.velocity.y);
         
       
       
@@ -134,14 +142,9 @@ public class PlayerScript : MonoBehaviour {
         //{ 
         //    BeatAnimation.Play();
         //}
-
-
-
-       
-
         
     }
-
+		
     public void ChangePlayerState(PlayerStates newState)
     {
 

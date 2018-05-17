@@ -585,8 +585,8 @@ MonoBehaviour:
   rb: {fileID: 0}
   myrenderer: {fileID: 0}
   playerCheckPoint: {fileID: 0}
+  Anim: {fileID: 0}
   drag: 0.01
-  run: {fileID: 0}
 --- !u!114 &114875641800922484
 MonoBehaviour:
   m_ObjectHideFlags: 1
