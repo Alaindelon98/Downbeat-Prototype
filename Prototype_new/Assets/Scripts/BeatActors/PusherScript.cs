@@ -51,13 +51,24 @@ public class PusherScript : BeatActor
 
             if (bump && !bumped)
             {
+                switch (col.gameObject.tag)
+                {
+                    case "Player":
+                        if (GameManagerScript.player.actualPlayerState == PlayerScript.PlayerStates.alive)
+                        {
+                            Rigidbody2D colRb = col.gameObject.GetComponent<Rigidbody2D>();
+                            colRb.velocity = new Vector2(HorizontalPushForce, VerticalPushForce);
 
-                Rigidbody2D colRb = col.gameObject.GetComponent<Rigidbody2D>();
-                colRb.velocity = new Vector2(HorizontalPushForce, VerticalPushForce);
+                            //colRb.AddForce(new Vector2(HorizontalPushForce,VerticalPushForce));
+                            GameManagerScript.player.impulsed = true;
+                            GameManagerScript.player.jumpSound.Play();
 
-                //colRb.AddForce(new Vector2(HorizontalPushForce,VerticalPushForce));
-                GameManagerScript.player.impulsed = true;
-                GameManagerScript.player.jumpSound.Play();
+                        }
+                       
+                        break;
+
+                }
+             
              
                 bump = false;
                // Debug.Log("Impulsed");
