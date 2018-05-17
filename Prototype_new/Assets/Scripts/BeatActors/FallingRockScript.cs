@@ -80,7 +80,7 @@ public class FallingRockScript : BeatActor
         if (BeatListener())
         {
             DropRocks();
-            //Debug.Log("Drop Rock");
+            Debug.Log("Drop Rock");
         }
 
         if (GameManagerScript.player.actualPlayerState == PlayerScript.PlayerStates.dead)

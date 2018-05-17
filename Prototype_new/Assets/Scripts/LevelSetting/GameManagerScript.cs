@@ -8,12 +8,16 @@ public class GameManagerScript : MonoBehaviour {
     public static ScreenScript actualScreen;
     public float respawnTime;
     public static PlayerScript player;
+    public int sceneNumber;
+    public static int currentScene;
  
 
 	// Use this for initialization
 	void Start ()
     {
-        DontDestroyOnLoad(this.gameObject);
+        //DontDestroyOnLoad(this.gameObject);
+
+        currentScene = sceneNumber;
 	}
     void Update()
     {

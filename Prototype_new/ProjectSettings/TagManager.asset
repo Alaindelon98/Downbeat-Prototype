@@ -14,6 +14,7 @@ TagManager:
   - Spike
   - Crystal
   - Platform
+  - End
   layers:
   - Default
   - TransparentFX

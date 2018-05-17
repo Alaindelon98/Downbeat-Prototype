@@ -72,7 +72,7 @@ public class PlayerScript : MonoBehaviour {
     public float drag = 0.01f;
 
 
-	public SpriteRenderer run;
+	//public SpriteRenderer run;
 
     // Use this for initialization
     
@@ -358,11 +358,11 @@ public class PlayerScript : MonoBehaviour {
 	{
 		if(axis > 0) 
 		{
-			run.flipX = false;	
+			//run.flipX = false;	
 		}
 		if(axis<0)
 		{
-			run.flipX = true;
+			//run.flipX = true;
 		}
 	}
 

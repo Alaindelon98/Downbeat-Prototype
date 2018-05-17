@@ -22,6 +22,7 @@ public class CollisionScript : MonoBehaviour {
 	{
 		if (col.gameObject.tag == "Player") 
 		{
+            if(transform.parent != null)
 			gameObject.GetComponentInParent<ScreenScript> ().TypeScreen (this.tag);
 		}
 	}

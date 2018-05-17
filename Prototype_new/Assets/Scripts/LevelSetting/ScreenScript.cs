@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 
 
@@ -48,7 +49,16 @@ public class ScreenScript : MonoBehaviour
             case "Down":
                 ChangeScreen(downScreen);
                 break;
+
+            case "End":
+                ChangeLevel();
+                break;
         }
+    }
+
+    public void ChangeLevel()
+    {
+        SceneManager.LoadScene(GameManagerScript.currentScene + 1);
     }
 
 	public void ChangeScreen(ScreenScript newScreen)

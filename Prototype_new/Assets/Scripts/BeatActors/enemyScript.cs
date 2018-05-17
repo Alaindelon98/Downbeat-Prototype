@@ -103,9 +103,9 @@ public class enemyScript : BeatActor {
             Move(xVel);
         }
 
-        Debug.Log("actspeed"+myRigidbody.velocity.x);
+        //Debug.Log("actspeed"+myRigidbody.velocity.x);
 
-        Debug.Log("dir" + direction);
+        //Debug.Log("dir" + direction);
         //myRigidbody.velocity = Vector2.up * jumpVelocity;
 
 
