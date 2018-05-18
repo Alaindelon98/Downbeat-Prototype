@@ -16,7 +16,7 @@ public class EnemyDirection : MonoBehaviour
            
                 //Debug.Log("Go left");
                 myEnemy.direction *=-1;
-            
+            Debug.Log("NOW");
      
         }
         //Debug.Log("COLLISION");

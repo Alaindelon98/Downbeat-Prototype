@@ -7,7 +7,7 @@ public class enemyScript : BeatActor {
 
     public float speed;
     public Rigidbody2D myRigidbody;
-	public int direction=1;
+	public int direction;
     public SpriteRenderer sprite;
     public bool onSpawner;
     private bool grounded;

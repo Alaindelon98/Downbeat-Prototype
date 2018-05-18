@@ -111,7 +111,7 @@ BoxCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 1.62, y: -1}
+  m_Offset: {x: 1.5, y: -1}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0, y: 0}
@@ -186,7 +186,7 @@ BoxCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: -1.62, y: -1}
+  m_Offset: {x: -1.5, y: -1}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0, y: 0}
@@ -294,9 +294,9 @@ MonoBehaviour:
   beatList: 03000000
   actSound: {fileID: 8300000, guid: e77eaf1e490aa5a4cbc26408793f32b7, type: 3}
   waitBarInterval: 1
-  speed: 35
+  speed: 40
   myRigidbody: {fileID: 50300262572974254}
-  direction: 1
+  direction: -1
   sprite: {fileID: 212285833441718128}
   onSpawner: 0
   drag: 5
@@ -3760,7 +3760,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 417895005
   m_SortingLayer: 2
-  m_SortingOrder: 0
+  m_SortingOrder: 2
   m_Sprite: {fileID: 21300012, guid: 348ad8c68714a9d4d9805c55af671420, type: 3}
   m_Color: {r: 1, g: 0, b: 0.93103504, a: 1}
   m_FlipX: 0
