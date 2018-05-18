@@ -7,6 +7,7 @@ public class bulletScript : MonoBehaviour {
 	public int directionH, directionV;
 	public float speed;
     public Rigidbody2D rb;
+	public SpriteRenderer mySprite;
 
 	// Use this for initialization
 	void Start () {
@@ -31,6 +32,10 @@ public class bulletScript : MonoBehaviour {
         
     }
 
+	public void FlipY()
+	{
+		mySprite.flipY = true;
+	}
 
 
     private void Move()

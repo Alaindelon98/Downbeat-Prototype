@@ -69,6 +69,7 @@ public class torretaScript : BeatActor {
 	{
 		bl = Instantiate (b);
 		bl.transform.position = new Vector3 (this.transform.position.x-offset, this.transform.position.y, this.transform.position.z);
+		bl.transform.Rotate (0,0,90);
 		bl.GetComponent<bulletScript> ().directionH = -1;
 		bl.GetComponent<bulletScript> ().directionV = 0;
 	}
@@ -76,6 +77,7 @@ public class torretaScript : BeatActor {
 	{
 		br = Instantiate (b);
 		br.transform.position = new Vector3 (this.transform.position.x+offset, this.transform.position.y, this.transform.position.z);
+		br.transform.Rotate (0,0,-90);
 		br.GetComponent<bulletScript> ().directionH = 1;
 		br.GetComponent<bulletScript> ().directionV = 0;
 	}
@@ -83,7 +85,6 @@ public class torretaScript : BeatActor {
 	{
 		bu = Instantiate (b);
 		bu.transform.position = new Vector3 (this.transform.position.x, this.transform.position.y+offset, this.transform.position.z);
-		bu.transform.Rotate (0,0,90);
 		bu.GetComponent<bulletScript> ().directionH = 0;
 		bu.GetComponent<bulletScript> ().directionV = 1;
 
@@ -92,7 +93,7 @@ public class torretaScript : BeatActor {
 	{
 		bd = Instantiate (b);
 		bd.transform.position =  new Vector3 (this.transform.position.x, this.transform.position.y-offset, this.transform.position.z);
-		bd.transform.Rotate (0,0,-90);
+		bd.GetComponent<bulletScript> ().FlipY ();
 		bd.GetComponent<bulletScript> ().directionH = 0;
 		bd.GetComponent<bulletScript> ().directionV = -1;
 	}
