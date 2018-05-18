@@ -446,7 +446,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   respawnTime: 0
-  sceneNumber: 0
+  sceneNumber: 1
 --- !u!1001 &436479043
 Prefab:
   m_ObjectHideFlags: 0

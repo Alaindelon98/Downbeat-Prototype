@@ -57,7 +57,7 @@ public class SpectrumVisualizer : MonoBehaviour {
 
             Color tempColor = sr.color;
             tempColor = spectrumColor;
-            tempColor.a = 0.2f;
+            //tempColor.a = 0.2f;
            
             sr.color = tempColor;
 

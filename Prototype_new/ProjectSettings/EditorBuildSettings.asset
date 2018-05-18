@@ -11,13 +11,13 @@ EditorBuildSettings:
   - enabled: 0
     path: Assets/Scenes/spectrumTest.unity
     guid: a03cc2a162fbe524ea45009dcae03b60
-  - enabled: 1
+  - enabled: 0
     path: Assets/Scenes/Menu.unity
     guid: c0d6c1b359b4cee478bf330aca846886
-  - enabled: 1
+  - enabled: 0
     path: Assets/Scenes/Alpha_Level_1.unity
     guid: 089531647493fbe47ad58fd20994ad41
-  - enabled: 1
+  - enabled: 0
     path: Assets/Scenes/Alpha_Level_2.unity
     guid: c80f104fb9cdae94d80a1141e010de13
   - enabled: 1

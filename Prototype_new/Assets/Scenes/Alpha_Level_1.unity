@@ -26929,7 +26929,7 @@ MonoBehaviour:
   keepPercentage: 0.05
   tex: {fileID: 2800000, guid: b0ebc36c74ca9dc4c9e2690c7e643885, type: 3}
   spectrumParent: {fileID: 391364320}
-  spectrumColor: {r: 0.56845933, g: 0.4269031, b: 0.6911765, a: 0}
+  spectrumColor: {r: 0.56845933, g: 0.4269031, b: 0.6911765, a: 0.509}
 --- !u!1001 &935661663
 Prefab:
   m_ObjectHideFlags: 0
