@@ -18,6 +18,8 @@ public class SpectrumVisualizer : MonoBehaviour {
     public Texture2D tex;
     public Transform spectrumParent;
 
+    public Color spectrumColor;
+
 
     private AudioSource source;
     private float[] samples;
@@ -54,9 +56,13 @@ public class SpectrumVisualizer : MonoBehaviour {
             sr.sprite = Sprite.Create(tex, new Rect(0.0f, 0.0f, tex.width, tex.height), new Vector2(0.5f, 0.5f), 5.0f);
 
             Color tempColor = sr.color;
+            tempColor = spectrumColor;
             tempColor.a = 0.2f;
+           
             sr.color = tempColor;
 
+            sr.sortingLayerName = "BackPlayer";
+            sr.sortingOrder = -1;
             visualList[i] = go.transform;
             visualList[i].position = goPos + (Vector3.right * i);
         }

@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.44657844, g: 0.49641222, b: 0.57481694, a: 1}
+  m_IndirectSpecularColor: {r: 0.44657898, g: 0.4964133, b: 0.5748178, a: 1}
 --- !u!157 &3
 LightmapSettings:
   m_ObjectHideFlags: 0
@@ -1232,6 +1232,34 @@ MonoBehaviour:
     type: 2}
   m_PrefabInternal: {fileID: 470998202}
   m_Script: {fileID: 11500000, guid: ad6abca565bd70540a0939afd9481a95, type: 3}
+--- !u!1 &553829999
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 5
+  m_Component:
+  - component: {fileID: 553830000}
+  m_Layer: 0
+  m_Name: Spectrum
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &553830000
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 553829999}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -18, y: -6, z: 10}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 1120395445}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &573027147
 Prefab:
   m_ObjectHideFlags: 0
@@ -29215,6 +29243,7 @@ GameObject:
   - component: {fileID: 933470505}
   - component: {fileID: 933470504}
   - component: {fileID: 933470503}
+  - component: {fileID: 933470506}
   m_Layer: 0
   m_Name: GameBeatManager
   m_TagString: Untagged
@@ -29334,6 +29363,28 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &933470506
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 933470502}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8795197fbbb464d47aac59a510a0c999, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  rmsValue: 0
+  dbValue: 0
+  pitchValue: 0
+  maxVisualScale: 30
+  visualModifier: 500
+  smoothSpeed: 15
+  amountVisual: 50
+  keepPercentage: 0.05
+  tex: {fileID: 2800000, guid: b0ebc36c74ca9dc4c9e2690c7e643885, type: 3}
+  spectrumParent: {fileID: 553830000}
+  spectrumColor: {r: 0.2622597, g: 0.24221452, b: 0.8235294, a: 0}
 --- !u!1001 &935661663
 Prefab:
   m_ObjectHideFlags: 0
@@ -29840,21 +29891,26 @@ Prefab:
     - target: {fileID: 20108005433360250, guid: 403d899c0de731f46afbe1de837d3014,
         type: 2}
       propertyPath: m_BackGroundColor.r
-      value: 0.24264705
+      value: 0.27145034
       objectReference: {fileID: 0}
     - target: {fileID: 20108005433360250, guid: 403d899c0de731f46afbe1de837d3014,
         type: 2}
       propertyPath: m_BackGroundColor.g
-      value: 0.18555363
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 20108005433360250, guid: 403d899c0de731f46afbe1de837d3014,
         type: 2}
       propertyPath: m_BackGroundColor.b
-      value: 0.035683393
+      value: 0.3897059
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 403d899c0de731f46afbe1de837d3014, type: 2}
   m_IsPrefabParent: 0
+--- !u!4 &1120395445 stripped
+Transform:
+  m_PrefabParentObject: {fileID: 4208578827444494, guid: 403d899c0de731f46afbe1de837d3014,
+    type: 2}
+  m_PrefabInternal: {fileID: 1120395444}
 --- !u!1001 &1135912204
 Prefab:
   m_ObjectHideFlags: 0
