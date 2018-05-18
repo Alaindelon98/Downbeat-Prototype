@@ -1,28 +1,28 @@
 fileFormatVersion: 2
-guid: b86c902b35104734381b1bed5c631371
-timeCreated: 1526571414
+guid: 348ad8c68714a9d4d9805c55af671420
+timeCreated: 1526603317
 licenseType: Free
 TextureImporter:
   fileIDToRecycleName:
-    21300000: character_0
-    21300002: character_1
-    21300004: character_2
-    21300006: character_3
-    21300008: character_4
-    21300010: character_5
-    21300012: character_6
-    21300014: character_7
-    21300016: character_8
-    21300018: character_9
-    21300020: character_10
-    21300022: character_11
-    21300024: character_12
-    21300026: character_13
-    21300028: character_14
-    21300030: character_15
-    21300032: character_16
-    21300034: character_17
-    21300036: character_18
+    21300000: EnemiesSprites_0
+    21300002: EnemiesSprites_1
+    21300004: EnemiesSprites_2
+    21300006: EnemiesSprites_3
+    21300008: EnemiesSprites_4
+    21300010: EnemiesSprites_5
+    21300012: EnemiesSprites_6
+    21300014: EnemiesSprites_7
+    21300016: EnemiesSprites_8
+    21300018: EnemiesSprites_9
+    21300020: EnemiesSprites_10
+    21300022: EnemiesSprites_11
+    21300024: EnemiesSprites_12
+    21300026: EnemiesSprites_13
+    21300028: EnemiesSprites_14
+    21300030: EnemiesSprites_15
+    21300032: EnemiesSprites_16
+    21300034: EnemiesSprites_17
+    21300036: EnemiesSprites_18
   externalObjects: {}
   serializedVersion: 4
   mipmaps:
@@ -65,7 +65,7 @@ TextureImporter:
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
-  spritePixelsToUnits: 950
+  spritePixelsToUnits: 500
   alphaUsage: 1
   alphaIsTransparency: 1
   spriteTessellationDetail: -1
@@ -95,281 +95,257 @@ TextureImporter:
     allowsAlphaSplitting: 0
     overridden: 0
     androidETC2FallbackOverride: 0
-  - buildTarget: Windows Store Apps
-    maxTextureSize: 2048
-    resizeAlgorithm: 0
-    textureFormat: -1
-    textureCompression: 1
-    compressionQuality: 50
-    crunchedCompression: 0
-    allowsAlphaSplitting: 0
-    overridden: 0
-    androidETC2FallbackOverride: 0
   spriteSheet:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: character_0
+      name: EnemiesSprites_1
       rect:
         serializedVersion: 2
-        x: 0
-        y: 5654.4
-        width: 1296
-        height: 1413.6
+        x: 3164
+        y: 1725
+        width: 12
+        height: 14
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
     - serializedVersion: 2
-      name: character_1
+      name: EnemiesSprites_2
       rect:
         serializedVersion: 2
-        x: 1296
-        y: 5654.4
-        width: 1296
-        height: 1413.6
+        x: 3321
+        y: 1716
+        width: 11
+        height: 13
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
     - serializedVersion: 2
-      name: character_2
+      name: EnemiesSprites_3
       rect:
         serializedVersion: 2
-        x: 2592
-        y: 5654.4
-        width: 1296
-        height: 1413.6
+        x: 3150
+        y: 1716
+        width: 7
+        height: 9
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
     - serializedVersion: 2
-      name: character_3
+      name: EnemiesSprites_4
       rect:
         serializedVersion: 2
-        x: 3888
-        y: 5654.4
-        width: 1296
-        height: 1413.6
+        x: 1661
+        y: 1063
+        width: 645
+        height: 619
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
     - serializedVersion: 2
-      name: character_4
+      name: EnemiesSprites_5
       rect:
         serializedVersion: 2
-        x: 0
-        y: 4241.4
-        width: 1296
-        height: 1413.6
+        x: 2395
+        y: 1084
+        width: 260
+        height: 595
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
     - serializedVersion: 2
-      name: character_5
+      name: EnemiesSprites_6
       rect:
         serializedVersion: 2
-        x: 1296
-        y: 4241.4
-        width: 1296
-        height: 1413.6
+        x: 2889
+        y: 1083
+        width: 674
+        height: 602
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
     - serializedVersion: 2
-      name: character_6
+      name: EnemiesSprites_7
       rect:
         serializedVersion: 2
-        x: 2592
-        y: 4241.4
-        width: 1296
-        height: 1413.6
+        x: 3188
+        y: 1677
+        width: 12
+        height: 13
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
     - serializedVersion: 2
-      name: character_7
+      name: EnemiesSprites_8
       rect:
         serializedVersion: 2
-        x: 0
-        y: 2828.4
-        width: 1296
-        height: 1413.6
+        x: 3304
+        y: 1670
+        width: 30
+        height: 32
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
     - serializedVersion: 2
-      name: character_8
+      name: EnemiesSprites_9
       rect:
         serializedVersion: 2
-        x: 1296
-        y: 2828.4
-        width: 1296
-        height: 1413.6
+        x: 3641
+        y: 1579
+        width: 12
+        height: 13
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
     - serializedVersion: 2
-      name: character_9
+      name: EnemiesSprites_10
       rect:
         serializedVersion: 2
-        x: 2592
-        y: 2828.4
-        width: 1296
-        height: 1413.6
+        x: 3721
+        y: 1502
+        width: 6
+        height: 11
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
     - serializedVersion: 2
-      name: character_10
+      name: EnemiesSprites_11
       rect:
         serializedVersion: 2
-        x: 3888
-        y: 2828.4
-        width: 1296
-        height: 1413.6
+        x: 2878
+        y: 1383
+        width: 23
+        height: 27
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
     - serializedVersion: 2
-      name: character_11
+      name: EnemiesSprites_12
       rect:
         serializedVersion: 2
-        x: 0
-        y: 1415.4
-        width: 1296
-        height: 1413.6
+        x: 2812
+        y: 1369
+        width: 8
+        height: 10
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
     - serializedVersion: 2
-      name: character_12
+      name: EnemiesSprites_13
       rect:
         serializedVersion: 2
-        x: 1296
-        y: 1415.4
-        width: 1296
-        height: 1413.6
+        x: 1890
+        y: 215
+        width: 610
+        height: 653
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 13, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: EnemiesSprites_14
+      rect:
+        serializedVersion: 2
+        x: 2587
+        y: 153
+        width: 471
+        height: 656
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
     - serializedVersion: 2
-      name: character_13
+      name: EnemiesSprites_15
       rect:
         serializedVersion: 2
-        x: 2592
-        y: 1415.4
-        width: 1296
-        height: 1413.6
+        x: 3357
+        y: 744
+        width: 5
+        height: 7
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
     - serializedVersion: 2
-      name: character_14
+      name: EnemiesSprites_16
       rect:
         serializedVersion: 2
-        x: 3888
-        y: 1415.4
-        width: 1296
-        height: 1413.6
+        x: 3432
+        y: 688
+        width: 5
+        height: 8
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
     - serializedVersion: 2
-      name: character_15
+      name: EnemiesSprites_17
       rect:
         serializedVersion: 2
-        x: 0
-        y: 2.4000244
-        width: 1296
-        height: 1413.6
+        x: 3144
+        y: 148
+        width: 498
+        height: 528
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
     - serializedVersion: 2
-      name: character_16
+      name: EnemiesSprites_18
       rect:
         serializedVersion: 2
-        x: 1296
-        y: 2.4000244
-        width: 1296
-        height: 1413.6
+        x: 1535
+        y: 396
+        width: 376
+        height: 506
       alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-    - serializedVersion: 2
-      name: character_17
-      rect:
-        serializedVersion: 2
-        x: 2592
-        y: 2.4000244
-        width: 1296
-        height: 1413.6
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-    - serializedVersion: 2
-      name: character_18
-      rect:
-        serializedVersion: 2
-        x: 3888
-        y: 2.4000244
-        width: 1296
-        height: 1413.6
-      alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
