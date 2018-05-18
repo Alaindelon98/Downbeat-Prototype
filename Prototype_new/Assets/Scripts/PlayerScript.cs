@@ -160,7 +160,7 @@ public class PlayerScript : MonoBehaviour {
 
             case PlayerStates.dying:
                 diyingSound.Play();
-                transform.parent = null;
+                //transform.parent = null;
                 originalPlayerPos = transform.position;
                 myStream.Stop();
                 rb.velocity = Vector3.zero;
