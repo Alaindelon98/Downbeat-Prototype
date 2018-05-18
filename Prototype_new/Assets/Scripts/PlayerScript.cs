@@ -55,14 +55,6 @@ public class PlayerScript : MonoBehaviour {
 
     private float jumpPressedTime = -1, downBeatTime, normalBeatTime;
     private float move;
-    
-    [HideInInspector]
-
-    public Rigidbody2D rb;
-
-    [HideInInspector]
-
-    public SpriteRenderer myrenderer;
 
     [HideInInspector]
 
@@ -74,17 +66,18 @@ public class PlayerScript : MonoBehaviour {
 
     public float drag = 0.01f;
 
-	//public SpriteRenderer run;
+    private SpriteRenderer sr;
+    private Rigidbody2D rb;
 
     // Use this for initialization
-    
+
     void Start()
     {
         JumpedWhenGrounded = false;
         manageDownBeat = false;
         JumpedOnDownBeat = false;
         rb = GetComponent<Rigidbody2D>();
-        myrenderer = GetComponent<SpriteRenderer>();
+        sr = GetComponent<SpriteRenderer>();
         ChangePlayerState(PlayerStates.alive);
 		Anim = GetComponent<Animator> ();
     }
@@ -132,7 +125,7 @@ public class PlayerScript : MonoBehaviour {
 			
 
 		Anim.SetBool ("grounded", grounded);
-		Anim.SetFloat ("speedX", rb.velocity.x);
+		Anim.SetFloat ("speedX", Mathf.Abs(rb.velocity.x));
 		Anim.SetFloat ("speedY", rb.velocity.y);
         
       
@@ -167,6 +160,7 @@ public class PlayerScript : MonoBehaviour {
 
             case PlayerStates.dying:
                 diyingSound.Play();
+                transform.parent = null;
                 originalPlayerPos = transform.position;
                 myStream.Stop();
                 rb.velocity = Vector3.zero;
@@ -361,11 +355,14 @@ public class PlayerScript : MonoBehaviour {
 	{
 		if(axis > 0) 
 		{
-			//run.flipX = false;	
+            //run.flipX = false;	
+            sr.flipX = false;
+
 		}
 		if(axis<0)
 		{
-			//run.flipX = true;
+            //run.flipX = true;
+            sr.flipX = true;
 		}
 	}
 

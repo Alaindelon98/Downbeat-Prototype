@@ -126,8 +126,8 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1828795555214898}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 10, y: 4.034, z: 13.322981}
-  m_LocalScale: {x: 1, y: 1.1526641, z: 1}
+  m_LocalPosition: {x: 8.9, y: 2.3, z: 13.322981}
+  m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 4613733464277538}
   - {fileID: 224362658932141484}
@@ -166,18 +166,18 @@ BoxCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0}
+  m_Offset: {x: 0, y: -0.053622007}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 1.2342857, y: 1.3462857}
+    oldSize: {x: 1.6199999, y: 1.767}
     newSize: {x: 1, y: 1}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 1, y: 1}
+  m_Size: {x: 1, y: 1.3997269}
   m_EdgeRadius: 0
 --- !u!61 &61799448856415476
 BoxCollider2D:
@@ -191,11 +191,11 @@ BoxCollider2D:
   m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0, y: -0.45}
+  m_Offset: {x: 0, y: -0.7}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 1.2342857, y: 1.3462857}
+    oldSize: {x: 1.6199999, y: 1.767}
     newSize: {x: 1, y: 1}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
@@ -582,8 +582,6 @@ MonoBehaviour:
   lowJumpMultiplier: 2.5
   shakeAmt: 7.5
   errorRange: 0.12
-  rb: {fileID: 0}
-  myrenderer: {fileID: 0}
   playerCheckPoint: {fileID: 0}
   Anim: {fileID: 0}
   drag: 0.01
