@@ -445,7 +445,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   respawnTime: 0
-  currentScene: 0
+  sceneNumber: 0
 --- !u!1001 &436479043
 Prefab:
   m_ObjectHideFlags: 0
@@ -545,7 +545,7 @@ Prefab:
     - target: {fileID: 114002063736297426, guid: 59758267f53611b4c97bb96e1a467d47,
         type: 2}
       propertyPath: fallSpeed
-      value: 10
+      value: 20
       objectReference: {fileID: 0}
     - target: {fileID: 114002063736297426, guid: 59758267f53611b4c97bb96e1a467d47,
         type: 2}
