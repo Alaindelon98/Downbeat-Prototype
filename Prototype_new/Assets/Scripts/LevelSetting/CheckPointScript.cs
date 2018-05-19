@@ -6,7 +6,9 @@ public class CheckPointScript : MonoBehaviour
 {
     public ScreenScript myScreen;
     public SpriteRenderer myrenderer;
+    public List<Sprite> StateSprites;
     public bool checkPointActive;
+    public Animation WiggleAnim;
 
 	// Use this for initialization
 	void Start ()
@@ -26,6 +28,10 @@ public class CheckPointScript : MonoBehaviour
     {
         if (checkPointActive)
         {
+            //if(BeatManager.currentBeat==BeatManager.BeatType.FourthBeat || BeatManager.currentBeat == BeatManager.BeatType.DownBeat)
+            //{
+            //    WiggleAnim.Play();
+            //}
         }
 		
 	}
@@ -46,11 +52,14 @@ public class CheckPointScript : MonoBehaviour
     {
         if (state)
         {
-            myrenderer.color = Color.green;
+            // myrenderer.color = Color.green;
+           // myrenderer.color = Color.white;
+            myrenderer.sprite = StateSprites[0];
         }
         else
         {
-            myrenderer.color = Color.gray;
+            //myrenderer.color = Color.gray;
+            myrenderer.sprite = StateSprites[1];
         }
     }
 }

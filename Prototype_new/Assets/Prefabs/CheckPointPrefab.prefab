@@ -22,6 +22,7 @@ GameObject:
   - component: {fileID: 212371954428785458}
   - component: {fileID: 114405359239828156}
   - component: {fileID: 61757537293598000}
+  - component: {fileID: 111030653598328462}
   m_Layer: 0
   m_Name: CheckPointPrefab
   m_TagString: Untagged
@@ -67,6 +68,21 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 1, y: 3.0935984}
   m_EdgeRadius: 0
+--- !u!111 &111030653598328462
+Animation:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1870207766067792}
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Animation: {fileID: 7400000, guid: dc955ba99387c0d4e83dc1d63a23ec0e, type: 2}
+  m_Animations:
+  - {fileID: 7400000, guid: dc955ba99387c0d4e83dc1d63a23ec0e, type: 2}
+  m_WrapMode: 0
+  m_PlayAutomatically: 1
+  m_AnimatePhysics: 0
+  m_CullingType: 0
 --- !u!114 &114405359239828156
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -80,7 +96,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   myScreen: {fileID: 0}
   myrenderer: {fileID: 212371954428785458}
+  StateSprites:
+  - {fileID: 21300028, guid: 348ad8c68714a9d4d9805c55af671420, type: 3}
+  - {fileID: 21300034, guid: 348ad8c68714a9d4d9805c55af671420, type: 3}
   checkPointActive: 0
+  WiggleAnim: {fileID: 0}
 --- !u!212 &212371954428785458
 SpriteRenderer:
   m_ObjectHideFlags: 1
