@@ -52,13 +52,13 @@ public class CheckPointScript : MonoBehaviour
     {
         if (state)
         {
-            // myrenderer.color = Color.green;
+            myrenderer.color = Color.cyan;
            // myrenderer.color = Color.white;
             myrenderer.sprite = StateSprites[0];
         }
         else
         {
-            //myrenderer.color = Color.gray;
+            myrenderer.color = Color.gray;
             myrenderer.sprite = StateSprites[1];
         }
     }
