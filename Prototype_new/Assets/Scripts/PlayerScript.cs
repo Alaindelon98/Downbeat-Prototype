@@ -66,6 +66,8 @@ public class PlayerScript : MonoBehaviour {
 
     public float drag = 0.01f;
 
+	//public CircleCollider2D downTrigger;
+
     private SpriteRenderer sr;
     private Rigidbody2D rb;
 
@@ -89,7 +91,7 @@ public class PlayerScript : MonoBehaviour {
         //testCameraPos.x = transform.position.x + 4;
         //Camera.main.transform.position = testCameraPos;
 
-
+		Debug.Log (grounded);
 
         switch (actualPlayerState)
         {
@@ -210,8 +212,6 @@ public class PlayerScript : MonoBehaviour {
         else if (BeatManager.currentBeat == BeatManager.BeatType.FourthBeat)
         {
 
-            
-            
             //MakeJump(normaljumpVelocity);
             manageDownBeat = false;
             normalBeatTime = Time.time;
@@ -268,9 +268,6 @@ public class PlayerScript : MonoBehaviour {
                 //Debug.Log("Normal Beat Jump");
             }
         }
-
-        
-            
     }
 
     public void MakeJump(float jumpVelocity, bool fromPlayer = true)
@@ -298,7 +295,7 @@ public class PlayerScript : MonoBehaviour {
     {
         if (rb.velocity.y != 0)
         {
-            grounded = false;
+            //grounded = false;
 
             if (transform.parent != null)
                 transform.parent = null;
@@ -316,7 +313,7 @@ public class PlayerScript : MonoBehaviour {
 
         else
         {
-            grounded = true;
+            //grounded = true;
         }
     }
 
@@ -366,18 +363,12 @@ public class PlayerScript : MonoBehaviour {
 		}
 	}
 
-
     private void OnCollisionEnter2D(Collision2D col)
     {
         if((col.gameObject.tag == "Enemy"||col.gameObject.tag == "Spike")&& actualPlayerState == PlayerStates.alive)
         {
             ChangePlayerState(PlayerStates.dying);
         }
-        
-        /*else
-        {
-            grounded = true;
-        }*/
 	}
 
     IEnumerator PlayerCounter (float TotalTime,PlayerStates nextState)
@@ -385,10 +376,8 @@ public class PlayerScript : MonoBehaviour {
         yield return new WaitForSeconds(TotalTime);
 
         ChangePlayerState(nextState);
-
-      
+		  
     }
-
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
@@ -401,16 +390,14 @@ public class PlayerScript : MonoBehaviour {
         {
             GameManagerScript.actualScreen.LevelEndingDoor.SetActive(false);
         }
-
         else if (collision.gameObject.tag == "Platform")
         {
             transform.parent = collision.gameObject.transform;
+			grounded = true;
         }
-
-        else
-
-        {
-            grounded = true;
-        }
+		else if(collision.gameObject.tag == "Tilemap")
+		{
+			grounded = true;
+		}
     }
 }
