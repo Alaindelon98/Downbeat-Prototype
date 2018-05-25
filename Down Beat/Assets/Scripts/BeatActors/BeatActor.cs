@@ -12,10 +12,14 @@ public class BeatActor : MonoBehaviour
     public AudioClip actSound;
     //public float offset;
     public int waitBarInterval = 1;
+    public bool startImmediately;
 
     protected bool severalBeats;
     protected int singleBeat;
     protected bool actOnBeat = true;
+
+    protected Vector3 savedPosition;
+    
 
     private int waitBarCounter = 0;
     private bool actOnBar;
@@ -53,6 +57,12 @@ public class BeatActor : MonoBehaviour
             waitForBars = true;
         }
 
+        if(startImmediately)
+        {
+            waitBarCounter = waitBarInterval;
+        }
+
+        SaveSettings();
     }
 
     protected void SetPitch()
@@ -74,6 +84,24 @@ public class BeatActor : MonoBehaviour
         }
     }
 
+    protected virtual void SaveSettings()
+    {
+        savedPosition = gameObject.transform.position;
+
+    }
+
+    protected virtual void LoadSettings()
+    {
+        gameObject.transform.position = savedPosition;
+
+
+        if (startImmediately)
+        {
+            waitBarCounter = waitBarInterval;
+        }
+
+    }
+
     protected void PlaySound()
     {
         mySource.PlayOneShot(actSound);
@@ -83,6 +111,7 @@ public class BeatActor : MonoBehaviour
     {
         mySource.loop = false;
         mySource.Stop();
+        
     }
 
     protected void LoopSound()

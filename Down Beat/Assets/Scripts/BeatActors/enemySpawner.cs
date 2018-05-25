@@ -30,9 +30,14 @@ public class enemySpawner : BeatActor {
         enemySettings.waitBarInterval = spawnerSettings.waitBarInterval;
         
     }
-	
-	// Update is called once per frame
-	void Update () {
+
+    private void OnDisable()
+    {
+        
+    }
+
+    // Update is called once per frame
+    void Update () {
         if (!actOnBeat)
         {
             return;

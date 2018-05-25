@@ -13,6 +13,7 @@ public class enemyScript : BeatActor {
     private bool grounded;
     public float drag ;
 
+    private int savedDir;
 	// Use this for initialization
 	void Start ()
     {
@@ -62,7 +63,13 @@ public class enemyScript : BeatActor {
         //    shot = false;
         //if (BeatManager.currentBeat == BeatManager.BeatType.DownBeat) { Jump(); }
     }
-	
+
+    private void OnDisable()
+    {
+        LoadSettings();
+
+    }
+
     private void OnCollisionEnter2D(Collision2D col)
     {
       
@@ -112,5 +119,17 @@ public class enemyScript : BeatActor {
 
     }
 
-   
+    protected override void SaveSettings()
+    {
+        base.SaveSettings();
+        savedDir = direction;
+        
+    }
+
+    protected override void LoadSettings()
+    {
+        base.LoadSettings();
+    }
+
+
 }

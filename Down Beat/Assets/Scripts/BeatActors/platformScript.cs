@@ -12,30 +12,24 @@ public class platformScript : BeatActor {
     //public List<Vector2> directionsList;
 
     private Vector2 direction;
-
     private Vector2 vDir;
     private float scalar;
     private Vector2 destination;
     private int destIdx;
-    private float speed, movingTime, moveTimer;
+    private float speed, movingTime;//, moveTimer;
 	void Start () {
         SetBehavior();
 
-        moveTimer = movingTime;
+        
+        LoadSettings();
 
-        positionsList.Insert(0, (Vector2)transform.position);
-        destination = positionsList[1];
-        destIdx = 1;
-
-        scalar = transform.position.x;
-
-        direction = destination - (Vector2)transform.position;
-        vDir = direction / scalar;
-
-        speed = SetSpeed(out movingTime);
         //Debug.Log("Speed: " + speed);
     }
 
+    private void OnDisable()
+    {
+        LoadSettings();
+    }
     void Update () {
         //Debug.Log(isMoving);
        // Debug.Log(destination);
@@ -56,7 +50,7 @@ public class platformScript : BeatActor {
 
     private void Move()
     {
-        moveTimer -= Time.deltaTime;
+        //moveTimer -= Time.deltaTime;
 
         //transform.position += ((Vector3)direction * travelAmount) * speed * Time.deltaTime;
         transform.position += (Vector3)vDir * speed * Time.deltaTime;
@@ -78,7 +72,7 @@ public class platformScript : BeatActor {
     }
     private void Arrive()
     {
-        moveTimer = movingTime;
+       // moveTimer = movingTime;
         isMoving = false;
         StopSound();
 
@@ -134,5 +128,28 @@ public class platformScript : BeatActor {
 
         return Mathf.Abs((direction.x / time) + (direction.y / time));
 
+    }
+
+    protected override void SaveSettings()
+    {
+
+    }
+
+    protected override void LoadSettings()
+    {
+        base.LoadSettings();
+
+        //moveTimer = movingTime;
+
+        //positionsList.Insert(0, (Vector2)transform.position);
+        destination = positionsList[1];
+        destIdx = 1;
+
+        scalar = transform.position.x;
+
+        direction = destination - (Vector2)transform.position;
+        vDir = direction / scalar;
+
+        speed = SetSpeed(out movingTime);
     }
 }
