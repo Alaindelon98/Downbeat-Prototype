@@ -20,8 +20,18 @@ public class platformScript : BeatActor {
 	void Start () {
         SetBehavior();
 
-        
-        LoadSettings();
+        positionsList.Insert(0, (Vector2)transform.position);
+        destination = positionsList[1];
+        destIdx = 1;
+
+        scalar = transform.position.x;
+
+        direction = destination - (Vector2)transform.position;
+        vDir = direction / scalar;
+
+        speed = SetSpeed(out movingTime);
+
+        //LoadSettings();
 
         //Debug.Log("Speed: " + speed);
     }
@@ -70,6 +80,7 @@ public class platformScript : BeatActor {
             }
         }
     }
+
     private void Arrive()
     {
        // moveTimer = movingTime;
@@ -132,7 +143,7 @@ public class platformScript : BeatActor {
 
     protected override void SaveSettings()
     {
-
+        base.SaveSettings();
     }
 
     protected override void LoadSettings()

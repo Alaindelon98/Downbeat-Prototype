@@ -129,6 +129,8 @@ public class enemyScript : BeatActor {
     protected override void LoadSettings()
     {
         base.LoadSettings();
+
+        direction = savedDir;
     }
 
 
