@@ -91,8 +91,6 @@ public class PlayerScript : MonoBehaviour {
         //testCameraPos.x = transform.position.x + 4;
         //Camera.main.transform.position = testCameraPos;
 
-		Debug.Log (grounded);
-
         switch (actualPlayerState)
         {
             case PlayerStates.alive:
@@ -237,8 +235,6 @@ public class PlayerScript : MonoBehaviour {
                 }
                 else
                 {
-                   
-
                     actualYVelocity = (highJumpVelocity + (Physics.gravity.y * (Time.time - downBeatTime)))- rb.velocity.y;
                 }
 

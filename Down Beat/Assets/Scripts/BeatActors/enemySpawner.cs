@@ -57,7 +57,7 @@ public class enemySpawner : BeatActor {
         GameObject newEnemy = Instantiate(enemyPrefab, spawnPos, Quaternion.identity);
 
         Rigidbody2D rb = newEnemy.GetComponent<Rigidbody2D>();
-
+		rb.bodyType = RigidbodyType2D.Dynamic;
 
         rb.AddForce(spawnDirection * shootStrength);
     }

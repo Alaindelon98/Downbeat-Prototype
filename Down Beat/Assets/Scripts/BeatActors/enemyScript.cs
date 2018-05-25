@@ -6,7 +6,7 @@ public class enemyScript : BeatActor {
 
 
     public float speed;
-    public Rigidbody2D myRigidbody;
+	public Rigidbody2D myRigidbody;
 	public int direction;
     public SpriteRenderer sprite;
     public bool onSpawner;
@@ -22,23 +22,23 @@ public class enemyScript : BeatActor {
         myRigidbody = GetComponent<Rigidbody2D>();
 
         if (!onSpawner) { }
-        
+
+		myRigidbody.bodyType = RigidbodyType2D.Dynamic;
 	}
 
     private void FixedUpdate()
     {
         if (!onSpawner)
         {
-
             GestionateMovement();
         }
-
-
     }
 
     // Update is called once per frame
     void Update () 
 	{
+		Debug.Log (myRigidbody.bodyType);
+
         if (!onSpawner)
         {
             if (!actOnBeat)
@@ -72,13 +72,32 @@ public class enemyScript : BeatActor {
 
     private void OnCollisionEnter2D(Collision2D col)
     {
-      
-
-        if (col.gameObject.tag == "Spike")
-        {
-            Destroy(this.gameObject);
-        }
+		if (col.gameObject.tag == "Spike") 
+		{
+			Destroy (this.gameObject);
+		} 
+		if (col.gameObject.tag == "Tilemap") 
+		{
+			myRigidbody.bodyType = RigidbodyType2D.Kinematic;
+			myRigidbody.useFullKinematicContacts = true;
+		} 
     }
+
+	private void OnCollisionStay2D(Collision2D col)
+	{
+		if (col.gameObject.tag == "Tilemap") 
+		{
+			myRigidbody.bodyType = RigidbodyType2D.Kinematic;
+			myRigidbody.useFullKinematicContacts = true;
+		}
+	}
+
+	private void OnCollisionExit2D (Collision2D col)
+	{
+		if (col.gameObject.tag == "Tilemap") {
+			myRigidbody.bodyType = RigidbodyType2D.Dynamic;
+		}
+	}
 
 	private void Move(float speedMove)
 	{
@@ -115,8 +134,6 @@ public class enemyScript : BeatActor {
         //Debug.Log("dir" + direction);
         //myRigidbody.velocity = Vector2.up * jumpVelocity;
 
-
-
     }
 
     protected override void SaveSettings()
@@ -130,6 +147,4 @@ public class enemyScript : BeatActor {
     {
         base.LoadSettings();
     }
-
-
 }
