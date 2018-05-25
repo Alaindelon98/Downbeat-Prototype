@@ -33,7 +33,10 @@ public class enemySpawner : BeatActor {
 
     private void OnDisable()
     {
-        
+        foreach(Transform child in transform)
+        {
+            Destroy(child.gameObject);
+        }
     }
 
     // Update is called once per frame
@@ -55,6 +58,8 @@ public class enemySpawner : BeatActor {
         Vector3 spawnPos = transform.position;
         spawnPos.x += 0.5f * enemySettings.direction;
         GameObject newEnemy = Instantiate(enemyPrefab, spawnPos, Quaternion.identity);
+
+        newEnemy.transform.parent = transform;
 
         Rigidbody2D rb = newEnemy.GetComponent<Rigidbody2D>();
 		rb.bodyType = RigidbodyType2D.Dynamic;

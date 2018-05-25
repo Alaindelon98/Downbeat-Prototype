@@ -88,6 +88,8 @@ public class BeatActor : MonoBehaviour
     {
         savedPosition = gameObject.transform.position;
 
+       // Debug.Log(transform.name + "  " + savedPosition);
+
     }
 
     protected virtual void LoadSettings()
@@ -98,6 +100,11 @@ public class BeatActor : MonoBehaviour
         if (startImmediately)
         {
             waitBarCounter = waitBarInterval;
+        }
+
+        else
+        {
+            waitBarCounter = 0;
         }
 
     }

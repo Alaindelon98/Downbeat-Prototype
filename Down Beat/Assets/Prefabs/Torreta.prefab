@@ -79,13 +79,13 @@ AudioSource:
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 0}
   m_PlayOnAwake: 0
-  m_Volume: 1
+  m_Volume: 0.419
   m_Pitch: 1
   Loop: 0
   Mute: 0
   Spatialize: 0
   SpatializePostEffects: 0
-  Priority: 128
+  Priority: 136
   DopplerLevel: 1
   MinDistance: 1
   MaxDistance: 500
@@ -161,7 +161,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   beatType: 2
   beatList: 03000000
-  actSound: {fileID: 8300000, guid: fc89a99954503b448bc367d585150d33, type: 3}
+  actSound: {fileID: 8300000, guid: 4068cae3959d04344a81c825c94be48c, type: 3}
   waitBarInterval: 1
   b: {fileID: 1307767865894498, guid: 701815eb96a4dc1469254508669a28a6, type: 2}
   left: 1

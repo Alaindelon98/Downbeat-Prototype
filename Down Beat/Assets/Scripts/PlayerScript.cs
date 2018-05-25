@@ -1,5 +1,4 @@
 ﻿using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
 public class PlayerScript : MonoBehaviour {
@@ -91,6 +90,11 @@ public class PlayerScript : MonoBehaviour {
         //testCameraPos.x = transform.position.x + 4;
         //Camera.main.transform.position = testCameraPos;
 
+<<<<<<< HEAD
+=======
+		//Debug.Log (grounded);
+
+>>>>>>> 80b8a06d1b2b78d3a22de2ce8703c774a09b3969
         switch (actualPlayerState)
         {
             case PlayerStates.alive:
@@ -122,20 +126,11 @@ public class PlayerScript : MonoBehaviour {
                 break;
 
         }
-			
 
 		Anim.SetBool ("grounded", grounded);
 		Anim.SetFloat ("speedX", Mathf.Abs(rb.velocity.x));
 		Anim.SetFloat ("speedY", rb.velocity.y);
-        
-      
-      
-
-        //if (BeatManager.currentBeat == BeatManager.BeatType.FourthBeat || BeatManager.currentBeat == BeatManager.BeatType.DownBeat && grounded)
-        //{ 
-        //    BeatAnimation.Play();
-        //}
-        
+                
     }
 		
     public void ChangePlayerState(PlayerStates newState)
@@ -154,13 +149,11 @@ public class PlayerScript : MonoBehaviour {
                     GameManagerScript.actualScreen.ChangeScreen(playerCheckPoint.myScreen);
                 }
 
-
-
                 break;
 
             case PlayerStates.dying:
                 diyingSound.Play();
-                //transform.parent = null;
+                transform.parent = null;
                 originalPlayerPos = transform.position;
                 myStream.Stop();
                 rb.velocity = Vector3.zero;
@@ -173,13 +166,13 @@ public class PlayerScript : MonoBehaviour {
 
                 explosionSound.Play();
 
+                transform.parent = null;
+
                 //myrenderer.enabled = false;
 
                 transform.position = originalPlayerPos;
 
                 Instantiate(DeadParticles, transform.position, transform.rotation);
-
-  
 
                 transform.position = playerCheckPoint.transform.position;
 
@@ -202,9 +195,12 @@ public class PlayerScript : MonoBehaviour {
             //rb.velocity = Vector2.zero;
             downBeatTime = Time.time;
             manageDownBeat = true;
-            if (grounded) { MakeJump(normalJumpVelocity, false); JumpedWhenGrounded = true; }
-            //Debug.Log("Down beat: " + downBeatTime);
-
+            if (grounded)
+            {
+                MakeJump(normalJumpVelocity, false);
+                JumpedWhenGrounded = true;
+            }
+            Debug.Log("Down beat: " + downBeatTime);
 
         }
         else if (BeatManager.currentBeat == BeatManager.BeatType.FourthBeat)
@@ -213,7 +209,7 @@ public class PlayerScript : MonoBehaviour {
             //MakeJump(normaljumpVelocity);
             manageDownBeat = false;
             normalBeatTime = Time.time;
-            //Debug.Log("Normal Beat: " + normalBeatTime);
+            Debug.Log("Normal Beat: " + normalBeatTime);
             
         }
 
@@ -221,7 +217,7 @@ public class PlayerScript : MonoBehaviour {
         if (Input.GetKeyDown(KeyCode.Space) || Input.GetButtonDown("Jump"))
         {
             jumpPressedTime = Time.time;
-            //Debug.Log("Jump press: " + jumpPressedTime);
+            Debug.Log("Jump press: " + jumpPressedTime);
         }
 
         if (manageDownBeat)
@@ -236,9 +232,7 @@ public class PlayerScript : MonoBehaviour {
                 else
                 {
                     actualYVelocity = (highJumpVelocity + (Physics.gravity.y * (Time.time - downBeatTime)))- rb.velocity.y;
-                }
-
-                
+                }                
 
                 //if (!grounded) { rb.velocity = new Vector2(rb.velocity.x, 0); }
                 //Debug.Log(downBeatJumpVelocity);
@@ -250,18 +244,22 @@ public class PlayerScript : MonoBehaviour {
 
                 JumpedOnDownBeat = true;
 
-                //Debug.Log("DOWN BEAT JUMP");
+                Debug.Log("HIGH JUMP");
+                //Debug.Log(jumpPressedTime - downBeatTime);
+
 
             }
-           
+
         }
         else
         {
             if (jumpPressedTime != -1 && Mathf.Abs(jumpPressedTime - normalBeatTime) < errorRange && grounded)
             {
                 //rb.velocity = Vector2.zero;
+
+                Debug.Log(jumpPressedTime - normalBeatTime);
                 MakeJump(lowJumpVelocity);
-                //Debug.Log("Normal Beat Jump");
+                //Debug.Log("Low Jump");
             }
         }
     }
