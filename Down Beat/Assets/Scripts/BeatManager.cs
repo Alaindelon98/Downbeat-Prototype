@@ -28,8 +28,10 @@ public class BeatManager : MonoBehaviour
     public static bool OnBeat, OnEighthBeat, OnSixteenthBeat;
     public static BeatType currentBeat;
     public static float barDuration;
+    public static float currentSample;
+    public static float audioFrequency;
 
-    public int delay;
+    public float delay;
     public float loopSampleRange;
     private float firstBeatRange;
 
@@ -57,12 +59,16 @@ public class BeatManager : MonoBehaviour
 
         barDuration = 1 / bps * barLength;
         firstBeatRange = (delay * mySource.clip.frequency) + (1 / bps * mySource.clip.frequency);
+
+        audioFrequency = mySource.clip.frequency;
     }
 
     void Update()
     {
         if (mySource.isPlaying)
         {
+            currentSample = mySource.timeSamples;
+
             if (nextBeatIsOut && mySource.timeSamples < firstBeatRange)
             {
                 nextFourthSample = delay * mySource.clip.frequency;
@@ -127,6 +133,8 @@ public class BeatManager : MonoBehaviour
             {
                 nextBeatIsOut = true;
             }
+
+            currentSample = mySource.timeSamples;
         }
 
         //if(currentBeat == BeatType.DownBeat)
