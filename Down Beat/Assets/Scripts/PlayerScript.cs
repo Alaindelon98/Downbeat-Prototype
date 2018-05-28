@@ -93,22 +93,12 @@ public class PlayerScript : MonoBehaviour {
         //Vector3 testCameraPos = Camera.main.transform.position;
         //testCameraPos.x = transform.position.x + 4;
         //Camera.main.transform.position = testCameraPos;
-
-        //<<<<<<< HEAD
-        ////=======
-        //Debug.Log (grounded);
-
-        //>>>>>>> 80b8a06d1b2b78d3a22de2ce8703c774a09b3969
-
-        if (Input.GetKeyDown(KeyCode.Space) || Input.GetButtonDown("Jump"))
-        {
-            jumpPressedTime = BeatManager.currentSample;
-            Debug.Log("Jump press: " + (jumpPressedTime / BeatManager.audioFrequency));
-            //Debug.Log("Current Beat on press " + BeatManager.fourthNotesCounter);
-        }
+        
         switch (actualPlayerState)
         {
             case PlayerStates.alive:
+
+                
 
                 ManageMove();
                 ManageJump();
@@ -200,6 +190,13 @@ public class PlayerScript : MonoBehaviour {
 
     public void ManageJump()
     {
+        if (Input.GetKeyDown(KeyCode.Space) || Input.GetButtonDown("Jump"))
+        {
+            jumpPressedTime = BeatManager.currentSample;
+            //Debug.Log("Jump press: " + (jumpPressedTime / BeatManager.audioFrequency));
+            //Debug.Log("Current Beat on press " + BeatManager.fourthNotesCounter);
+        }
+
         if (BeatManager.currentBeat == BeatManager.BeatType.DownBeat)
         {
             JumpedWhenGrounded = false;
