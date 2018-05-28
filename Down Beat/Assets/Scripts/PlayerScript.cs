@@ -212,7 +212,7 @@ public class PlayerScript : MonoBehaviour {
                 MakeJump(normalJumpVelocity, false);
                 JumpedWhenGrounded = true;
             }
-            //Debug.Log("Down beat: " + (downBeatTime / BeatManager.audioFrequency));
+            Debug.Log("Down beat: " + (downBeatTime / BeatManager.audioFrequency));
 
         }
         else if (BeatManager.currentBeat == BeatManager.BeatType.FourthBeat)
@@ -230,7 +230,7 @@ public class PlayerScript : MonoBehaviour {
 
         if (manageDownBeat)
         {
-            if (jumpPressedTime != -1 && Mathf.Abs(jumpPressedTime - downBeatTime) < errorRange && !JumpedOnDownBeat && JumpedWhenGrounded)
+            if (jumpPressedTime != -1 && (jumpPressedTime - downBeatTime) >= 0 && (jumpPressedTime - downBeatTime) < errorRange && !JumpedOnDownBeat && JumpedWhenGrounded)
             {
                 float actualYVelocity = 0;
                 if (jumpPressedTime <= downBeatTime)
@@ -240,7 +240,7 @@ public class PlayerScript : MonoBehaviour {
                 else
                 {
                     actualYVelocity = (highJumpVelocity + (Physics.gravity.y * ((BeatManager.currentSample - downBeatTime) / BeatManager.audioFrequency)))- rb.velocity.y;
-                    //Debug.Log("high jump velocity: "+actualYVelocity);
+                    Debug.Log("high jump velocity: "+actualYVelocity);
                 }                
 
                 //if (!grounded) { rb.velocity = new Vector2(rb.velocity.x, 0); }
@@ -249,7 +249,7 @@ public class PlayerScript : MonoBehaviour {
 
                 //Debug.Log(actualYVelocity);
 
-                //Debug.Log("Difference with downbeat: " + ((jumpPressedTime - downBeatTime) / BeatManager.audioFrequency));
+                Debug.Log("Difference with downbeat: " + ((jumpPressedTime - downBeatTime) / BeatManager.audioFrequency));
 
                 //Debug.Log("Current Beat on jump " + BeatManager.fourthNotesCounter);
 
@@ -265,11 +265,11 @@ public class PlayerScript : MonoBehaviour {
         }
         else
         {
-            if (jumpPressedTime != -1 && Mathf.Abs(jumpPressedTime - normalBeatTime) < errorRange && grounded)
+            if (jumpPressedTime != -1 && (jumpPressedTime - normalBeatTime) >= 0 && (jumpPressedTime - normalBeatTime) < errorRange && grounded)
             {
                 //rb.velocity = Vector2.zero;
 
-               // Debug.Log("Difference with low beat: " + ((jumpPressedTime - normalBeatTime) / BeatManager.audioFrequency));
+                Debug.Log("Difference with low beat: " + ((jumpPressedTime - normalBeatTime) / BeatManager.audioFrequency));
                 //Debug.Log("Current Beat on jump " + BeatManager.fourthNotesCounter);
 
                 MakeJump(lowJumpVelocity);
