@@ -9,14 +9,14 @@ public class enemySpawner : BeatActor {
     //public float enemySpeed, enemyJumpVel;
     public Vector2 spawnDirection = new Vector2(1, 0);
     public float shootStrength;
-
+	private Rigidbody2D myRigidbody;
 
 
     public GameObject enemyPrefab;
     void Start () {
         SetBehavior();
-
-
+		myRigidbody = GetComponent<Rigidbody2D>();
+		myRigidbody.bodyType = RigidbodyType2D.Static;
 
         enemySettings = enemyPrefab.GetComponent<enemyScript>();
         spawnerSettings = GetComponent<enemyScript>();
@@ -62,7 +62,7 @@ public class enemySpawner : BeatActor {
         newEnemy.transform.parent = transform;
 
         Rigidbody2D rb = newEnemy.GetComponent<Rigidbody2D>();
-		rb.bodyType = RigidbodyType2D.Dynamic;
+		//rb.bodyType = RigidbodyType2D.Dynamic;
 
         rb.AddForce(spawnDirection * shootStrength);
     }
