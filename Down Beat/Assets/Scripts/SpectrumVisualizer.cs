@@ -52,7 +52,9 @@ public class SpectrumVisualizer : MonoBehaviour {
             Vector3 goPos = spectrumParent.position;
             goPos.x -= 12f;
             //go.transform.position = goPos;
-            SpriteRenderer sr = go.AddComponent<SpriteRenderer>() as SpriteRenderer;
+            SpriteMask sm = go.AddComponent<SpriteMask>() as SpriteMask;
+            sm.sprite = Sprite.Create(tex, new Rect(0.0f, 0.0f, tex.width, tex.height), new Vector2(0.5f, 0.5f), 5.0f);
+           /* SpriteRenderer sr = go.AddComponent<SpriteRenderer>() as SpriteRenderer;
             sr.sprite = Sprite.Create(tex, new Rect(0.0f, 0.0f, tex.width, tex.height), new Vector2(0.5f, 0.5f), 5.0f);
 
             Color tempColor = sr.color;
@@ -62,7 +64,7 @@ public class SpectrumVisualizer : MonoBehaviour {
             sr.color = tempColor;
 
             sr.sortingLayerName = "BackPlayer";
-            sr.sortingOrder = -1;
+            sr.sortingOrder = -1;*/
             visualList[i] = go.transform;
             visualList[i].position = goPos + (Vector3.right * i);
         }
