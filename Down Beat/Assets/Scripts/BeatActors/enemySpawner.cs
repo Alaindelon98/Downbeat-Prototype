@@ -28,7 +28,6 @@ public class enemySpawner : BeatActor {
         enemySettings.beatList = spawnerSettings.beatList;
         enemySettings.actSound = spawnerSettings.actSound;
         enemySettings.waitBarInterval = spawnerSettings.waitBarInterval;
-        
     }
 
     private void OnDisable()
@@ -41,6 +40,7 @@ public class enemySpawner : BeatActor {
 
     // Update is called once per frame
     void Update () {
+		myRigidbody.bodyType = RigidbodyType2D.Static;
         if (!actOnBeat)
         {
             return;
@@ -62,7 +62,6 @@ public class enemySpawner : BeatActor {
         newEnemy.transform.parent = transform;
 
         Rigidbody2D rb = newEnemy.GetComponent<Rigidbody2D>();
-		//rb.bodyType = RigidbodyType2D.Dynamic;
 
         rb.AddForce(spawnDirection * shootStrength);
     }
