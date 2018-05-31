@@ -38,9 +38,10 @@ GameObject:
   - component: {fileID: 212994819983520838}
   - component: {fileID: 61085383495081566}
   - component: {fileID: 82466168961974392}
+  - component: {fileID: 114735644334751718}
   m_Layer: 0
   m_Name: Platform
-  m_TagString: Untagged
+  m_TagString: Platform
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -103,7 +104,7 @@ AudioSource:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1887314903180278}
-  m_Enabled: 1
+  m_Enabled: 0
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 0}
@@ -177,6 +178,24 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 0
+--- !u!114 &114735644334751718
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1887314903180278}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: df0953586e0beb044b61a65f063d02b9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  beatType: 0
+  beatList: 
+  actSound: {fileID: 0}
+  waitBarInterval: 1
+  startImmediately: 0
+  beatsDuration: 0
+  positionsList: []
 --- !u!212 &212900115445760416
 SpriteRenderer:
   m_ObjectHideFlags: 1
