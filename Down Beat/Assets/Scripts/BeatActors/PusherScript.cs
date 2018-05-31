@@ -6,6 +6,7 @@ public class PusherScript : BeatActor
 {
     public float VerticalPushForce,HorizontalPushForce;
     public Animation BeatAnim;
+	public Animation touchAnim;
     private bool bump,bumped;
     private float BeatTime;
     public float JumpRange;
@@ -53,18 +54,16 @@ public class PusherScript : BeatActor
             {
                 switch (col.gameObject.tag)
                 {
-                    case "Player":
-                        if (GameManagerScript.player.actualPlayerState == PlayerScript.PlayerStates.alive)
-                        {
-                            Rigidbody2D colRb = col.gameObject.GetComponent<Rigidbody2D>();
-                            colRb.velocity = new Vector2(HorizontalPushForce, VerticalPushForce);
+				case "Player":
+					if (GameManagerScript.player.actualPlayerState == PlayerScript.PlayerStates.alive) {
+						Rigidbody2D colRb = col.gameObject.GetComponent<Rigidbody2D> ();
+						colRb.velocity = new Vector2 (HorizontalPushForce, VerticalPushForce);
 
-                            //colRb.AddForce(new Vector2(HorizontalPushForce,VerticalPushForce));
-                            GameManagerScript.player.impulsed = true;
-                            GameManagerScript.player.jumpSound.Play();
-
-                        }
-                       
+						//colRb.AddForce(new Vector2(HorizontalPushForce,VerticalPushForce));
+						GameManagerScript.player.impulsed = true;
+						GameManagerScript.player.jumpSound.Play ();
+						TouchIt ();
+					}
                         break;
 
                 }
@@ -77,4 +76,9 @@ public class PusherScript : BeatActor
             }
         }
     }
+
+	private void TouchIt()
+	{
+		touchAnim.Play ();
+	}
 }
