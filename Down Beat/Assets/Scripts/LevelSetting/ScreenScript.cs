@@ -64,17 +64,17 @@ public class ScreenScript : MonoBehaviour
 
 	public void ChangeScreen(ScreenScript newScreen)
 	{
+        if (rocksManager != null)
+            rocksManager.ResetRocks();
+
         newScreen.CallCamera();
 
         newScreen.gameObject.SetActive(true);
 
-        rocksManager.ResetRocks();
-
-        GameManagerScript.actualScreen = newScreen;
-
         gameObject.SetActive(false);
 
 		
+        GameManagerScript.actualScreen = newScreen;
 	}
     public void TakeMeasures()
     {
