@@ -406,21 +406,6 @@ Prefab:
       propertyPath: m_Name
       value: Enemy (1)
       objectReference: {fileID: 0}
-    - target: {fileID: 114351299421844710, guid: ad03ea5016c00384e9364cdb29425f42,
-        type: 2}
-      propertyPath: direction
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 114351299421844710, guid: ad03ea5016c00384e9364cdb29425f42,
-        type: 2}
-      propertyPath: speed
-      value: 45
-      objectReference: {fileID: 0}
-    - target: {fileID: 114351299421844710, guid: ad03ea5016c00384e9364cdb29425f42,
-        type: 2}
-      propertyPath: beatList.Array.data[0]
-      value: 2
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: ad03ea5016c00384e9364cdb29425f42, type: 2}
   m_IsPrefabParent: 0
@@ -1304,7 +1289,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 1045806790492094, guid: abcc1189ecf994a46abcec7f4dd61e1b, type: 2}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 61691440829236740, guid: abcc1189ecf994a46abcec7f4dd61e1b,
         type: 2}
@@ -29850,7 +29835,7 @@ Prefab:
       objectReference: {fileID: 2119053071}
     - target: {fileID: 1045806790492094, guid: abcc1189ecf994a46abcec7f4dd61e1b, type: 2}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 4799413757019156, guid: abcc1189ecf994a46abcec7f4dd61e1b, type: 2}
       propertyPath: m_LocalPosition.y
@@ -31425,11 +31410,11 @@ Prefab:
     m_Modifications:
     - target: {fileID: 4208578827444494, guid: 403d899c0de731f46afbe1de837d3014, type: 2}
       propertyPath: m_LocalPosition.x
-      value: 13.5
+      value: 230.53
       objectReference: {fileID: 0}
     - target: {fileID: 4208578827444494, guid: 403d899c0de731f46afbe1de837d3014, type: 2}
       propertyPath: m_LocalPosition.y
-      value: -7
+      value: -84
       objectReference: {fileID: 0}
     - target: {fileID: 4208578827444494, guid: 403d899c0de731f46afbe1de837d3014, type: 2}
       propertyPath: m_LocalPosition.z
@@ -115230,7 +115215,7 @@ BoxCollider2D:
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 0.85333335, y: 0.85333335}
+    oldSize: {x: 1.26, y: 2.11}
     newSize: {x: 0.64, y: 0.64}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
