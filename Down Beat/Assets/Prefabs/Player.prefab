@@ -196,7 +196,7 @@ BoxCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: -0.011477947, y: 0}
+  m_Offset: {x: -0.011477947, y: -0.26}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
@@ -221,7 +221,7 @@ BoxCollider2D:
   m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0, y: -0.45}
+  m_Offset: {x: 0, y: -0.73}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
@@ -232,7 +232,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 0.75, y: 0.0920831}
+  m_Size: {x: 0.75, y: 0.09}
   m_EdgeRadius: 0
 --- !u!82 &82568183230048864
 AudioSource:
@@ -323,15 +323,15 @@ AudioSource:
   m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
-  m_audioClip: {fileID: 8300000, guid: ad410aeed73c06448824377c3b4da134, type: 3}
+  m_audioClip: {fileID: 8300000, guid: e99d393180dfc97428db04e22f8fbad4, type: 3}
   m_PlayOnAwake: 0
-  m_Volume: 0.5
+  m_Volume: 0.756
   m_Pitch: 1
   Loop: 0
   Mute: 0
   Spatialize: 0
   SpatializePostEffects: 0
-  Priority: 128
+  Priority: 254
   DopplerLevel: 1
   MinDistance: 1
   MaxDistance: 500
@@ -611,7 +611,7 @@ MonoBehaviour:
   playerSpeed: 4
   lowJumpMultiplier: 2.5
   shakeAmt: 7.5
-  errorRange: 0.12
+  errorRange: 0.2
   playerCheckPoint: {fileID: 0}
   Anim: {fileID: 0}
   drag: 0.01
