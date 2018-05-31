@@ -925,14 +925,24 @@ Prefab:
   m_Modification:
     m_TransformParent: {fileID: 1830904350}
     m_Modifications:
+    - target: {fileID: 114735644334751718, guid: 40c006619a1d75e49b5126f31b39ca73,
+        type: 2}
+      propertyPath: beatList.Array.size
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 114204289272670406, guid: 40c006619a1d75e49b5126f31b39ca73,
+        type: 2}
+      propertyPath: positionsList.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 114735644334751718, guid: 40c006619a1d75e49b5126f31b39ca73,
         type: 2}
       propertyPath: positionsList.Array.size
       value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 4689313454586674, guid: 40c006619a1d75e49b5126f31b39ca73, type: 2}
       propertyPath: m_LocalPosition.x
-      value: 8.567405
+      value: 7.57
       objectReference: {fileID: 0}
     - target: {fileID: 4689313454586674, guid: 40c006619a1d75e49b5126f31b39ca73, type: 2}
       propertyPath: m_LocalPosition.y
@@ -986,6 +996,31 @@ Prefab:
         type: 2}
       propertyPath: beatList.Array.data[0]
       value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 114735644334751718, guid: 40c006619a1d75e49b5126f31b39ca73,
+        type: 2}
+      propertyPath: positionsList.Array.data[0].x
+      value: 45.922592
+      objectReference: {fileID: 0}
+    - target: {fileID: 114735644334751718, guid: 40c006619a1d75e49b5126f31b39ca73,
+        type: 2}
+      propertyPath: positionsList.Array.data[0].y
+      value: -13.3
+      objectReference: {fileID: 0}
+    - target: {fileID: 114735644334751718, guid: 40c006619a1d75e49b5126f31b39ca73,
+        type: 2}
+      propertyPath: beatType
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 114735644334751718, guid: 40c006619a1d75e49b5126f31b39ca73,
+        type: 2}
+      propertyPath: beatList.Array.data[0]
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 114735644334751718, guid: 40c006619a1d75e49b5126f31b39ca73,
+        type: 2}
+      propertyPath: waitBarInterval
+      value: 2
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 40c006619a1d75e49b5126f31b39ca73, type: 2}
@@ -77589,7 +77624,7 @@ BoxCollider2D:
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 0.85333335, y: 0.85333335}
+    oldSize: {x: 1.26, y: 2.11}
     newSize: {x: 0.64, y: 0.64}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
@@ -78414,7 +78449,7 @@ Prefab:
       objectReference: {fileID: 935661665}
     - target: {fileID: 1045806790492094, guid: abcc1189ecf994a46abcec7f4dd61e1b, type: 2}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 114480587494415128, guid: abcc1189ecf994a46abcec7f4dd61e1b,
         type: 2}
