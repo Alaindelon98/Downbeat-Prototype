@@ -94,7 +94,7 @@ public class FallingRockScript : BeatActor
     private void DropRocks()
     {
         //rocksList[currentRock].Drop(fallSpeed);
-        rocksList[currentRock].Drop(fallSpeed, myScreen.myScreenSettings.positionScreen.y);
+        rocksList[currentRock].Drop(fallSpeed, transform.parent.position.y);
         currentRock++;
     }
 

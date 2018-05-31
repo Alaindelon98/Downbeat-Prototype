@@ -10,9 +10,7 @@ public class ScreenScript : MonoBehaviour
 	public ScreenScript upScreen, downScreen, leftScreen, rightScreen;
     public ScreenSettings myScreenSettings;
 	public float maxSize, minSize;
-	public float zoomVariation = 0.05f;
-
-    private FallingRockScript rocksManager;
+	public float zoomVariation=0.05f;
 
 
     public GameObject LevelEndingDoor;
@@ -23,7 +21,7 @@ public class ScreenScript : MonoBehaviour
 	// Use this for initialization
 	void Start () 
 	{
-        rocksManager = GetComponentInChildren<FallingRockScript>();
+       
 
 		maxSize = Camera.main.orthographicSize;
 		minSize = maxSize - zoomVariation;
@@ -67,12 +65,10 @@ public class ScreenScript : MonoBehaviour
         newScreen.CallCamera();
 
         newScreen.gameObject.SetActive(true);
+        gameObject.SetActive(false);
 
-        rocksManager.ResetRocks();
-
+		
         GameManagerScript.actualScreen = newScreen;
-
-        gameObject.SetActive(false);	
 	}
     public void TakeMeasures()
     {
