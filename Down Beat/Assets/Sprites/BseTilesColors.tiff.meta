@@ -1,0 +1,927 @@
+fileFormatVersion: 2
+guid: 67eaade6a4a7b804da6a944377b2a01d
+timeCreated: 1527784906
+licenseType: Free
+TextureImporter:
+  fileIDToRecycleName:
+    21300000: BseTilesColors_lv1_0
+    21300002: BseTilesColors_lv1_1
+    21300004: BseTilesColors_lv1_2
+    21300006: BseTilesColors_3
+    21300008: BseTilesColors_4
+    21300010: BseTilesColors_5
+    21300012: BseTilesColors_6
+    21300014: BseTilesColors_7
+    21300016: BseTilesColors_8
+    21300018: BseTilesColors_lv1_9
+    21300020: BseTilesColors_lv1_10
+    21300022: BseTilesColors_lv1_11
+    21300024: BseTilesColors_12
+    21300026: BseTilesColors_13
+    21300028: BseTilesColors_14
+    21300030: BseTilesColors_15
+    21300032: BseTilesColors_16
+    21300034: BseTilesColors_17
+    21300036: BseTilesColors_lv1_18
+    21300038: BseTilesColors_lv1_19
+    21300040: BseTilesColors_lv1_20
+    21300042: BseTilesColors_21
+    21300044: BseTilesColors_22
+    21300046: BseTilesColors_23
+    21300048: BseTilesColors_24
+    21300050: BseTilesColors_25
+    21300052: BseTilesColors_26
+    21300054: BseTilesColors_27
+    21300056: BseTilesColors_28
+    21300058: BseTilesColors_29
+    21300060: BseTilesColors_30
+    21300062: BseTilesColors_31
+    21300064: BseTilesColors_32
+    21300066: BseTilesColors_33
+    21300068: BseTilesColors_34
+    21300070: BseTilesColors_35
+    21300072: BseTilesColors_36
+    21300074: BseTilesColors_37
+    21300076: BseTilesColors_38
+    21300078: BseTilesColors_39
+    21300080: BseTilesColors_40
+    21300082: BseTilesColors_41
+    21300084: BseTilesColors_42
+    21300086: BseTilesColors_43
+    21300088: BseTilesColors_44
+    21300090: BseTilesColors_45
+    21300092: BseTilesColors_46
+    21300094: BseTilesColors_47
+    21300096: BseTilesColors_48
+    21300098: BseTilesColors_49
+    21300100: BseTilesColors_50
+    21300102: BseTilesColors_51
+    21300104: BseTilesColors_52
+    21300106: BseTilesColors_53
+  externalObjects: {}
+  serializedVersion: 4
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: -1
+    aniso: -1
+    mipBias: -1
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spritePixelsToUnits: 100
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  platformSettings:
+  - buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+  - buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+  - buildTarget: Android
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+  - buildTarget: Windows Store Apps
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+  - buildTarget: WebGL
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: BseTilesColors_lv1_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 790
+        width: 157.33333
+        height: 158
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: BseTilesColors_lv1_1
+      rect:
+        serializedVersion: 2
+        x: 157
+        y: 790
+        width: 157.33333
+        height: 158
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: BseTilesColors_lv1_2
+      rect:
+        serializedVersion: 2
+        x: 314
+        y: 790
+        width: 157.33333
+        height: 158
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: BseTilesColors_3
+      rect:
+        serializedVersion: 2
+        x: 471
+        y: 790
+        width: 157.33333
+        height: 158
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: BseTilesColors_4
+      rect:
+        serializedVersion: 2
+        x: 628
+        y: 790
+        width: 157.33333
+        height: 158
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: BseTilesColors_5
+      rect:
+        serializedVersion: 2
+        x: 785
+        y: 790
+        width: 157.33333
+        height: 158
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: BseTilesColors_6
+      rect:
+        serializedVersion: 2
+        x: 942
+        y: 790
+        width: 157.33333
+        height: 158
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: BseTilesColors_7
+      rect:
+        serializedVersion: 2
+        x: 1099
+        y: 790
+        width: 157.33333
+        height: 158
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: BseTilesColors_8
+      rect:
+        serializedVersion: 2
+        x: 1256
+        y: 790
+        width: 157.33333
+        height: 158
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: BseTilesColors_lv1_9
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 632
+        width: 157.33333
+        height: 158
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: BseTilesColors_lv1_10
+      rect:
+        serializedVersion: 2
+        x: 157
+        y: 632
+        width: 157.33333
+        height: 158
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: BseTilesColors_lv1_11
+      rect:
+        serializedVersion: 2
+        x: 314
+        y: 632
+        width: 157.33333
+        height: 158
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: BseTilesColors_12
+      rect:
+        serializedVersion: 2
+        x: 471
+        y: 632
+        width: 157.33333
+        height: 158
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: BseTilesColors_13
+      rect:
+        serializedVersion: 2
+        x: 628
+        y: 632
+        width: 157.33333
+        height: 158
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: BseTilesColors_14
+      rect:
+        serializedVersion: 2
+        x: 785
+        y: 632
+        width: 157.33333
+        height: 158
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: BseTilesColors_15
+      rect:
+        serializedVersion: 2
+        x: 942
+        y: 632
+        width: 157.33333
+        height: 158
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: BseTilesColors_16
+      rect:
+        serializedVersion: 2
+        x: 1099
+        y: 632
+        width: 157.33333
+        height: 158
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: BseTilesColors_17
+      rect:
+        serializedVersion: 2
+        x: 1256
+        y: 632
+        width: 157.33333
+        height: 158
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: BseTilesColors_lv1_18
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 474
+        width: 157.33333
+        height: 158
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: BseTilesColors_lv1_19
+      rect:
+        serializedVersion: 2
+        x: 157
+        y: 474
+        width: 157.33333
+        height: 158
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: BseTilesColors_lv1_20
+      rect:
+        serializedVersion: 2
+        x: 314
+        y: 474
+        width: 157.33333
+        height: 158
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: BseTilesColors_21
+      rect:
+        serializedVersion: 2
+        x: 471
+        y: 474
+        width: 157.33333
+        height: 158
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: BseTilesColors_22
+      rect:
+        serializedVersion: 2
+        x: 628
+        y: 474
+        width: 157.33333
+        height: 158
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: BseTilesColors_23
+      rect:
+        serializedVersion: 2
+        x: 785
+        y: 474
+        width: 157.33333
+        height: 158
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: BseTilesColors_24
+      rect:
+        serializedVersion: 2
+        x: 942
+        y: 474
+        width: 157.33333
+        height: 158
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: BseTilesColors_25
+      rect:
+        serializedVersion: 2
+        x: 1099
+        y: 474
+        width: 157.33333
+        height: 158
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: BseTilesColors_26
+      rect:
+        serializedVersion: 2
+        x: 1256
+        y: 474
+        width: 157.33333
+        height: 158
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: BseTilesColors_27
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 316
+        width: 157.33333
+        height: 158
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: BseTilesColors_28
+      rect:
+        serializedVersion: 2
+        x: 157
+        y: 316
+        width: 157.33333
+        height: 158
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: BseTilesColors_29
+      rect:
+        serializedVersion: 2
+        x: 314
+        y: 316
+        width: 157.33333
+        height: 158
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: BseTilesColors_30
+      rect:
+        serializedVersion: 2
+        x: 471
+        y: 316
+        width: 157.33333
+        height: 158
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: BseTilesColors_31
+      rect:
+        serializedVersion: 2
+        x: 628
+        y: 316
+        width: 157.33333
+        height: 158
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: BseTilesColors_32
+      rect:
+        serializedVersion: 2
+        x: 785
+        y: 316
+        width: 157.33333
+        height: 158
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: BseTilesColors_33
+      rect:
+        serializedVersion: 2
+        x: 942
+        y: 316
+        width: 157.33333
+        height: 158
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: BseTilesColors_34
+      rect:
+        serializedVersion: 2
+        x: 1099
+        y: 316
+        width: 157.33333
+        height: 158
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: BseTilesColors_35
+      rect:
+        serializedVersion: 2
+        x: 1256
+        y: 316
+        width: 157.33333
+        height: 158
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: BseTilesColors_36
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 158
+        width: 157.33333
+        height: 158
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: BseTilesColors_37
+      rect:
+        serializedVersion: 2
+        x: 157
+        y: 158
+        width: 157.33333
+        height: 158
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: BseTilesColors_38
+      rect:
+        serializedVersion: 2
+        x: 314
+        y: 158
+        width: 157.33333
+        height: 158
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: BseTilesColors_39
+      rect:
+        serializedVersion: 2
+        x: 471
+        y: 158
+        width: 157.33333
+        height: 158
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: BseTilesColors_40
+      rect:
+        serializedVersion: 2
+        x: 628
+        y: 158
+        width: 157.33333
+        height: 158
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: BseTilesColors_41
+      rect:
+        serializedVersion: 2
+        x: 785
+        y: 158
+        width: 157.33333
+        height: 158
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: BseTilesColors_42
+      rect:
+        serializedVersion: 2
+        x: 942
+        y: 158
+        width: 157.33333
+        height: 158
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: BseTilesColors_43
+      rect:
+        serializedVersion: 2
+        x: 1099
+        y: 158
+        width: 157.33333
+        height: 158
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: BseTilesColors_44
+      rect:
+        serializedVersion: 2
+        x: 1256
+        y: 158
+        width: 157.33333
+        height: 158
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: BseTilesColors_45
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 0
+        width: 157.33333
+        height: 158
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: BseTilesColors_46
+      rect:
+        serializedVersion: 2
+        x: 157
+        y: 0
+        width: 157.33333
+        height: 158
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: BseTilesColors_47
+      rect:
+        serializedVersion: 2
+        x: 314
+        y: 0
+        width: 157.33333
+        height: 158
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: BseTilesColors_48
+      rect:
+        serializedVersion: 2
+        x: 471
+        y: 0
+        width: 157.33333
+        height: 158
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: BseTilesColors_49
+      rect:
+        serializedVersion: 2
+        x: 628
+        y: 0
+        width: 157.33333
+        height: 158
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: BseTilesColors_50
+      rect:
+        serializedVersion: 2
+        x: 785
+        y: 0
+        width: 157.33333
+        height: 158
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: BseTilesColors_51
+      rect:
+        serializedVersion: 2
+        x: 942
+        y: 0
+        width: 157.33333
+        height: 158
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: BseTilesColors_52
+      rect:
+        serializedVersion: 2
+        x: 1099
+        y: 0
+        width: 157.33333
+        height: 158
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: BseTilesColors_53
+      rect:
+        serializedVersion: 2
+        x: 1256
+        y: 0
+        width: 157.33333
+        height: 158
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    outline: []
+    physicsShape: []
+  spritePackingTag: 
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
