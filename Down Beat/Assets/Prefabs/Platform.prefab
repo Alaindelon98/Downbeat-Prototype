@@ -36,12 +36,11 @@ GameObject:
   m_Component:
   - component: {fileID: 4689313454586674}
   - component: {fileID: 212994819983520838}
-  - component: {fileID: 114204289272670406}
   - component: {fileID: 61085383495081566}
   - component: {fileID: 82466168961974392}
   m_Layer: 0
   m_Name: Platform
-  m_TagString: Platform
+  m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -53,8 +52,8 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1712912688789382}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: -0.39193726, z: 0}
-  m_LocalScale: {x: 0.33333334, y: 2, z: 1}
+  m_LocalPosition: {x: -0.0089, y: 0.049, z: 0}
+  m_LocalScale: {x: 0.22577697, y: 0.9217402, z: 1}
   m_Children: []
   m_Father: {fileID: 4689313454586674}
   m_RootOrder: 0
@@ -66,8 +65,8 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1887314903180278}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -75.45259, y: -28.504032, z: 9.996838}
-  m_LocalScale: {x: 3, y: 0.5, z: 1}
+  m_LocalPosition: {x: 5.2, y: -7.08, z: 10}
+  m_LocalScale: {x: 4.7203126, y: 1.1155329, z: 1}
   m_Children:
   - {fileID: 4169865506006302}
   m_Father: {fileID: 0}
@@ -178,25 +177,6 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 0
---- !u!114 &114204289272670406
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1887314903180278}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: df0953586e0beb044b61a65f063d02b9, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  beatType: 2
-  beatList: 03000000
-  actSound: {fileID: 8300000, guid: 615aa578ab07bf040b166a9e3e326d85, type: 3}
-  waitBarInterval: 3
-  startImmediately: 0
-  beatsDuration: 17
-  positionsList:
-  - {x: 54.87, y: -57.30403}
 --- !u!212 &212900115445760416
 SpriteRenderer:
   m_ObjectHideFlags: 1
