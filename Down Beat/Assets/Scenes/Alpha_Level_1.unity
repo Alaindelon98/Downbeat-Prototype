@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.44657898, g: 0.4964133, b: 0.5748178, a: 1}
+  m_IndirectSpecularColor: {r: 0.44657844, g: 0.49641222, b: 0.57481694, a: 1}
 --- !u!157 &3
 LightmapSettings:
   m_ObjectHideFlags: 0
@@ -100007,56 +100007,6 @@ Prefab:
     - target: {fileID: 4796885006575242, guid: 6c82f1583239f3144a27873cbe40d7c8, type: 2}
       propertyPath: m_RootOrder
       value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 61194548075445474, guid: 6c82f1583239f3144a27873cbe40d7c8,
-        type: 2}
-      propertyPath: m_Offset.y
-      value: -0.14
-      objectReference: {fileID: 0}
-    - target: {fileID: 61799448856415476, guid: 6c82f1583239f3144a27873cbe40d7c8,
-        type: 2}
-      propertyPath: m_Offset.y
-      value: -0.6
-      objectReference: {fileID: 0}
-    - target: {fileID: 212742893896160416, guid: 6c82f1583239f3144a27873cbe40d7c8,
-        type: 2}
-      propertyPath: m_SortingLayerID
-      value: 417895005
-      objectReference: {fileID: 0}
-    - target: {fileID: 212742893896160416, guid: 6c82f1583239f3144a27873cbe40d7c8,
-        type: 2}
-      propertyPath: m_SortingLayer
-      value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 212742893896160416, guid: 6c82f1583239f3144a27873cbe40d7c8,
-        type: 2}
-      propertyPath: m_SortingOrder
-      value: 5
-      objectReference: {fileID: 0}
-    - target: {fileID: 199485862167477388, guid: 6c82f1583239f3144a27873cbe40d7c8,
-        type: 2}
-      propertyPath: m_RenderAlignment
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 199485862167477388, guid: 6c82f1583239f3144a27873cbe40d7c8,
-        type: 2}
-      propertyPath: m_SortingLayerID
-      value: 417895005
-      objectReference: {fileID: 0}
-    - target: {fileID: 199485862167477388, guid: 6c82f1583239f3144a27873cbe40d7c8,
-        type: 2}
-      propertyPath: m_SortingLayer
-      value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 114656836653688508, guid: 6c82f1583239f3144a27873cbe40d7c8,
-        type: 2}
-      propertyPath: errorRange
-      value: 0.2
-      objectReference: {fileID: 0}
-    - target: {fileID: 82764393230016928, guid: 6c82f1583239f3144a27873cbe40d7c8,
-        type: 2}
-      propertyPath: m_Volume
-      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 6c82f1583239f3144a27873cbe40d7c8, type: 2}

@@ -295,11 +295,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   beatType: 2
-  beatList: 02000000
+  beatList: 03000000
   actSound: {fileID: 8300000, guid: 8fc06fa505701df4daae2fe249eb88a4, type: 3}
   waitBarInterval: 1
   startImmediately: 0
-  speed: 45
+  speed: 35
   myRigidbody: {fileID: 50300262572974254}
   direction: 1
   sprite: {fileID: 212285833441718128}
