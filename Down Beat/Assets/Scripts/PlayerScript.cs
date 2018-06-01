@@ -15,6 +15,7 @@ public class PlayerScript : MonoBehaviour {
     public AudioSource jumpSound;
     public AudioSource explosionSound;
     public AudioSource diyingSound;
+    public AudioSource CrystalSound;
 
     [Header("Animations")]
 
@@ -24,7 +25,7 @@ public class PlayerScript : MonoBehaviour {
     [Header("Player Particles")]
 
     public ParticleSystem myStream;
-    public GameObject DeadParticles;
+    public GameObject DeadParticles, CrystalParticle;
 
     [HideInInspector]
 
@@ -143,7 +144,7 @@ public class PlayerScript : MonoBehaviour {
             case PlayerStates.alive:
 
                 myStream.Play();
-                //myrenderer.enabled = true;
+                sr.enabled = true;
                 rb.isKinematic = false;
 
                 if (!(GameManagerScript.actualScreen == playerCheckPoint.myScreen))
@@ -170,7 +171,7 @@ public class PlayerScript : MonoBehaviour {
 
                 transform.parent = null;
 
-                //myrenderer.enabled = false;
+                sr.enabled = false;
 
                 transform.position = originalPlayerPos;
 
@@ -398,7 +399,11 @@ public class PlayerScript : MonoBehaviour {
 
         else if (collision.gameObject.tag == "Crystal")
         {
+            collision.gameObject.SetActive(false);
+            CrystalSound.Play();
+
             GameManagerScript.actualScreen.LevelEndingDoor.SetActive(false);
+            Debug.Log("enddoor");
         }
         else if (collision.gameObject.tag == "Platform")
         {
