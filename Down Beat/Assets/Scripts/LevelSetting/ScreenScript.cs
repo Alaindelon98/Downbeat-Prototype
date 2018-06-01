@@ -11,6 +11,7 @@ public class ScreenScript : MonoBehaviour
     public ScreenSettings myScreenSettings;
 	public float maxSize, minSize;
 	public float zoomVariation = 0.05f;
+    public bool changeMusicInNext = false;
 
     private FallingRockScript rocksManager;
 
@@ -66,6 +67,11 @@ public class ScreenScript : MonoBehaviour
 	{
         if (rocksManager != null)
             rocksManager.ResetRocks();
+
+        if(changeMusicInNext)
+        {
+
+        }
 
         newScreen.CallCamera();
 
