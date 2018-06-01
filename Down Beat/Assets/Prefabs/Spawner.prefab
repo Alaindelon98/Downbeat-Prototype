@@ -159,6 +159,7 @@ MonoBehaviour:
   beatList: 01000000
   actSound: {fileID: 0}
   waitBarInterval: 4
+  startImmediately: 0
   spawnDirection: {x: 0, y: -1}
   shootStrength: 3
   enemyPrefab: {fileID: 1660612286635276, guid: ad03ea5016c00384e9364cdb29425f42,
@@ -176,8 +177,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   beatType: 2
   beatList: 03000000
-  actSound: {fileID: 8300000, guid: e77eaf1e490aa5a4cbc26408793f32b7, type: 3}
+  actSound: {fileID: 8300000, guid: 8fc06fa505701df4daae2fe249eb88a4, type: 3}
   waitBarInterval: 1
+  startImmediately: 0
   speed: 35
   myRigidbody: {fileID: 0}
   direction: 1

@@ -66,7 +66,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1887314903180278}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 5.2, y: -7.08, z: 10}
+  m_LocalPosition: {x: -14.642593, y: 6.292427, z: 19.996838}
   m_LocalScale: {x: 4.7203126, y: 1.1155329, z: 1}
   m_Children:
   - {fileID: 4169865506006302}
@@ -96,7 +96,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 1, y: 1}
+  m_Size: {x: 0.76, y: 1}
   m_EdgeRadius: 0
 --- !u!82 &82466168961974392
 AudioSource:
@@ -189,13 +189,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: df0953586e0beb044b61a65f063d02b9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  beatType: 0
-  beatList: 
+  beatType: 2
+  beatList: 02000000
   actSound: {fileID: 0}
-  waitBarInterval: 1
-  startImmediately: 0
-  beatsDuration: 0
-  positionsList: []
+  waitBarInterval: 2
+  startImmediately: 1
+  beatsDuration: 0.5
+  positionsList:
+  - {x: 62.68, y: -50.48757}
 --- !u!212 &212900115445760416
 SpriteRenderer:
   m_ObjectHideFlags: 1
