@@ -99093,6 +99093,16 @@ Prefab:
       propertyPath: spectrumParent
       value: 
       objectReference: {fileID: 868836665}
+    - target: {fileID: 114350164634019236, guid: 7b327f6da72712545ac1db7508b29fb2,
+        type: 2}
+      propertyPath: childSource
+      value: 
+      objectReference: {fileID: 2141805962}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 7b327f6da72712545ac1db7508b29fb2, type: 2}
   m_IsPrefabParent: 0
+--- !u!82 &2141805962 stripped
+AudioSource:
+  m_PrefabParentObject: {fileID: 82080467128339272, guid: 7b327f6da72712545ac1db7508b29fb2,
+    type: 2}
+  m_PrefabInternal: {fileID: 2141805961}
