@@ -246,6 +246,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e3aa2cdb82f38a444bbef105cbe7754b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  mySource: {fileID: 0}
   beatType: 2
   beatList: 03000000
   actSound: {fileID: 8300000, guid: 81f89e41d7589cd438b2dfea5c449850, type: 3}
@@ -254,6 +255,8 @@ MonoBehaviour:
   VerticalPushForce: 8
   HorizontalPushForce: 0
   BeatAnim: {fileID: 111305256813411110}
+  touchAnim: {fileID: 0}
+  jumpPusher: {fileID: 8300000, guid: b1474f96da3122b419b4519f6ab7328b, type: 3}
   JumpRange: 0.12
 --- !u!212 &212052610530290746
 SpriteRenderer:

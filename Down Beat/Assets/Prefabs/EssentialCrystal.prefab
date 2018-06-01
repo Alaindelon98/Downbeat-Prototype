@@ -40,7 +40,6 @@ GameObject:
   - component: {fileID: 114899437685874600}
   - component: {fileID: 82414886500055522}
   - component: {fileID: 61616398476335778}
-  - component: {fileID: 114837483615035036}
   m_Layer: 0
   m_Name: EssentialCrystal
   m_TagString: Crystal
@@ -188,27 +187,13 @@ Animation:
   m_GameObject: {fileID: 1046415165424714}
   m_Enabled: 1
   serializedVersion: 3
-  m_Animation: {fileID: 0}
+  m_Animation: {fileID: 7400000, guid: ee46ddcb8d795b340b90507cf2bd50f7, type: 2}
   m_Animations:
   - {fileID: 7400000, guid: ee46ddcb8d795b340b90507cf2bd50f7, type: 2}
   m_WrapMode: 0
   m_PlayAutomatically: 1
   m_AnimatePhysics: 0
   m_CullingType: 0
---- !u!114 &114837483615035036
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1611719844919912}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 8c15c9f42e44d194ba300427e1fb4368, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  TakeParticle: {fileID: 0}
-  CrystalTakeSound: {fileID: 0}
-  CrystalLoopSound: {fileID: 0}
 --- !u!114 &114899437685874600
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -220,6 +205,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: df0953586e0beb044b61a65f063d02b9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  mySource: {fileID: 0}
   beatType: 2
   beatList: 0100000003000000
   actSound: {fileID: 8300000, guid: 615aa578ab07bf040b166a9e3e326d85, type: 3}

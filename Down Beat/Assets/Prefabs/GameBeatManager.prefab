@@ -249,6 +249,7 @@ MonoBehaviour:
   strongBeat: 1
   downBeat: {fileID: 8300000, guid: cd0e1583fa6e4e04bb61d168109c8644, type: 3}
   offBeat: {fileID: 8300000, guid: e77eaf1e490aa5a4cbc26408793f32b7, type: 3}
+  childSource: {fileID: 82080467128339272}
   delay: 0.02
   loopSampleRange: 15000
 --- !u!114 &114595346359449680
