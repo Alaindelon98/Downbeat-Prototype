@@ -4,8 +4,8 @@ using UnityEngine;
 
 public class BeatActor : MonoBehaviour
 {
-
-    private AudioSource mySource;
+    [HideInInspector]
+    public AudioSource mySource;
 
     public BeatManager.BeatType beatType;
     public List<int> beatList;

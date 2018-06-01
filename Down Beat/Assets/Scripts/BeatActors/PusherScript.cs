@@ -7,6 +7,7 @@ public class PusherScript : BeatActor
     public float VerticalPushForce,HorizontalPushForce;
     public Animation BeatAnim;
 	public Animation touchAnim;
+    public AudioClip jumpPusher;
     private bool bump,bumped;
     private float BeatTime;
     public float JumpRange;
@@ -61,7 +62,9 @@ public class PusherScript : BeatActor
 
 						//colRb.AddForce(new Vector2(HorizontalPushForce,VerticalPushForce));
 						GameManagerScript.player.impulsed = true;
-						GameManagerScript.player.jumpSound.Play ();
+                            mySource.clip = jumpPusher;
+                            mySource.Play();
+						
 						TouchIt ();
 					}
                         break;
