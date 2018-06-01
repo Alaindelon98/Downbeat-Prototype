@@ -954,6 +954,11 @@ Prefab:
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 38425977e32680f4e87ad84240b2f532, type: 2}
   m_IsPrefabParent: 0
+--- !u!4 &280291788 stripped
+Transform:
+  m_PrefabParentObject: {fileID: 4372126727319886, guid: 403d899c0de731f46afbe1de837d3014,
+    type: 2}
+  m_PrefabInternal: {fileID: 1120395444}
 --- !u!1001 &289087419
 Prefab:
   m_ObjectHideFlags: 0
@@ -112900,7 +112905,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   respawnTime: 0
-  sceneNumber: 0
 --- !u!4 &1650235035
 Transform:
   m_ObjectHideFlags: 0
@@ -113355,6 +113359,11 @@ Prefab:
       propertyPath: m_RootOrder
       value: 5
       objectReference: {fileID: 0}
+    - target: {fileID: 114595346359449680, guid: 7b327f6da72712545ac1db7508b29fb2,
+        type: 2}
+      propertyPath: spectrumParent
+      value: 
+      objectReference: {fileID: 280291788}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 7b327f6da72712545ac1db7508b29fb2, type: 2}
   m_IsPrefabParent: 0
@@ -114710,6 +114719,7 @@ MonoBehaviour:
   actSound: {fileID: 8300000, guid: 615aa578ab07bf040b166a9e3e326d85, type: 3}
   waitBarInterval: 1
   startImmediately: 0
+  waitBarCounter: 0
   beatsDuration: 0.1
   positionsList:
   - {x: 238.02258, y: -80.6}

@@ -1562,6 +1562,11 @@ Prefab:
       propertyPath: childSource
       value: 
       objectReference: {fileID: 657609481}
+    - target: {fileID: 114595346359449680, guid: 7b327f6da72712545ac1db7508b29fb2,
+        type: 2}
+      propertyPath: spectrumParent
+      value: 
+      objectReference: {fileID: 1120395445}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 7b327f6da72712545ac1db7508b29fb2, type: 2}
   m_IsPrefabParent: 0
@@ -25734,6 +25739,11 @@ Prefab:
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 403d899c0de731f46afbe1de837d3014, type: 2}
   m_IsPrefabParent: 0
+--- !u!4 &1120395445 stripped
+Transform:
+  m_PrefabParentObject: {fileID: 4372126727319886, guid: 403d899c0de731f46afbe1de837d3014,
+    type: 2}
+  m_PrefabInternal: {fileID: 1120395444}
 --- !u!1001 &1135912204
 Prefab:
   m_ObjectHideFlags: 0
