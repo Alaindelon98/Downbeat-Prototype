@@ -19,9 +19,9 @@ public class BeatActor : MonoBehaviour
     protected bool actOnBeat = true;
 
     protected Vector3 savedPosition;
-    
 
-    private int waitBarCounter = 0;
+    [HideInInspector]
+    public  int waitBarCounter = 0;
     private bool actOnBar;
     private bool waitForBars;
 

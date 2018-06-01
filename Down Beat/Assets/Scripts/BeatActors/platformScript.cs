@@ -155,12 +155,13 @@ public class platformScript : BeatActor {
         //positionsList.Insert(0, (Vector2)transform.position);
         destination = positionsList[1];
         destIdx = 1;
-
+        waitBarCounter = 0;
+        if (startImmediately) { waitBarCounter = waitBarInterval; }
         scalar = transform.position.x;
 
         direction = destination - (Vector2)transform.position;
         vDir = direction / scalar;
-
+        
         speed = SetSpeed(out movingTime);
     }
 }
