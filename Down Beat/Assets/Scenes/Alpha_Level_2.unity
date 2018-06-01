@@ -25133,6 +25133,7 @@ MonoBehaviour:
   strongBeat: 1
   downBeat: {fileID: 8300000, guid: cd0e1583fa6e4e04bb61d168109c8644, type: 3}
   offBeat: {fileID: 8300000, guid: e77eaf1e490aa5a4cbc26408793f32b7, type: 3}
+  childSource: {fileID: 0}
   delay: 0
   loopSampleRange: 15000
 --- !u!4 &933470505
@@ -103326,6 +103327,11 @@ Prefab:
       propertyPath: m_IsActive
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 114480587494415128, guid: abcc1189ecf994a46abcec7f4dd61e1b,
+        type: 2}
+      propertyPath: returnFromMuffled
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: abcc1189ecf994a46abcec7f4dd61e1b, type: 2}
   m_IsPrefabParent: 0
@@ -103869,6 +103875,11 @@ Prefab:
     - target: {fileID: 1045806790492094, guid: abcc1189ecf994a46abcec7f4dd61e1b, type: 2}
       propertyPath: m_IsActive
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 114480587494415128, guid: abcc1189ecf994a46abcec7f4dd61e1b,
+        type: 2}
+      propertyPath: startMuffledSong
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: abcc1189ecf994a46abcec7f4dd61e1b, type: 2}
