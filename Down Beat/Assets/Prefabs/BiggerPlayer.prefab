@@ -29,6 +29,7 @@ GameObject:
   - component: {fileID: 82763401297644962}
   - component: {fileID: 82668417531200856}
   - component: {fileID: 95807024109234494}
+  - component: {fileID: 82494891290101386}
   m_Layer: 0
   m_Name: BiggerPlayer
   m_TagString: Player
@@ -284,6 +285,86 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 0
+--- !u!82 &82494891290101386
+AudioSource:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1107483814847348}
+  m_Enabled: 1
+  serializedVersion: 4
+  OutputAudioMixerGroup: {fileID: 0}
+  m_audioClip: {fileID: 8300000, guid: 5f0550ce01de396458201e4ef0223671, type: 3}
+  m_PlayOnAwake: 1
+  m_Volume: 1
+  m_Pitch: 1
+  Loop: 0
+  Mute: 0
+  Spatialize: 0
+  SpatializePostEffects: 0
+  Priority: 128
+  DopplerLevel: 1
+  MinDistance: 1
+  MaxDistance: 500
+  Pan2D: 0
+  rolloffMode: 0
+  BypassEffects: 0
+  BypassListenerEffects: 0
+  BypassReverbZones: 0
+  rolloffCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 2
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    - serializedVersion: 2
+      time: 1
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  panLevelCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 2
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 0
+  spreadCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 2
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  reverbZoneMixCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 2
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 0
 --- !u!82 &82668417531200856
 AudioSource:
   m_ObjectHideFlags: 1
@@ -513,10 +594,12 @@ MonoBehaviour:
   jumpSound: {fileID: 82169970021008548}
   explosionSound: {fileID: 82668417531200856}
   diyingSound: {fileID: 82763401297644962}
+  CrystalSound: {fileID: 82494891290101386}
   BeatAnimation: {fileID: 111563629797198234}
   myStream: {fileID: 198703805942159570}
   DeadParticles: {fileID: 1571466194420236, guid: e4e48305a08cd3a48815ada65ad29958,
     type: 2}
+  CrystalParticle: {fileID: 0}
   actualPlayerState: 0
   respawnTime: 1
   diyingTime: 0.5
