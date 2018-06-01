@@ -53,7 +53,7 @@ public class SpectrumVisualizer : MonoBehaviour {
             goPos.x -= 12f;
             //go.transform.position = goPos;
             SpriteMask sm = go.AddComponent<SpriteMask>() as SpriteMask;
-            sm.sprite = Sprite.Create(tex, new Rect(0.0f, 0.0f, tex.width, tex.height), new Vector2(0.5f, 0.5f), 5.0f);
+            sm.sprite = Sprite.Create(tex, new Rect(0.0f, 0.0f, tex.width, tex.height), new Vector2(0.5f, 0.5f), 4);
            /* SpriteRenderer sr = go.AddComponent<SpriteRenderer>() as SpriteRenderer;
             sr.sprite = Sprite.Create(tex, new Rect(0.0f, 0.0f, tex.width, tex.height), new Vector2(0.5f, 0.5f), 5.0f);
 
