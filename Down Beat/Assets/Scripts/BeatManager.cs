@@ -10,8 +10,8 @@ public class BeatManager : MonoBehaviour
     public int barLength = 4;
     public int strongBeat = 1;
     private float bps;
-    AudioSource mySource;
     public AudioClip downBeat, offBeat;
+    public AudioSource childSource;
 
     public enum BeatType
     {
@@ -30,6 +30,10 @@ public class BeatManager : MonoBehaviour
     public static float barDuration;
     public static float currentSample;
     public static float audioFrequency;
+    public static AudioSource muffledSource;
+
+    public static AudioSource mySource;
+
 
     public float delay;
     public float loopSampleRange;
@@ -43,6 +47,8 @@ public class BeatManager : MonoBehaviour
     void Awake()
     {
         mySource = GetComponent<AudioSource>();
+        muffledSource = childSource;
+        Debug.Log(muffledSource.mute);
         fourthNotesCounter = barLength;
         eighthNotesCounter = barLength * 2;
         sixteenthNotesCounter = barLength * 4;
@@ -201,6 +207,22 @@ public class BeatManager : MonoBehaviour
         }
 
 
+    }
+
+    public static void ChangeSong(bool isMuffled)
+    {
+        if(isMuffled)
+        {
+            
+            mySource.mute = true;
+            muffledSource.mute = false;
+        }
+
+        else
+        {
+            muffledSource.mute = true;
+            mySource.mute = false;
+        }
     }
 
 }

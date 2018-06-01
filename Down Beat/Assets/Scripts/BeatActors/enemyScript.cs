@@ -37,7 +37,7 @@ public class enemyScript : BeatActor {
     // Update is called once per frame
     void Update () 
 	{
-		Debug.Log (myRigidbody.bodyType);
+		//Debug.Log (myRigidbody.bodyType);
 
         if (!onSpawner)
         {

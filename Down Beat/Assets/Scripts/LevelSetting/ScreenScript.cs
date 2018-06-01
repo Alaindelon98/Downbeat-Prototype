@@ -11,7 +11,8 @@ public class ScreenScript : MonoBehaviour
     public ScreenSettings myScreenSettings;
 	public float maxSize, minSize;
 	public float zoomVariation = 0.05f;
-    public bool changeMusicInNext = false;
+    public bool startMuffledSong = false;
+    public bool returnFromMuffled = false;
 
     private FallingRockScript rocksManager;
 
@@ -68,9 +69,14 @@ public class ScreenScript : MonoBehaviour
         if (rocksManager != null)
             rocksManager.ResetRocks();
 
-        if(changeMusicInNext)
+        if(newScreen.startMuffledSong)
         {
+            BeatManager.ChangeSong(true);
+        }
 
+        else if(newScreen.returnFromMuffled)
+        {
+            BeatManager.ChangeSong(false);
         }
 
         newScreen.CallCamera();
@@ -78,6 +84,7 @@ public class ScreenScript : MonoBehaviour
         newScreen.gameObject.SetActive(true);
 
         gameObject.SetActive(false);
+
 
 		
         GameManagerScript.actualScreen = newScreen;
