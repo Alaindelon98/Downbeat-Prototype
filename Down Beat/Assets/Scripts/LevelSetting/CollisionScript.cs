@@ -20,7 +20,7 @@ public class CollisionScript : MonoBehaviour {
 
 	private void OnTriggerEnter2D(Collider2D col)
 	{
-		if (col.gameObject.tag == "Player") 
+		if (col.gameObject.tag == "Player" && transform.parent.gameObject.activeSelf) 
 		{
             if(transform.parent != null)
 			gameObject.GetComponentInParent<ScreenScript> ().TypeScreen (this.tag);

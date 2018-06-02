@@ -32,9 +32,14 @@ public class ScreenScript : MonoBehaviour
     }
 	
 	// Update is called once per frame
-	void Update () 
+	void FixedUpdate () 
 	{
-        
+        if (Input.GetKeyDown(KeyCode.P))
+        {
+            int nextSceneIndex = SceneManager.GetActiveScene().buildIndex + 1;
+
+            SceneManager.LoadScene(nextSceneIndex);
+        }        
 	}
 
 	public void TypeScreen(string tagcol)
@@ -66,10 +71,10 @@ public class ScreenScript : MonoBehaviour
         {
             SceneManager.LoadScene(nextSceneIndex);
         }
-        else
-        {
-            SceneManager.LoadScene(0);
-        }
+        //else
+        //{
+        //    SceneManager.LoadScene(0);
+        //}
     }
 
 	public void ChangeScreen(ScreenScript newScreen)

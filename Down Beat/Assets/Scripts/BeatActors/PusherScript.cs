@@ -65,7 +65,7 @@ public class PusherScript : BeatActor
                             mySource.clip = jumpPusher;
                             mySource.Play();
 						
-						TouchIt ();
+						//TouchIt ();
 					}
                         break;
 
