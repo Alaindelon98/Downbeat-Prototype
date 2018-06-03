@@ -60,6 +60,7 @@ public class enemySpawner : BeatActor {
         GameObject newEnemy = Instantiate(enemyPrefab, spawnPos, Quaternion.identity);
 
         newEnemy.transform.parent = transform;
+		newEnemy.GetComponent<enemyScript> ().spawneado = true;
 
         Rigidbody2D rb = newEnemy.GetComponent<Rigidbody2D>();
 

@@ -12,6 +12,8 @@ public class enemyScript : BeatActor {
     public bool onSpawner;
     private bool grounded;
     public float drag ;
+	public bool spawneado;
+
 
     private int savedDir;
 	// Use this for initialization
@@ -94,7 +96,7 @@ public class enemyScript : BeatActor {
 
 	private void OnCollisionExit2D (Collision2D col)
 	{
-		if (col.gameObject.tag == "Tilemap") {
+		if (col.gameObject.tag == "Tilemap" && spawneado) {
 			myRigidbody.bodyType = RigidbodyType2D.Dynamic;
 		}
 	}
