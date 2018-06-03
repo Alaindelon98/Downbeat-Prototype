@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.44657844, g: 0.49641222, b: 0.57481694, a: 1}
+  m_IndirectSpecularColor: {r: 0.44657898, g: 0.4964133, b: 0.5748178, a: 1}
 --- !u!157 &3
 LightmapSettings:
   m_ObjectHideFlags: 0
@@ -103095,6 +103095,7 @@ GameObject:
   - component: {fileID: 1483082731}
   - component: {fileID: 1483082733}
   - component: {fileID: 1483082732}
+  - component: {fileID: 1483082734}
   m_Layer: 0
   m_Name: Brillos
   m_TagString: Untagged
@@ -103565,6 +103566,25 @@ Tilemap:
     m_DirtyIndex: 0
   - serializedVersion: 1
     m_DirtyIndex: 0
+--- !u!114 &1483082734
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1483082730}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 742d53446d99ce64992ae87de39ee103, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  mySource: {fileID: 0}
+  beatType: 1
+  beatList: 
+  actSound: {fileID: 0}
+  waitBarInterval: 1
+  startImmediately: 0
+  waitBarCounter: 0
+  tilemap: {fileID: 1483082733}
 --- !u!1001 &1508790681
 Prefab:
   m_ObjectHideFlags: 0

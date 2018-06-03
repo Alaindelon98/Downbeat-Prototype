@@ -1267,6 +1267,7 @@ GameObject:
   - component: {fileID: 589970003}
   - component: {fileID: 589970005}
   - component: {fileID: 589970004}
+  - component: {fileID: 589970006}
   m_Layer: 0
   m_Name: Brillos
   m_TagString: Untagged
@@ -1833,6 +1834,25 @@ Tilemap:
     m_DirtyIndex: 0
   - serializedVersion: 1
     m_DirtyIndex: 0
+--- !u!114 &589970006
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 589970002}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 742d53446d99ce64992ae87de39ee103, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  mySource: {fileID: 0}
+  beatType: 1
+  beatList: 
+  actSound: {fileID: 0}
+  waitBarInterval: 1
+  startImmediately: 0
+  waitBarCounter: 0
+  tilemap: {fileID: 589970005}
 --- !u!1 &623468735
 GameObject:
   m_ObjectHideFlags: 0
