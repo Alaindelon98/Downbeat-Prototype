@@ -38,7 +38,7 @@ GameObject:
   - component: {fileID: 4419823419955520}
   - component: {fileID: 2569400267294398222}
   m_Layer: 31
-  m_Name: BetaPalette
+  m_Name: PaletteDef
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
