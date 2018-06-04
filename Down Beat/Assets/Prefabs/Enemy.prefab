@@ -89,8 +89,8 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1858348034500804}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -0.05, y: 0.27, z: 0}
-  m_LocalScale: {x: 0.16549112, y: 0.16549112, z: 0.16549112}
+  m_LocalPosition: {x: -0.05, y: 0.1, z: 0}
+  m_LocalScale: {x: 0.8, y: 0.8, z: 0}
   m_Children: []
   m_Father: {fileID: 4257603997519262}
   m_RootOrder: 1
@@ -270,7 +270,7 @@ AudioSource:
       tangentMode: 0
     m_PreInfinity: 2
     m_PostInfinity: 2
-    m_RotationOrder: 4
+    m_RotationOrder: 0
   reverbZoneMixCustomCurve:
     serializedVersion: 2
     m_Curve:
@@ -294,17 +294,20 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a2ff8bac0f21777499ac1f466121d81a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  mySource: {fileID: 0}
   beatType: 2
   beatList: 03000000
   actSound: {fileID: 8300000, guid: 8fc06fa505701df4daae2fe249eb88a4, type: 3}
   waitBarInterval: 1
   startImmediately: 0
-  speed: 35
+  waitBarCounter: 0
+  speed: 40
   myRigidbody: {fileID: 50300262572974254}
-  direction: 1
+  direction: -1
   sprite: {fileID: 212285833441718128}
   onSpawner: 0
   drag: 5
+  spawneado: 0
 --- !u!114 &114451390070671038
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -3766,8 +3769,8 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: 71763b7333ac793428d869df514837e2, type: 3}
-  m_Color: {r: 1, g: 0.25735295, b: 0.25735295, a: 1}
+  m_Sprite: {fileID: 21300000, guid: 2e7a2dd96b32e534489e391bdceceb2a, type: 3}
+  m_Color: {r: 1, g: 0.25735295, b: 0.25735295, a: 0.703}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
