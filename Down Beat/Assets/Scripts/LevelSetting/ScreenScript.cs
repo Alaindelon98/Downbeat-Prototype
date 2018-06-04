@@ -67,10 +67,15 @@ public class ScreenScript : MonoBehaviour
     public void ChangeLevel()
     {
         int nextSceneIndex = SceneManager.GetActiveScene().buildIndex + 1;
-        if (SceneManager.sceneCount > nextSceneIndex)
+
+        if(nextSceneIndex == 5)
         {
-            SceneManager.LoadScene(nextSceneIndex);
+            nextSceneIndex = 0;
         }
+        //Debug.Log(nextSceneIndex);
+
+        SceneManager.LoadScene(nextSceneIndex);
+
         //else
         //{
         //    SceneManager.LoadScene(0);
