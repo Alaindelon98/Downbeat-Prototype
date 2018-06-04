@@ -52857,6 +52857,11 @@ Prefab:
       propertyPath: MinDistance
       value: 2.979309
       objectReference: {fileID: 0}
+    - target: {fileID: 82779688288883606, guid: 6c82f1583239f3144a27873cbe40d7c8,
+        type: 2}
+      propertyPath: spreadCustomCurve.m_RotationOrder
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 6c82f1583239f3144a27873cbe40d7c8, type: 2}
   m_IsPrefabParent: 0
