@@ -81,7 +81,7 @@ BoxCollider2D:
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 0.52000004, y: 1.19}
+    oldSize: {x: 0.9628571, y: 1.82}
     newSize: {x: 1, y: 1}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
@@ -256,7 +256,7 @@ ParticleSystem:
       serializedVersion: 2
       minMaxState: 0
       minColor: {r: 1, g: 1, b: 1, a: 1}
-      maxColor: {r: 1, g: 1, b: 1, a: 1}
+      maxColor: {r: 1, g: 0.066176474, b: 0.16277857, a: 1}
       maxGradient:
         serializedVersion: 2
         key0: {r: 1, g: 1, b: 1, a: 1}
@@ -819,15 +819,15 @@ ParticleSystem:
         m_Curve:
         - serializedVersion: 2
           time: 0
-          value: 0.30303
-          inSlope: -0.42619565
-          outSlope: -0.42619565
+          value: 0.6284237
+          inSlope: -1.722905
+          outSlope: -1.722905
           tangentMode: 0
         - serializedVersion: 2
           time: 1
           value: 0
-          inSlope: -0.4946913
-          outSlope: -0.4946913
+          inSlope: -1.8000674
+          outSlope: -1.8000674
           tangentMode: 0
         m_PreInfinity: 2
         m_PostInfinity: 2
@@ -1068,10 +1068,10 @@ ParticleSystem:
       maxColor: {r: 1, g: 1, b: 1, a: 1}
       maxGradient:
         serializedVersion: 2
-        key0: {r: 0.07628676, g: 0.6102941, b: 0.5881972, a: 1}
-        key1: {r: 0.097, g: 0.8879035, b: 1, a: 1}
-        key2: {r: 0.384, g: 1, b: 0.92353106, a: 0}
-        key3: {r: 0.8088235, g: 1, b: 0.97626776, a: 0}
+        key0: {r: 1, g: 0, b: 0.18620682, a: 1}
+        key1: {r: 1, g: 0.097, b: 0.41570577, a: 1}
+        key2: {r: 1, g: 0.384, b: 0.6014117, a: 0}
+        key3: {r: 1, g: 0.8088235, b: 0.9804308, a: 0}
         key4: {r: 0.9450981, g: 0.6058079, b: 0.9084945, a: 0}
         key5: {r: 0, g: 0, b: 0, a: 0}
         key6: {r: 0, g: 0, b: 0, a: 0}
@@ -1085,8 +1085,8 @@ ParticleSystem:
         ctime6: 0
         ctime7: 0
         atime0: 0
-        atime1: 65535
-        atime2: 0
+        atime1: 32369
+        atime2: 65535
         atime3: 0
         atime4: 0
         atime5: 0
@@ -1094,7 +1094,7 @@ ParticleSystem:
         atime7: 0
         m_Mode: 0
         m_NumColorKeys: 4
-        m_NumAlphaKeys: 2
+        m_NumAlphaKeys: 3
       minGradient:
         serializedVersion: 2
         key0: {r: 1, g: 1, b: 1, a: 1}
@@ -3482,7 +3482,7 @@ ParticleSystemRenderer:
   m_LightProbeUsage: 0
   m_ReflectionProbeUsage: 0
   m_Materials:
-  - {fileID: 10754, guid: 0000000000000000f000000000000000, type: 0}
+  - {fileID: 2100000, guid: 028c6846714a601448c019a4a1b379bf, type: 2}
   - {fileID: 0}
   m_StaticBatchInfo:
     firstSubMesh: 0
@@ -3555,8 +3555,8 @@ SpriteRenderer:
   m_SortingLayerID: 417895005
   m_SortingLayer: 2
   m_SortingOrder: 2
-  m_Sprite: {fileID: 21300010, guid: 348ad8c68714a9d4d9805c55af671420, type: 3}
-  m_Color: {r: 0.026000023, g: 1, b: 0.83878636, a: 1}
+  m_Sprite: {fileID: 21300000, guid: e7a808664145e4a41b24d9fbc71f6a98, type: 3}
+  m_Color: {r: 1, g: 0.7941176, b: 0.90060854, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
