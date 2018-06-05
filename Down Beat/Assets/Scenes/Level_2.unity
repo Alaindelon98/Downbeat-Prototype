@@ -6193,6 +6193,15 @@ Tilemap:
       m_ObjectToInstantiate: {fileID: 0}
       m_TileFlags: 1
       m_ColliderType: 1
+  - first: {x: 18, y: -2, z: 0}
+    second:
+      m_TileIndex: 3
+      m_TileSpriteIndex: 3
+      m_TileMatrixIndex: 0
+      m_TileColorIndex: 0
+      m_ObjectToInstantiate: {fileID: 0}
+      m_TileFlags: 1
+      m_ColliderType: 1
   - first: {x: 33, y: -2, z: 0}
     second:
       m_TileIndex: 3
@@ -6534,7 +6543,7 @@ Tilemap:
     m_Data: {fileID: 11400000, guid: f89aebcadde53494f8741ddf4cf25e03, type: 2}
   - m_RefCount: 13
     m_Data: {fileID: 11400000, guid: f286eba8317e7f8458afd8191581f9f2, type: 2}
-  - m_RefCount: 16
+  - m_RefCount: 17
     m_Data: {fileID: 11400000, guid: 088b05ca2f3d74040a18904b725dc3c8, type: 2}
   - m_RefCount: 16
     m_Data: {fileID: 11400000, guid: 844f45486ccb805499de2fba2ae35358, type: 2}
@@ -6547,14 +6556,14 @@ Tilemap:
     m_Data: {fileID: 21300038, guid: 67eaade6a4a7b804da6a944377b2a01d, type: 3}
   - m_RefCount: 13
     m_Data: {fileID: 21300012, guid: 94824457cb14b4e43a6f576f8c992259, type: 3}
-  - m_RefCount: 16
+  - m_RefCount: 17
     m_Data: {fileID: 21300004, guid: 94824457cb14b4e43a6f576f8c992259, type: 3}
   - m_RefCount: 16
     m_Data: {fileID: 21300014, guid: 94824457cb14b4e43a6f576f8c992259, type: 3}
   - m_RefCount: 10
     m_Data: {fileID: 21300006, guid: 94824457cb14b4e43a6f576f8c992259, type: 3}
   m_TileMatrixArray:
-  - m_RefCount: 581
+  - m_RefCount: 582
     m_Data:
       e00: 1
       e01: 0
@@ -6573,7 +6582,7 @@ Tilemap:
       e32: 0
       e33: 1
   m_TileColorArray:
-  - m_RefCount: 581
+  - m_RefCount: 582
     m_Data: {r: 1, g: 1, b: 1, a: 1}
   m_AnimationFrameRate: 1
   m_Color: {r: 1, g: 1, b: 1, a: 0.709}
@@ -71896,6 +71905,11 @@ Prefab:
     - target: {fileID: 4796885006575242, guid: 6c82f1583239f3144a27873cbe40d7c8, type: 2}
       propertyPath: m_RootOrder
       value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 82779688288883606, guid: 6c82f1583239f3144a27873cbe40d7c8,
+        type: 2}
+      propertyPath: spreadCustomCurve.m_RotationOrder
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 6c82f1583239f3144a27873cbe40d7c8, type: 2}
