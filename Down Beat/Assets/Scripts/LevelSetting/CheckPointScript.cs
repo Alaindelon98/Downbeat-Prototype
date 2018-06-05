@@ -8,12 +8,16 @@ public class CheckPointScript : MonoBehaviour
     public SpriteRenderer myrenderer;
     public List<Sprite> StateSprites;
     public bool checkPointActive;
-    public Animation WiggleAnim;
+	public Animation WiggleAnim, CheckPointAnim;
+	public Animator Anim;
 
 	// Use this for initialization
 	void Start ()
     {
-        ChangeSprite(checkPointActive);
+        //ChangeSprite(checkPointActive);
+
+		CheckPointAnim = GetComponent<Animation>();
+		//Anim = GetComponent<Animator>();
 
         if (checkPointActive)
         {
@@ -28,6 +32,7 @@ public class CheckPointScript : MonoBehaviour
     {
         if (checkPointActive)
         {
+			ChangeSprite (true);
             //if(BeatManager.currentBeat==BeatManager.BeatType.FourthBeat || BeatManager.currentBeat == BeatManager.BeatType.DownBeat)
             //{
             //    WiggleAnim.Play();
@@ -39,7 +44,6 @@ public class CheckPointScript : MonoBehaviour
     {
         if (col.gameObject.tag == "Player"&& !checkPointActive)
         {
-            
             checkPointActive = true;
             GameManagerScript.ChangeCheckPoint(this);
             ChangeSprite(true);
@@ -52,14 +56,15 @@ public class CheckPointScript : MonoBehaviour
     {
         if (state)
         {
-            myrenderer.color = Color.cyan;
-           // myrenderer.color = Color.white;
-            myrenderer.sprite = StateSprites[0];
+			Anim.SetBool ("check", true);
+            //myrenderer.color = Color.cyan;
+            //myrenderer.sprite = StateSprites[0];
         }
         else
         {
-            myrenderer.color = Color.gray;
-            myrenderer.sprite = StateSprites[1];
+			Anim.SetBool ("check", false);
+            //myrenderer.color = Color.gray;
+            //myrenderer.sprite = StateSprites[1];
         }
     }
 }
