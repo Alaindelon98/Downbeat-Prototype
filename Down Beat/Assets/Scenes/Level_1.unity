@@ -114600,6 +114600,16 @@ Prefab:
       propertyPath: childSource
       value: 
       objectReference: {fileID: 296521255}
+    - target: {fileID: 82988748700645442, guid: 7b327f6da72712545ac1db7508b29fb2,
+        type: 2}
+      propertyPath: m_audioClip
+      value: 
+      objectReference: {fileID: 8300000, guid: 58af1ae8385b83b4aba6e9145f6b54ef, type: 3}
+    - target: {fileID: 82080467128339272, guid: 7b327f6da72712545ac1db7508b29fb2,
+        type: 2}
+      propertyPath: m_audioClip
+      value: 
+      objectReference: {fileID: 8300000, guid: 242e513923304ca48b59e71945e797fc, type: 3}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 7b327f6da72712545ac1db7508b29fb2, type: 2}
   m_IsPrefabParent: 0
