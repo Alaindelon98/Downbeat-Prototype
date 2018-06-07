@@ -7,6 +7,7 @@ public class platformScript : BeatActor {
     bool isMoving = false;
 
     public float beatsDuration;
+    public int initialWaitBars;
     //public float travelAmount;
     public List<Vector2> positionsList;
     //public List<Vector2> directionsList;
@@ -16,7 +17,9 @@ public class platformScript : BeatActor {
     private float scalar;
     private Vector2 destination;
     private int destIdx;
+    public int currentBar;
     private float speed, movingTime;//, moveTimer;
+    private bool startMoving;
 	void Start () {
         SetBehavior();
 
@@ -42,13 +45,30 @@ public class platformScript : BeatActor {
     }
     void Update () {
         //Debug.Log(isMoving);
-       // Debug.Log(destination);
-        if(BeatListener() && !isMoving)
+        // Debug.Log(destination);
+        if (!startMoving)
+        {
+            Debug.Log("Don't move yet");
+            if (BeatManager.currentBeat == BeatManager.BeatType.DownBeat)
+            {
+                currentBar += 1;
+            }
+
+            if (currentBar >= initialWaitBars)
+            {
+                startMoving = true;
+                //Debug.Log("GO ROCKS");
+            }
+
+            return;
+        }
+        if (BeatListener() && !isMoving)
         {
             //Debug.Log("Beat Listener and not moving");
             isMoving = true;
             //LoopSound();
             Move();
+            Debug.Log("GO");
 
         }
 
@@ -83,6 +103,7 @@ public class platformScript : BeatActor {
 
     private void Arrive()
     {
+        Debug.Log("Arrived");
        // moveTimer = movingTime;
         isMoving = false;
         StopSound();
@@ -156,6 +177,8 @@ public class platformScript : BeatActor {
         destination = positionsList[1];
         destIdx = 1;
         waitBarCounter = 0;
+        currentBar = 0;
+        startMoving = false;
         if (startImmediately) { waitBarCounter = waitBarInterval; }
         scalar = transform.position.x;
 

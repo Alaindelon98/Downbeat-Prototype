@@ -27,7 +27,7 @@ public class FallingRockScript : BeatActor
 
         myScreen = GetComponentInParent<ScreenScript>();
         Vector3 rockScale = rockPrefab.transform.localScale;
-        rockScale.y = transform.parent.position.y + myScreen.myScreenSettings.sizeScreen * 2;
+        rockScale.y = transform.parent.localScale.y + myScreen.myScreenSettings.sizeScreen * 2;
         rockPrefab.transform.localScale = rockScale;
         firstPosition.x = transform.parent.position.x - myScreen.myScreenSettings.sizeScreen * 1.8f + 0.5f;
         //firstPosition.y = transform.parent.position.y + myScreen.myScreenSettings.sizeScreen;
@@ -70,9 +70,10 @@ public class FallingRockScript : BeatActor
                 currentBar += 1;
             }
 
-            if (currentBar == initialWaitBars)
+            if (currentBar >= initialWaitBars)
             {
                 canFall = true;
+                //Debug.Log("GO ROCKS");
             }
 
             return;
@@ -80,7 +81,7 @@ public class FallingRockScript : BeatActor
         if (BeatListener())
         {
             DropRocks();
-            Debug.Log("Drop Rock");
+            //Debug.Log("Drop Rock");
         }
 
         if (GameManagerScript.player.actualPlayerState == PlayerScript.PlayerStates.dead)

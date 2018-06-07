@@ -85,7 +85,7 @@ public class PlayerScript : MonoBehaviour {
 
         errorRange *= BeatManager.audioFrequency;
 
-        Debug.Log("Error Range: "+ errorRange);
+        //Debug.Log("Error Range: "+ errorRange);
     }
     
     // Update is called once per frame
@@ -243,14 +243,17 @@ public class PlayerScript : MonoBehaviour {
 
                 //if (!grounded) { rb.velocity = new Vector2(rb.velocity.x, 0); }
                 //Debug.Log(downBeatJumpVelocity);
-                if (actualYVelocity < 0) { actualYVelocity = 0; }
+                if (actualYVelocity < 0)
+                {
+                    actualYVelocity = 0;
+                }
 
                 //Debug.Log(actualYVelocity);
 
                 //Debug.Log("Difference with downbeat: " + ((jumpPressedTime - downBeatTime) / BeatManager.audioFrequency));
 
                 //Debug.Log("Current Beat on jump " + BeatManager.fourthNotesCounter);
-
+                //if(grounded)
                 MakeJump(actualYVelocity);
 
                 JumpedOnDownBeat = true;
@@ -407,6 +410,7 @@ public class PlayerScript : MonoBehaviour {
         }
         else if (collision.gameObject.tag == "Platform")
         {
+            Debug.Log("On top of platform");
             transform.parent = collision.gameObject.transform;
 			grounded = true;
         }

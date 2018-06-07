@@ -48,7 +48,7 @@ public class BeatManager : MonoBehaviour
     {
         mySource = GetComponent<AudioSource>();
         muffledSource = childSource;
-        Debug.Log(muffledSource.mute);
+        //Debug.Log(muffledSource.mute);
         fourthNotesCounter = barLength;
         eighthNotesCounter = barLength * 2;
         sixteenthNotesCounter = barLength * 4;
