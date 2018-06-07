@@ -8,6 +8,7 @@ public class BrilloScript : BeatActor {
 	public Tilemap tilemap;
 
 	private Color original;
+	private float menosAlpha;
 
 	// Use this for initialization
 	void Start () {
@@ -24,10 +25,12 @@ public class BrilloScript : BeatActor {
 		{
 			tilemap.color = new Color (original.r, original.g, original.b, 0.75f);
 		}*/
-		if (BeatManager.fourthNotesCounter == 1) {
+		if (BeatManager.currentBeat == BeatManager.BeatType.DownBeat) {
 			tilemap.color = original;
+			menosAlpha = 0;
 		} else {
-			tilemap.color = new Color (original.r, original.g, original.b, 0.75f);
+			menosAlpha += 0.00015f;
+			tilemap.color = new Color (original.r, original.g, original.b, tilemap.color.a - menosAlpha);
 		}
 	}
 }
