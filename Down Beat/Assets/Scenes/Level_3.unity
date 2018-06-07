@@ -83466,6 +83466,11 @@ Prefab:
       propertyPath: spectrumParent
       value: 
       objectReference: {fileID: 280291788}
+    - target: {fileID: 82988748700645442, guid: 7b327f6da72712545ac1db7508b29fb2,
+        type: 2}
+      propertyPath: m_PlayOnAwake
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 7b327f6da72712545ac1db7508b29fb2, type: 2}
   m_IsPrefabParent: 0
@@ -92005,10 +92010,12 @@ MonoBehaviour:
   startImmediately: 0
   waitBarCounter: 0
   beatsDuration: 0.1
+  initialWaitBars: 0
   positionsList:
   - {x: 238.02258, y: -80.6}
   - {x: 221.9226, y: -80.6}
   - {x: 226.9226, y: -80.6}
+  currentBar: 0
 --- !u!212 &1879026721
 SpriteRenderer:
   m_ObjectHideFlags: 0

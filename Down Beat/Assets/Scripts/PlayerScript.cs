@@ -395,6 +395,8 @@ public class PlayerScript : MonoBehaviour {
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
+        if (!BeatManager.kickIn) { BeatManager.kickIn = true; }
+
         if ((collision.gameObject.tag == "Enemy" || collision.gameObject.tag == "Spike")&&actualPlayerState==PlayerStates.alive)
         {
             ChangePlayerState(PlayerStates.dying);

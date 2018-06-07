@@ -25,7 +25,7 @@ public class BeatManager : MonoBehaviour
     public static int fourthNotesCounter;
     public static int eighthNotesCounter;
     public static int sixteenthNotesCounter;
-    public static bool OnBeat, OnEighthBeat, OnSixteenthBeat;
+    public static bool OnBeat, OnEighthBeat, OnSixteenthBeat,kickIn;
     public static BeatType currentBeat;
     public static float barDuration;
     public static float currentSample;
@@ -141,6 +141,14 @@ public class BeatManager : MonoBehaviour
             }
 
             currentSample = mySource.timeSamples;
+        }
+        else
+        {
+            if (kickIn)
+            {
+                mySource.Play();
+                Debug.Log("start");
+            }
         }
 
         //if(currentBeat == BeatType.DownBeat)
