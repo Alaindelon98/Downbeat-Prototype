@@ -12,6 +12,7 @@ public class PusherScript : BeatActor
     private float BeatTime;
     public float JumpRange;
 
+    public ParticleSystem Orb, particle;
     
 
 	// Use this for initialization
@@ -33,6 +34,7 @@ public class PusherScript : BeatActor
             BeatTime = Time.time;
             PlaySound();
             BeatAnim.Play();
+            Orb.Play();
             
             bump = true;
         }
@@ -62,10 +64,10 @@ public class PusherScript : BeatActor
 
 						//colRb.AddForce(new Vector2(HorizontalPushForce,VerticalPushForce));
 						GameManagerScript.player.impulsed = true;
-                            mySource.clip = jumpPusher;
-                            mySource.Play();
+                            //mySource.clip = jumpPusher;
+                            //mySource.Play();
+                            particle.Play();
 						
-						TouchIt ();
 					}
                         break;
 
@@ -80,8 +82,5 @@ public class PusherScript : BeatActor
         }
     }
 
-	private void TouchIt()
-	{
-		touchAnim.Play ();
-	}
+	
 }
