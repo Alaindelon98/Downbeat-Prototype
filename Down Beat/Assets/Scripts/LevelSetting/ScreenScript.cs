@@ -14,6 +14,8 @@ public class ScreenScript : MonoBehaviour
     public bool startMuffledSong = false;
     public bool returnFromMuffled = false;
 
+    public float timeToChange;
+
     private FallingRockScript rocksManager;
 
     public GameObject LevelEndingDoor;
@@ -59,13 +61,15 @@ public class ScreenScript : MonoBehaviour
                 ChangeScreen(downScreen);
                 break;
             case "End":
-                ChangeLevel();
+                 StartCoroutine(ChangeLevel());
                 break;
         }
     }
 
-    public void ChangeLevel()
+    public IEnumerator ChangeLevel()
     {
+        yield return new WaitForSeconds(timeToChange);
+
         int nextSceneIndex = SceneManager.GetActiveScene().buildIndex + 1;
 
         if(nextSceneIndex == 5)
