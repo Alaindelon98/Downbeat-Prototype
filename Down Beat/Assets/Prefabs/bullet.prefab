@@ -106,6 +106,8 @@ MonoBehaviour:
   speed: 9
   rb: {fileID: 50984107151851600}
   mySprite: {fileID: 212516949595521170}
+  DeadParticles: {fileID: 1896076994790690, guid: 2b5ef36c65d3bd541853de9b9199edc7,
+    type: 2}
 --- !u!198 &198578364416386516
 ParticleSystem:
   m_ObjectHideFlags: 1

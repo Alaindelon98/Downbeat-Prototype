@@ -308,6 +308,8 @@ MonoBehaviour:
   onSpawner: 0
   drag: 5
   spawneado: 0
+  DeadParticles: {fileID: 1298063173686094, guid: 96e95148f8551984bb47c047ec701f2d,
+    type: 2}
 --- !u!114 &114451390070671038
 MonoBehaviour:
   m_ObjectHideFlags: 1

@@ -14,6 +14,7 @@ public class enemyScript : BeatActor {
     public float drag ;
 	public bool spawneado;
 
+    public GameObject DeadParticles;
 
     private int savedDir;
 	// Use this for initialization
@@ -76,6 +77,7 @@ public class enemyScript : BeatActor {
     {
 		if (col.gameObject.tag == "Spike") 
 		{
+            Instantiate(DeadParticles, transform.position, transform.rotation);
 			Destroy (this.gameObject);
 		} 
 		if (col.gameObject.tag == "Tilemap") 
