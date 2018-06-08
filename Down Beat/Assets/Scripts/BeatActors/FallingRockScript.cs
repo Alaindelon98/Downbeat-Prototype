@@ -27,7 +27,7 @@ public class FallingRockScript : BeatActor
 
         myScreen = GetComponentInParent<ScreenScript>();
         Vector3 rockScale = rockPrefab.transform.localScale;
-        rockScale.y = transform.parent.localScale.y + myScreen.myScreenSettings.sizeScreen * 2;
+        rockScale.y = transform.parent.lossyScale.y + myScreen.myScreenSettings.sizeScreen * 2;
         rockPrefab.transform.localScale = rockScale;
         firstPosition.x = transform.parent.position.x - myScreen.myScreenSettings.sizeScreen * 1.8f + 0.5f;
         //firstPosition.y = transform.parent.position.y + myScreen.myScreenSettings.sizeScreen;
@@ -101,6 +101,7 @@ public class FallingRockScript : BeatActor
 
     public void ResetRocks()
     {
+        Debug.Log("Reset rocks");
         currentRock = 0;
         canFall = false;
         currentBar = 0;
