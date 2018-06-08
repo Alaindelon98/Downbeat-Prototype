@@ -12,7 +12,7 @@ public class enemyScript : BeatActor {
     public bool onSpawner;
     private bool grounded;
     public float drag ;
-	public bool spawneado;
+	//public bool spawneado;
 
 
     private int savedDir;
@@ -26,6 +26,7 @@ public class enemyScript : BeatActor {
         if (!onSpawner) { }
 
 		myRigidbody.bodyType = RigidbodyType2D.Dynamic;
+
 	}
 
     private void FixedUpdate()
@@ -39,8 +40,7 @@ public class enemyScript : BeatActor {
     // Update is called once per frame
     void Update () 
 	{
-		//Debug.Log (myRigidbody.bodyType);
-
+		print (myRigidbody.bodyType);
         if (!onSpawner)
         {
             if (!actOnBeat)
@@ -49,7 +49,6 @@ public class enemyScript : BeatActor {
             }
 
             
-
             if (BeatListener())
             {
                 Move(speed);
@@ -58,7 +57,7 @@ public class enemyScript : BeatActor {
 
             }
         }
-
+		//Debug.Log (direction);
         //Debug.Log(grounded);
 
         //if (shot && BeatManager.currentBeat == BeatManager.BeatType.NoBeat)
@@ -78,32 +77,36 @@ public class enemyScript : BeatActor {
 		{
 			Destroy (this.gameObject);
 		} 
-		if (col.gameObject.tag == "Tilemap") 
+		/*if (col.gameObject.tag == "Tilemap") 
 		{
+			print ("entraaaa");
 			myRigidbody.bodyType = RigidbodyType2D.Kinematic;
 			myRigidbody.useFullKinematicContacts = true;
-		} 
+		} */
     }
 
 	private void OnCollisionStay2D(Collision2D col)
 	{
-		if (col.gameObject.tag == "Tilemap") 
+		/*if (col.gameObject.tag == "Tilemap") 
 		{
+			//print ("dentroooo");
 			myRigidbody.bodyType = RigidbodyType2D.Kinematic;
 			myRigidbody.useFullKinematicContacts = true;
-		}
+		}*/
 	}
 
 	private void OnCollisionExit2D (Collision2D col)
 	{
-		if (col.gameObject.tag == "Tilemap" && spawneado) {
+		/*if (col.gameObject.tag == "Tilemap" && spawneado) {
+			print ("saleeeee");
 			myRigidbody.bodyType = RigidbodyType2D.Dynamic;
-		}
+		}*/
 	}
 
 	private void Move(float speedMove)
 	{
-        myRigidbody.velocity = Vector2.right * speedMove *direction;
+		float vely = myRigidbody.velocity.y;
+		myRigidbody.velocity = new Vector2 (speedMove *direction,vely);
        
 
         //var vel = myRigidbody.velocity;
@@ -124,12 +127,15 @@ public class enemyScript : BeatActor {
     }
     private void GestionateMovement()
     {
-        if ((Mathf.Abs(myRigidbody.velocity.x)) > 0)
-        {
-            float xVel = Mathf.Abs( myRigidbody.velocity.x);
-            xVel -= drag;
-            Move(xVel);
-        }
+		if ((Mathf.Abs (myRigidbody.velocity.x)) > 0) {
+			float xVel = Mathf.Abs (myRigidbody.velocity.x);
+			xVel -= drag;
+			Move (xVel);
+		} 
+		else 
+		{
+			Move (0);
+		}
 
         //Debug.Log("actspeed"+myRigidbody.velocity.x);
 

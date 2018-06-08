@@ -7,7 +7,7 @@ public class enemySpawner : BeatActor {
     enemyScript enemySettings, spawnerSettings;
 
     //public float enemySpeed, enemyJumpVel;
-    public Vector2 spawnDirection = new Vector2(1, 0);
+	public Vector2 spawnDirection; //= new Vector2(1, 0);
     public float shootStrength;
 	private Rigidbody2D myRigidbody;
 
@@ -60,7 +60,7 @@ public class enemySpawner : BeatActor {
         GameObject newEnemy = Instantiate(enemyPrefab, spawnPos, Quaternion.identity);
 
         newEnemy.transform.parent = transform;
-		newEnemy.GetComponent<enemyScript> ().spawneado = true;
+		//newEnemy.GetComponent<enemyScript> ().spawneado = true;
 
         Rigidbody2D rb = newEnemy.GetComponent<Rigidbody2D>();
 
