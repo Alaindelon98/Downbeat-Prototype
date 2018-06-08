@@ -197,6 +197,7 @@ MonoBehaviour:
   startImmediately: 0
   waitBarCounter: 0
   b: {fileID: 1307767865894498, guid: 701815eb96a4dc1469254508669a28a6, type: 2}
+  cannon: {fileID: 1724949144297084, guid: dbca5920530877c4db6e60a97c9a2388, type: 2}
   left: 0
   right: 0
   up: 0
@@ -279,7 +280,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 417895005
   m_SortingLayer: 2
-  m_SortingOrder: 0
+  m_SortingOrder: 1
   m_Sprite: {fileID: 21300002, guid: 2acfd084b40d76749a4adec0b9c9601c, type: 3}
   m_Color: {r: 1, g: 0, b: 0.9906206, a: 1}
   m_FlipX: 0

@@ -7,6 +7,7 @@ using UnityEngine;
 public class torretaScript : BeatActor {
 
 	public GameObject b;
+    public GameObject cannon;
     public enum ShootDirection { left,right,up,down}
 	public bool left, right, up, down;
     public float offset;
@@ -19,9 +20,68 @@ public class torretaScript : BeatActor {
 	void Start () 
 	{
         SetBehavior();
-	}
-	
-	void Update () 
+
+        Instantiate(cannon);
+
+
+
+        if (left)
+        {
+            cannon.transform.position = transform.position;
+            Vector3 pos = cannon.transform.position;
+            pos.x -= 0.4f;
+            cannon.transform.position = pos;
+            Vector3 rot = Vector3.zero;
+            rot.z = 45;
+            cannon.transform.rotation = Quaternion.Euler(rot);
+        }
+
+        else if (right)
+        {
+            cannon.transform.position = transform.position;
+
+            Vector3 pos = cannon.transform.position;
+            pos.x += 0.4f;
+            cannon.transform.position = pos;
+            Vector3 rot = Vector3.zero;
+            rot.z = 225;
+            cannon.transform.rotation = Quaternion.Euler(rot);
+        }
+
+        else if (up)
+        {
+            cannon.transform.position = transform.position;
+
+            Vector3 pos = cannon.transform.position;
+            pos.y += 0.4f;
+            cannon.transform.position = pos;
+            Vector3 rot = Vector3.zero;
+            rot.z = 315;
+            cannon.transform.rotation = Quaternion.Euler(rot);
+        }
+
+        else if (down)
+        {
+            cannon.transform.position = transform.position;
+
+            Vector3 pos = cannon.transform.position;
+            pos.y -= 0.4f;
+            cannon.transform.position = pos;
+            Vector3 rot = Vector3.zero;
+            rot.z = 135;
+            cannon.transform.rotation = Quaternion.Euler(rot);
+        }
+
+        if (up && down)
+        {
+
+        }
+
+
+
+    }
+
+    void Update () 
 	{
         if(!actOnBeat)
         {
