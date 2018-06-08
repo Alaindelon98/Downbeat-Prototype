@@ -10046,24 +10046,6 @@ Tilemap:
       m_ObjectToInstantiate: {fileID: 0}
       m_TileFlags: 1
       m_ColliderType: 1
-  - first: {x: 79, y: -25, z: 0}
-    second:
-      m_TileIndex: 0
-      m_TileSpriteIndex: 0
-      m_TileMatrixIndex: 0
-      m_TileColorIndex: 0
-      m_ObjectToInstantiate: {fileID: 0}
-      m_TileFlags: 1
-      m_ColliderType: 1
-  - first: {x: 80, y: -25, z: 0}
-    second:
-      m_TileIndex: 0
-      m_TileSpriteIndex: 0
-      m_TileMatrixIndex: 0
-      m_TileColorIndex: 0
-      m_ObjectToInstantiate: {fileID: 0}
-      m_TileFlags: 1
-      m_ColliderType: 1
   - first: {x: 81, y: -25, z: 0}
     second:
       m_TileIndex: 0
@@ -14161,13 +14143,13 @@ Tilemap:
       m_ColliderType: 1
   m_AnimatedTiles: {}
   m_TileAssetArray:
-  - m_RefCount: 1480
+  - m_RefCount: 1478
     m_Data: {fileID: 11400000, guid: 2ac35776879affe4ba4d2a470d8cf264, type: 2}
   m_TileSpriteArray:
-  - m_RefCount: 1480
+  - m_RefCount: 1478
     m_Data: {fileID: 21300034, guid: 1acd1701645844a439f5ee188d7daabc, type: 3}
   m_TileMatrixArray:
-  - m_RefCount: 1480
+  - m_RefCount: 1478
     m_Data:
       e00: 1
       e01: 0
@@ -14186,7 +14168,7 @@ Tilemap:
       e32: 0
       e33: 1
   m_TileColorArray:
-  - m_RefCount: 1480
+  - m_RefCount: 1478
     m_Data: {r: 1, g: 1, b: 1, a: 1}
   m_AnimationFrameRate: 1
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -20816,7 +20798,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 4705143074478032, guid: 3c8d3da7a8d860e49a62b4a43102dcd6, type: 2}
       propertyPath: m_LocalPosition.y
-      value: 8.27
+      value: 8.96
       objectReference: {fileID: 0}
     - target: {fileID: 4705143074478032, guid: 3c8d3da7a8d860e49a62b4a43102dcd6, type: 2}
       propertyPath: m_LocalPosition.z
@@ -21041,7 +21023,7 @@ Prefab:
     m_Modifications:
     - target: {fileID: 4705143074478032, guid: 3c8d3da7a8d860e49a62b4a43102dcd6, type: 2}
       propertyPath: m_LocalPosition.x
-      value: -4.84
+      value: -5.46
       objectReference: {fileID: 0}
     - target: {fileID: 4705143074478032, guid: 3c8d3da7a8d860e49a62b4a43102dcd6, type: 2}
       propertyPath: m_LocalPosition.y
