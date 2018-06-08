@@ -8,7 +8,7 @@ public class bulletScript : MonoBehaviour {
 	public float speed;
     public Rigidbody2D rb;
 	public SpriteRenderer mySprite;
-
+    public GameObject DeadParticles;
 	// Use this for initialization
 	void Start () {
         Destroy(this.gameObject, 4);
@@ -23,6 +23,7 @@ public class bulletScript : MonoBehaviour {
     {
         if (col.gameObject.tag != "Enemy")
         {
+            Instantiate(DeadParticles, transform.position, transform.rotation);
             Destroy(this.gameObject);
         }
     }
