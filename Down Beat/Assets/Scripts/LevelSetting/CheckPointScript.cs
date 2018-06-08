@@ -11,6 +11,7 @@ public class CheckPointScript : MonoBehaviour
 	public Animation WiggleAnim, CheckPointAnim;
 	public Animator Anim;
 
+    public AudioSource CheckPointTake;
 	// Use this for initialization
 	void Start ()
     {
@@ -46,6 +47,7 @@ public class CheckPointScript : MonoBehaviour
         {
             checkPointActive = true;
             GameManagerScript.ChangeCheckPoint(this);
+            CheckPointTake.Play();
             ChangeSprite(true);
         }
         
