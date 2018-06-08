@@ -148,7 +148,7 @@ public class platformScript : BeatActor {
                 break;
         }
 
-        //Debug.Log("Bar duration: "+BeatManager.barDuration);
+        Debug.Log("Bar duration: "+BeatManager.barDuration);
         
 
 
