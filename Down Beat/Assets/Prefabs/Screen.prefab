@@ -296,8 +296,9 @@ MonoBehaviour:
   maxSize: 0
   minSize: 0
   zoomVariation: 0.05
+  startMuffledSong: 0
+  returnFromMuffled: 0
   LevelEndingDoor: {fileID: 0}
-  FallingRocks: []
 --- !u!114 &114629917725083122
 MonoBehaviour:
   m_ObjectHideFlags: 1
