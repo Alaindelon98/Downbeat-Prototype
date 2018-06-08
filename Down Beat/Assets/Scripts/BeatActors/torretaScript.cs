@@ -21,12 +21,12 @@ public class torretaScript : BeatActor {
 	{
         SetBehavior();
 
-        Instantiate(cannon);
 
 
 
         if (left)
         {
+            //GameObject cannonLeft =
             cannon.transform.position = transform.position;
             Vector3 pos = cannon.transform.position;
             pos.x -= 0.4f;
@@ -34,9 +34,12 @@ public class torretaScript : BeatActor {
             Vector3 rot = Vector3.zero;
             rot.z = 45;
             cannon.transform.rotation = Quaternion.Euler(rot);
+
+            Instantiate(cannon);
+
         }
 
-        else if (right)
+         if (right)
         {
             cannon.transform.position = transform.position;
 
@@ -46,9 +49,11 @@ public class torretaScript : BeatActor {
             Vector3 rot = Vector3.zero;
             rot.z = 225;
             cannon.transform.rotation = Quaternion.Euler(rot);
+            Instantiate(cannon);
+
         }
 
-        else if (up)
+         if (up)
         {
             cannon.transform.position = transform.position;
 
@@ -58,9 +63,12 @@ public class torretaScript : BeatActor {
             Vector3 rot = Vector3.zero;
             rot.z = 315;
             cannon.transform.rotation = Quaternion.Euler(rot);
+
+            Instantiate(cannon);
+
         }
 
-        else if (down)
+         if (down)
         {
             cannon.transform.position = transform.position;
 
@@ -70,10 +78,8 @@ public class torretaScript : BeatActor {
             Vector3 rot = Vector3.zero;
             rot.z = 135;
             cannon.transform.rotation = Quaternion.Euler(rot);
-        }
 
-        if (up && down)
-        {
+            Instantiate(cannon);
 
         }
 
