@@ -20,6 +20,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4572200563199908}
   - component: {fileID: 212116556224712070}
+  - component: {fileID: 114628315354589940}
   m_Layer: 0
   m_Name: ColorPlatformsLight_1
   m_TagString: Untagged
@@ -208,6 +209,25 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 0
+--- !u!114 &114628315354589940
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1686580737092994}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 31d8726ccccfe2c4d90a4c127dea9e6e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  mySource: {fileID: 0}
+  beatType: 0
+  beatList: 
+  actSound: {fileID: 0}
+  waitBarInterval: 1
+  startImmediately: 0
+  waitBarCounter: 0
+  mySprite: {fileID: 212116556224712070}
 --- !u!114 &114735644334751718
 MonoBehaviour:
   m_ObjectHideFlags: 1
