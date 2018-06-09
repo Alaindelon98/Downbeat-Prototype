@@ -142,7 +142,7 @@ public class PlayerScript : MonoBehaviour {
         switch (newState)
         {
             case PlayerStates.alive:
-                Debug.Log("New state alive");
+                //Debug.Log("New state alive");
                 myStream.Play();
                 sr.enabled = true;
                 rb.isKinematic = false;
@@ -155,7 +155,7 @@ public class PlayerScript : MonoBehaviour {
                 break;
 
             case PlayerStates.dying:
-                Debug.Log("New state dying");
+               // Debug.Log("New state dying");
 
                 diyingSound.Play();
                 transform.parent = null;
@@ -169,7 +169,7 @@ public class PlayerScript : MonoBehaviour {
 
             case PlayerStates.dead:
 
-                Debug.Log("New state dead");
+                //Debug.Log("New state dead");
 
                 explosionSound.Play();
 
@@ -412,11 +412,11 @@ public class PlayerScript : MonoBehaviour {
             CrystalSound.Play();
 
             GameManagerScript.actualScreen.LevelEndingDoor.SetActive(false);
-            //Debug.Log("enddoor");
+            Debug.Log("enddoor");
         }
         else if (collision.gameObject.tag == "Platform")
         {
-            //Debug.Log("On top of platform");
+            Debug.Log("On top of platform");
             transform.parent = collision.gameObject.transform;
 			grounded = true;
         }
