@@ -57,7 +57,7 @@ public class platformScript : BeatActor {
             if (currentBar >= initialWaitBars)
             {
                 startMoving = true;
-                //Debug.Log("GO ROCKS");
+                //Debug.Log("NO MORE WAITING");
             }
 
             return;
@@ -74,6 +74,7 @@ public class platformScript : BeatActor {
 
         if (isMoving)
         {
+            //Debug.Log("MOVE MOVE");
             Move();
         }
     }
@@ -179,6 +180,7 @@ public class platformScript : BeatActor {
         waitBarCounter = 0;
         currentBar = 0;
         startMoving = false;
+        isMoving = false;
         if (startImmediately) { waitBarCounter = waitBarInterval; }
         scalar = transform.position.x;
 
