@@ -91,6 +91,7 @@ public class PlayerScript : MonoBehaviour {
     // Update is called once per frame
     void Update()
     {
+		//Debug.Log (grounded);
         //Vector3 testCameraPos = Camera.main.transform.position;
         //testCameraPos.x = transform.position.x + 4;
         //Camera.main.transform.position = testCameraPos;
@@ -423,6 +424,14 @@ public class PlayerScript : MonoBehaviour {
 		else if(collision.gameObject.tag == "Tilemap")
 		{
 			grounded = true;
+
 		}
     }
+
+	private void OnTriggerStay2D(Collider2D collision)
+	{
+		if (collision.gameObject.tag == "Tilemap") {
+			grounded = true;
+		}
+	}
 }
