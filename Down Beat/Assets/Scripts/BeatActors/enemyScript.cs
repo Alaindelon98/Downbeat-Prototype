@@ -80,27 +80,27 @@ public class enemyScript : BeatActor {
             Instantiate(DeadParticles, transform.position, transform.rotation);
 			Destroy (this.gameObject);
 		} 
-		if (col.gameObject.tag == "Tilemap") 
+		/*if (col.gameObject.tag == "Tilemap") 
 		{
 			myRigidbody.bodyType = RigidbodyType2D.Kinematic;
 			myRigidbody.useFullKinematicContacts = true;
-		} 
+		}*/
     }
 
 	private void OnCollisionStay2D(Collision2D col)
 	{
-		if (col.gameObject.tag == "Tilemap") 
+		/*if (col.gameObject.tag == "Tilemap") 
 		{
 			myRigidbody.bodyType = RigidbodyType2D.Kinematic;
 			myRigidbody.useFullKinematicContacts = true;
-		}
+		}*/
 	}
 
 	private void OnCollisionExit2D (Collision2D col)
 	{
-		if (col.gameObject.tag == "Tilemap" && spawneado) {
+		/*if (col.gameObject.tag == "Tilemap" && spawneado) {
 			myRigidbody.bodyType = RigidbodyType2D.Dynamic;
-		}
+		}*/
 	}
 
 	private void Move(float speedMove)
