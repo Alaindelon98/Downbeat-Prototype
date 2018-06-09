@@ -48,7 +48,7 @@ public class platformScript : BeatActor {
         // Debug.Log(destination);
         if (!startMoving)
         {
-            Debug.Log("Don't move yet");
+            //Debug.Log("Don't move yet");
             if (BeatManager.currentBeat == BeatManager.BeatType.DownBeat)
             {
                 currentBar += 1;
@@ -68,7 +68,7 @@ public class platformScript : BeatActor {
             isMoving = true;
             //LoopSound();
             Move();
-            Debug.Log("GO");
+            //Debug.Log("GO");
 
         }
 
@@ -103,7 +103,7 @@ public class platformScript : BeatActor {
 
     private void Arrive()
     {
-        Debug.Log("Arrived");
+        //Debug.Log("Arrived");
        // moveTimer = movingTime;
         isMoving = false;
         StopSound();
