@@ -14,11 +14,14 @@ public class ScreenScript : MonoBehaviour
     public bool startMuffledSong = false;
     public bool returnFromMuffled = false;
 
+    public Animator FadeAnimator;
+
     public float timeToChange;
 
     private FallingRockScript rocksManager;
 
     public GameObject LevelEndingDoor;
+   
 
    // public List<FallingRockScript> FallingRocks;
     private bool HasRocks;
@@ -61,6 +64,7 @@ public class ScreenScript : MonoBehaviour
                 ChangeScreen(downScreen);
                 break;
             case "End":
+                FadeAnimator.SetTrigger("EndLevel");
                  StartCoroutine(ChangeLevel());
                 break;
         }
