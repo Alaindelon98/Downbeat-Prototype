@@ -22,7 +22,6 @@ public class BeatManager : MonoBehaviour
         SixteenthBeat
     }
 
-
     public static int fourthNotesCounter;
     public static int eighthNotesCounter;
     public static int sixteenthNotesCounter;
