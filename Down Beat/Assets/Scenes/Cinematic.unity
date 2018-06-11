@@ -723,11 +723,15 @@ Transform:
   m_Father: {fileID: 2111883651}
 <<<<<<< HEAD
   m_RootOrder: 27
+<<<<<<< HEAD
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: -119.296005}
 =======
   m_RootOrder: 7
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: -1.917}
 >>>>>>> parent of 8a5b07b... otra ves sry
+=======
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: -69.380585}
+>>>>>>> parent of e9625a4... finiquitao
 --- !u!212 &618086253
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -954,11 +958,15 @@ Transform:
 <<<<<<< HEAD
   m_RootOrder: 26
 <<<<<<< HEAD
+<<<<<<< HEAD
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: -43.971}
 =======
   m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 39.995003}
 >>>>>>> parent of 8a5b07b... otra ves sry
+=======
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: -8.26445}
+>>>>>>> parent of e9625a4... finiquitao
 =======
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: -8.26445}
 >>>>>>> parent of e9625a4... finiquitao
@@ -1036,11 +1044,15 @@ Transform:
 <<<<<<< HEAD
   m_RootOrder: 29
 <<<<<<< HEAD
+<<<<<<< HEAD
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 127.296005}
 =======
   m_RootOrder: 8
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 21.434002}
 >>>>>>> parent of 8a5b07b... otra ves sry
+=======
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 82.27818}
+>>>>>>> parent of e9625a4... finiquitao
 =======
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 82.27818}
 >>>>>>> parent of e9625a4... finiquitao
