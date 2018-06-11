@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.44657844, g: 0.49641222, b: 0.57481694, a: 1}
+  m_IndirectSpecularColor: {r: 0.44657898, g: 0.4964133, b: 0.5748178, a: 1}
 --- !u!157 &3
 LightmapSettings:
   m_ObjectHideFlags: 0
@@ -120835,12 +120835,12 @@ Prefab:
     - target: {fileID: 198776245999385020, guid: 403d899c0de731f46afbe1de837d3014,
         type: 2}
       propertyPath: SizeModule.curve.maxCurve.m_Curve.Array.data[0].value
-      value: 0.53043795
+      value: 0.7130475
       objectReference: {fileID: 0}
     - target: {fileID: 198776245999385020, guid: 403d899c0de731f46afbe1de837d3014,
         type: 2}
       propertyPath: SizeModule.curve.maxCurve.m_Curve.Array.data[1].value
-      value: 0.27825165
+      value: 0.4434662
       objectReference: {fileID: 0}
     - target: {fileID: 198776245999385020, guid: 403d899c0de731f46afbe1de837d3014,
         type: 2}
@@ -120860,7 +120860,7 @@ Prefab:
     - target: {fileID: 198776245999385020, guid: 403d899c0de731f46afbe1de837d3014,
         type: 2}
       propertyPath: ColorModule.gradient.maxGradient.atime1
-      value: 48766
+      value: 60331
       objectReference: {fileID: 0}
     - target: {fileID: 198776245999385020, guid: 403d899c0de731f46afbe1de837d3014,
         type: 2}
@@ -120871,6 +120871,30 @@ Prefab:
         type: 2}
       propertyPath: m_ForceIntoRT
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4372126727319886, guid: 403d899c0de731f46afbe1de837d3014, type: 2}
+      propertyPath: m_LocalPosition.x
+      value: -13
+      objectReference: {fileID: 0}
+    - target: {fileID: 198776245999385020, guid: 403d899c0de731f46afbe1de837d3014,
+        type: 2}
+      propertyPath: ColorModule.gradient.maxGradient.key0.a
+      value: 0.69411767
+      objectReference: {fileID: 0}
+    - target: {fileID: 198776245999385020, guid: 403d899c0de731f46afbe1de837d3014,
+        type: 2}
+      propertyPath: ColorModule.gradient.maxGradient.key1.a
+      value: 0.6784314
+      objectReference: {fileID: 0}
+    - target: {fileID: 198776245999385020, guid: 403d899c0de731f46afbe1de837d3014,
+        type: 2}
+      propertyPath: SizeModule.enabled
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 198776245999385020, guid: 403d899c0de731f46afbe1de837d3014,
+        type: 2}
+      propertyPath: ColorModule.gradient.maxGradient.key1.b
+      value: 0.99215686
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 403d899c0de731f46afbe1de837d3014, type: 2}
@@ -134019,6 +134043,16 @@ Prefab:
         type: 2}
       propertyPath: m_PlayOnAwake
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 114595346359449680, guid: 7b327f6da72712545ac1db7508b29fb2,
+        type: 2}
+      propertyPath: smoothSpeed
+      value: 20
+      objectReference: {fileID: 0}
+    - target: {fileID: 114595346359449680, guid: 7b327f6da72712545ac1db7508b29fb2,
+        type: 2}
+      propertyPath: keepPercentage
+      value: 0.09
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 7b327f6da72712545ac1db7508b29fb2, type: 2}
