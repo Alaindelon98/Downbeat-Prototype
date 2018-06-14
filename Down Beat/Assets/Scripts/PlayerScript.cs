@@ -433,5 +433,10 @@ public class PlayerScript : MonoBehaviour {
 		if (collision.gameObject.tag == "Tilemap") {
 			grounded = true;
 		}
+		if (collision.gameObject.tag == "Platform")
+		{
+			transform.parent = collision.gameObject.transform;
+			grounded = true;
+		}
 	}
 }
