@@ -100264,6 +100264,11 @@ Prefab:
       propertyPath: Mute
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 82080467128339272, guid: 7b327f6da72712545ac1db7508b29fb2,
+        type: 2}
+      propertyPath: m_PlayOnAwake
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 7b327f6da72712545ac1db7508b29fb2, type: 2}
   m_IsPrefabParent: 0
