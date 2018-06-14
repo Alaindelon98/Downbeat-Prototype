@@ -16,7 +16,6 @@ public class PlayerScript : MonoBehaviour {
     public AudioSource explosionSound;
     public AudioSource diyingSound;
     public AudioSource CrystalSound;
-
     [Header("Animations")]
 
     public Animation BeatAnimation;
@@ -29,7 +28,7 @@ public class PlayerScript : MonoBehaviour {
 
     [HideInInspector]
 
-    public enum PlayerStates { alive,dying,dead};
+    public enum PlayerStates { alive,dying,dead,ending};
 
     [HideInInspector]
 
