@@ -80,6 +80,11 @@ public class enemyScript : BeatActor {
             Instantiate(DeadParticles, transform.position, transform.rotation);
 			Destroy (this.gameObject);
 		} 
+        
+        else if(col.gameObject.tag == "Player")
+        {
+            myRigidbody.velocity = Vector2.zero;
+        }
 		/*if (col.gameObject.tag == "Tilemap") 
 		{
 			myRigidbody.bodyType = RigidbodyType2D.Kinematic;
@@ -105,7 +110,9 @@ public class enemyScript : BeatActor {
 
 	private void Move(float speedMove)
 	{
-        myRigidbody.velocity = Vector2.right * speedMove *direction;
+        myRigidbody.velocity = Vector2.right * speedMove * direction;
+
+
        
 
         //var vel = myRigidbody.velocity;
@@ -122,20 +129,28 @@ public class enemyScript : BeatActor {
 
         //saltito 
 
-        //Debug.Log(myRigidbody.velocity);
+        Debug.Log(myRigidbody.velocity);
     }
     private void GestionateMovement()
     {
         if ((Mathf.Abs(myRigidbody.velocity.x)) > 0)
         {
             float xVel = Mathf.Abs( myRigidbody.velocity.x);
-            xVel -= drag;
+            if (xVel >= drag)
+            {
+                xVel -= drag;
+            }
+
+            else
+            {
+                xVel = 0;
+            }
             Move(xVel);
         }
 
         //Debug.Log("actspeed"+myRigidbody.velocity.x);
 
-        //Debug.Log("dir" + direction);
+        Debug.Log("dir" + direction);
         //myRigidbody.velocity = Vector2.up * jumpVelocity;
 
     }
