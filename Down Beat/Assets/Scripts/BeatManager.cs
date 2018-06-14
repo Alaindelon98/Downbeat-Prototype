@@ -147,6 +147,7 @@ public class BeatManager : MonoBehaviour
             if (kickIn)
             {
                 mySource.Play();
+                childSource.Play();
                 //Debug.Log("start");
             }
         }
