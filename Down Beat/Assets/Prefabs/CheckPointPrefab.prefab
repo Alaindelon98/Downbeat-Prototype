@@ -25,7 +25,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!1 &1487252892784988
 GameObject:
   m_ObjectHideFlags: 1
@@ -324,6 +324,7 @@ MonoBehaviour:
   WiggleAnim: {fileID: 0}
   CheckPointAnim: {fileID: 0}
   Anim: {fileID: 95268173201625972}
+  particles: {fileID: 1252077005909492}
   CheckPointTake: {fileID: 82252709106130600}
 --- !u!198 &198002006668169010
 ParticleSystem:

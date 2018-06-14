@@ -11,6 +11,8 @@ public class CheckPointScript : MonoBehaviour
 	public Animation WiggleAnim, CheckPointAnim;
 	public Animator Anim;
 
+    public GameObject particles;
+
     public AudioSource CheckPointTake;
 	// Use this for initialization
 	void Start ()
@@ -22,7 +24,8 @@ public class CheckPointScript : MonoBehaviour
 
         if (checkPointActive)
         {
-           
+            ChangeSprite(true);
+            particles.SetActive(true);
             GameManagerScript.player.playerCheckPoint = this;
         }
 		
@@ -31,15 +34,7 @@ public class CheckPointScript : MonoBehaviour
 	// Update is called once per frame
 	void Update ()
     {
-        if (checkPointActive)
-        {
-			ChangeSprite (true);
-            //if(BeatManager.currentBeat==BeatManager.BeatType.FourthBeat || BeatManager.currentBeat == BeatManager.BeatType.DownBeat)
-            //{
-            //    WiggleAnim.Play();
-            //}
-        }
-		
+
 	}
     void OnTriggerEnter2D(Collider2D col)
     {
@@ -48,6 +43,7 @@ public class CheckPointScript : MonoBehaviour
             checkPointActive = true;
             GameManagerScript.ChangeCheckPoint(this);
             CheckPointTake.Play();
+          
             ChangeSprite(true);
         }
         
@@ -58,13 +54,15 @@ public class CheckPointScript : MonoBehaviour
     {
         if (state)
         {
-			Anim.SetBool ("check", true);
+            particles.SetActive(true);
+            Anim.SetBool ("check", true);
             //myrenderer.color = Color.cyan;
             //myrenderer.sprite = StateSprites[0];
         }
         else
         {
-			Anim.SetBool ("check", false);
+            particles.SetActive(false);
+            Anim.SetBool ("check", false);
             //myrenderer.color = Color.gray;
             //myrenderer.sprite = StateSprites[1];
         }
