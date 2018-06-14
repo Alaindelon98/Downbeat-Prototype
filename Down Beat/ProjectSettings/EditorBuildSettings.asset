@@ -11,18 +11,24 @@ EditorBuildSettings:
   - enabled: 0
     path: Assets/Scenes/spectrumTest.unity
     guid: a03cc2a162fbe524ea45009dcae03b60
-  - enabled: 1
+  - enabled: 0
     path: Assets/Scenes/Menu.unity
     guid: c0d6c1b359b4cee478bf330aca846886
-  - enabled: 1
+  - enabled: 0
     path: Assets/Scenes/Level_1.unity
     guid: 089531647493fbe47ad58fd20994ad41
-  - enabled: 1
+  - enabled: 0
     path: Assets/Scenes/Level_2.unity
     guid: c80f104fb9cdae94d80a1141e010de13
-  - enabled: 1
+  - enabled: 0
     path: Assets/Scenes/Level_3.unity
     guid: e9fe805a9e000c545a4a8eb7273e1032
-  - enabled: 1
+  - enabled: 0
     path: Assets/Scenes/Level_4.unity
     guid: 992558e6f3bc427419945c8cb08ab4d5
+  - enabled: 0
+    path: Assets/Scenes/Cinematic - copia.unity
+    guid: 3e1992fb5664e8a4eaf3f14c092789e4
+  - enabled: 1
+    path: Assets/Scenes/Menu - Copy.unity
+    guid: 542abe25ab0af9a418391779de78db42
