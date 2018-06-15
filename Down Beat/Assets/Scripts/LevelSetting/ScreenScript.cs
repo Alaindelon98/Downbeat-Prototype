@@ -21,6 +21,8 @@ public class ScreenScript : MonoBehaviour
     private FallingRockScript rocksManager;
 
     public GameObject LevelEndingDoor;
+
+    public GameObject spectrum;
    
 
    // public List<FallingRockScript> FallingRocks;
@@ -31,7 +33,7 @@ public class ScreenScript : MonoBehaviour
 	{
         rocksManager = GetComponentInChildren<FallingRockScript>();
 
-
+        spectrum = Camera.main.transform.GetChild(1).gameObject;
         maxSize = Camera.main.orthographicSize;
 		minSize = maxSize - zoomVariation;
     }
@@ -100,11 +102,13 @@ public class ScreenScript : MonoBehaviour
         if(newScreen.startMuffledSong)
         {
             BeatManager.ChangeSong(true);
+            spectrum.SetActive(false);
         }
 
         else if(newScreen.returnFromMuffled)
         {
             BeatManager.ChangeSong(false);
+            spectrum.SetActive(true);
         }
 
         newScreen.CallCamera();

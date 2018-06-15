@@ -273,12 +273,12 @@ Prefab:
     - target: {fileID: 198776245999385020, guid: 403d899c0de731f46afbe1de837d3014,
         type: 2}
       propertyPath: ColorModule.gradient.maxGradient.key1.r
-      value: 0.9825015
+      value: 0.9129816
       objectReference: {fileID: 0}
     - target: {fileID: 198776245999385020, guid: 403d899c0de731f46afbe1de837d3014,
         type: 2}
       propertyPath: ColorModule.gradient.maxGradient.key1.g
-      value: 0.33558244
+      value: 0.14768824
       objectReference: {fileID: 0}
     - target: {fileID: 198776245999385020, guid: 403d899c0de731f46afbe1de837d3014,
         type: 2}
@@ -288,7 +288,7 @@ Prefab:
     - target: {fileID: 198776245999385020, guid: 403d899c0de731f46afbe1de837d3014,
         type: 2}
       propertyPath: ColorModule.gradient.maxGradient.ctime1
-      value: 2120
+      value: 36430
       objectReference: {fileID: 0}
     - target: {fileID: 198776245999385020, guid: 403d899c0de731f46afbe1de837d3014,
         type: 2}
@@ -298,7 +298,7 @@ Prefab:
     - target: {fileID: 198776245999385020, guid: 403d899c0de731f46afbe1de837d3014,
         type: 2}
       propertyPath: ColorModule.gradient.maxGradient.key1.b
-      value: 0.99215686
+      value: 0.428
       objectReference: {fileID: 0}
     - target: {fileID: 198776245999385020, guid: 403d899c0de731f46afbe1de837d3014,
         type: 2}
@@ -342,7 +342,7 @@ Prefab:
     - target: {fileID: 198776245999385020, guid: 403d899c0de731f46afbe1de837d3014,
         type: 2}
       propertyPath: ColorModule.gradient.maxGradient.key0.a
-      value: 0.6
+      value: 0.69411767
       objectReference: {fileID: 0}
     - target: {fileID: 198776245999385020, guid: 403d899c0de731f46afbe1de837d3014,
         type: 2}
@@ -572,11 +572,6 @@ Prefab:
         type: 2}
       propertyPath: amountVisual
       value: 100
-      objectReference: {fileID: 0}
-    - target: {fileID: 82988748700645442, guid: 7b327f6da72712545ac1db7508b29fb2,
-        type: 2}
-      propertyPath: Loop
-      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 7b327f6da72712545ac1db7508b29fb2, type: 2}

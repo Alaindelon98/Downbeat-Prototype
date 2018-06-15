@@ -55,6 +55,7 @@ public class FallingRockScript : BeatActor
             rock.transform.parent = transform;
             individualRockScript rockScript = rock.GetComponent<individualRockScript>();
             rockScript.rockManager = this;
+            //rockScript.lavaPrefab = rockPrefab;
             rocksList.Add(rockScript);
         }
 
