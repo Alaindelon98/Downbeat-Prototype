@@ -70,9 +70,10 @@ public class individualRockScript : MonoBehaviour {
                 myCopy.transform.position = newCopyPos;
                 Debug.Log(myCopy.transform.position);
 
-                if (myCopy.transform.position.y <= (endPos - (endPos - startPos.y)))
+                if (myCopy.transform.position.y <= -20)
                 {
-                    Debug.Log("don't fall");
+                    Debug.Log("end pos" + endPos);
+                    Debug.Log("Go this far "+ (endPos - (endPos - startPos.y)));
                     copyFalling = false;
                 }
             }
@@ -104,6 +105,7 @@ public class individualRockScript : MonoBehaviour {
         killedPlayer = false;
         isFalling = false;
         fallen = false;
+        copyFalling = false;
 
         Destroy(myCopy);
 
