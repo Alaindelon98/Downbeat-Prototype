@@ -6,6 +6,7 @@ using UnityEngine.SceneManagement;
 public class TransicionScipt : MonoBehaviour {
 
 	public AudioSource song;
+	public Animator animator;
 
 	private int index;
 	// Use this for initialization
@@ -15,9 +16,16 @@ public class TransicionScipt : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-		if (song.time >=6.0f) {
-			SceneManager.LoadScene (index+1);
-			//print("changeee");
+		if (song.time >=5.5f) {
+			FadeToLevel();
 		}
+	}
+	public void FadeToLevel()
+	{
+		animator.SetTrigger ("EndLevel");
+	}
+	public void OnFadeComplete()
+	{
+		SceneManager.LoadScene (index + 1);
 	}
 }
