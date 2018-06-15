@@ -298,6 +298,7 @@ MonoBehaviour:
   zoomVariation: 0.05
   startMuffledSong: 0
   returnFromMuffled: 0
+  EndingLevel: {fileID: 0}
   FadeAnimator: {fileID: 0}
   timeToChange: 0
   LevelEndingDoor: {fileID: 0}
@@ -24587,6 +24588,7 @@ MonoBehaviour:
   zoomVariation: 0.05
   startMuffledSong: 0
   returnFromMuffled: 0
+  EndingLevel: {fileID: 0}
   FadeAnimator: {fileID: 0}
   timeToChange: 0
   LevelEndingDoor: {fileID: 0}
@@ -29289,6 +29291,7 @@ MonoBehaviour:
   zoomVariation: 0.05
   startMuffledSong: 0
   returnFromMuffled: 0
+  EndingLevel: {fileID: 0}
   FadeAnimator: {fileID: 0}
   timeToChange: 0
   LevelEndingDoor: {fileID: 0}
@@ -108593,6 +108596,7 @@ MonoBehaviour:
   zoomVariation: 0.05
   startMuffledSong: 0
   returnFromMuffled: 0
+  EndingLevel: {fileID: 0}
   FadeAnimator: {fileID: 0}
   timeToChange: 0
   LevelEndingDoor: {fileID: 0}
@@ -108989,6 +108993,7 @@ MonoBehaviour:
   zoomVariation: 0.05
   startMuffledSong: 0
   returnFromMuffled: 0
+  EndingLevel: {fileID: 0}
   FadeAnimator: {fileID: 0}
   timeToChange: 0
   LevelEndingDoor: {fileID: 0}
@@ -111856,6 +111861,7 @@ MonoBehaviour:
   zoomVariation: 0.05
   startMuffledSong: 0
   returnFromMuffled: 1
+  EndingLevel: {fileID: 0}
   FadeAnimator: {fileID: 0}
   timeToChange: 0
   LevelEndingDoor: {fileID: 0}
@@ -112200,6 +112206,7 @@ MonoBehaviour:
   zoomVariation: 0.05
   startMuffledSong: 1
   returnFromMuffled: 0
+  EndingLevel: {fileID: 0}
   FadeAnimator: {fileID: 0}
   timeToChange: 0
   LevelEndingDoor: {fileID: 0}
@@ -112493,6 +112500,7 @@ MonoBehaviour:
   zoomVariation: 0.05
   startMuffledSong: 0
   returnFromMuffled: 0
+  EndingLevel: {fileID: 0}
   FadeAnimator: {fileID: 0}
   timeToChange: 0
   LevelEndingDoor: {fileID: 0}
@@ -112914,6 +112922,7 @@ MonoBehaviour:
   zoomVariation: 0.05
   startMuffledSong: 0
   returnFromMuffled: 0
+  EndingLevel: {fileID: 0}
   FadeAnimator: {fileID: 0}
   timeToChange: 0
   LevelEndingDoor: {fileID: 0}
@@ -113186,6 +113195,7 @@ MonoBehaviour:
   zoomVariation: 0.05
   startMuffledSong: 0
   returnFromMuffled: 0
+  EndingLevel: {fileID: 0}
   FadeAnimator: {fileID: 0}
   timeToChange: 0
   LevelEndingDoor: {fileID: 0}
@@ -128646,7 +128656,12 @@ Prefab:
         type: 2}
       propertyPath: m_audioClip
       value: 
-      objectReference: {fileID: 8300000, guid: 4f44fd5e01e794b4daa8d7102eeca8dc, type: 3}
+      objectReference: {fileID: 8300000, guid: b25274d2118c7a0448cf34d40f9e9a5f, type: 3}
+    - target: {fileID: 82080467128339272, guid: 7b327f6da72712545ac1db7508b29fb2,
+        type: 2}
+      propertyPath: m_audioClip
+      value: 
+      objectReference: {fileID: 8300000, guid: 9fe3135805d5e25459934a3655a7d3a6, type: 3}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 7b327f6da72712545ac1db7508b29fb2, type: 2}
   m_IsPrefabParent: 0

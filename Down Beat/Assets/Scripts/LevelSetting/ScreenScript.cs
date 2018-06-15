@@ -13,7 +13,7 @@ public class ScreenScript : MonoBehaviour
 	public float zoomVariation = 0.05f;
     public bool startMuffledSong = false;
     public bool returnFromMuffled = false;
-
+    public AudioSource EndingLevel;
     public Animator FadeAnimator;
 
     public float timeToChange;
@@ -64,7 +64,9 @@ public class ScreenScript : MonoBehaviour
                 ChangeScreen(downScreen);
                 break;
             case "End":
+                EndingLevel.Play();
                 FadeAnimator.SetTrigger("EndLevel");
+                GameManagerScript.player.ChangePlayerState(PlayerScript.PlayerStates.ending);
                  StartCoroutine(ChangeLevel());
                 break;
         }

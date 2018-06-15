@@ -66,7 +66,7 @@ public class platformScript : BeatActor {
         {
             //Debug.Log("Beat Listener and not moving");
             isMoving = true;
-            //LoopSound();
+            LoopSound();
             Move();
             //Debug.Log("GO");
 
