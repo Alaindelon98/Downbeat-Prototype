@@ -10,8 +10,9 @@ public class BeatManager : MonoBehaviour
     public int barLength = 4;
     public int strongBeat = 1;
     private float bps;
-    public AudioClip downBeat, offBeat;
+   
     public AudioSource childSource;
+    public AudioSource downbeat;
 
     public enum BeatType
     {
@@ -99,7 +100,7 @@ public class BeatManager : MonoBehaviour
                 if (fourthNotesCounter == 1)
                 {
                     currentBeat = BeatType.DownBeat;
-                    mySource.PlayOneShot(downBeat);
+                    downbeat.Play();
                 }
             }
             else if (mySource.timeSamples > nextEighthSample)

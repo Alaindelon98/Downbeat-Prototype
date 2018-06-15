@@ -22,6 +22,7 @@ GameObject:
   - component: {fileID: 114350164634019236}
   - component: {fileID: 82988748700645442}
   - component: {fileID: 114595346359449680}
+  - component: {fileID: 82923753543714876}
   m_Layer: 0
   m_Name: GameBeatManager
   m_TagString: Untagged
@@ -81,12 +82,92 @@ AudioSource:
   m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
-  m_audioClip: {fileID: 8300000, guid: 880ca98994f66974caec47ec394c9c42, type: 3}
-  m_PlayOnAwake: 1
+  m_audioClip: {fileID: 8300000, guid: d11791b4526e72d4a8b2e111e29b0a2d, type: 3}
+  m_PlayOnAwake: 0
   m_Volume: 0.75
   m_Pitch: 1
   Loop: 1
   Mute: 1
+  Spatialize: 0
+  SpatializePostEffects: 0
+  Priority: 128
+  DopplerLevel: 1
+  MinDistance: 1
+  MaxDistance: 500
+  Pan2D: 0
+  rolloffMode: 0
+  BypassEffects: 0
+  BypassListenerEffects: 0
+  BypassReverbZones: 0
+  rolloffCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 2
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    - serializedVersion: 2
+      time: 1
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  panLevelCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 2
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 0
+  spreadCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 2
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  reverbZoneMixCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 2
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 0
+--- !u!82 &82923753543714876
+AudioSource:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1747949684553042}
+  m_Enabled: 1
+  serializedVersion: 4
+  OutputAudioMixerGroup: {fileID: 0}
+  m_audioClip: {fileID: 8300000, guid: cd0e1583fa6e4e04bb61d168109c8644, type: 3}
+  m_PlayOnAwake: 1
+  m_Volume: 1
+  m_Pitch: 1
+  Loop: 0
+  Mute: 0
   Spatialize: 0
   SpatializePostEffects: 0
   Priority: 128
@@ -161,8 +242,8 @@ AudioSource:
   m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
-  m_audioClip: {fileID: 8300000, guid: 492bedf4a76695e4ba6cfd8d79da3604, type: 3}
-  m_PlayOnAwake: 1
+  m_audioClip: {fileID: 8300000, guid: 99a340121eec7aa4984432efdacea617, type: 3}
+  m_PlayOnAwake: 0
   m_Volume: 0.75
   m_Pitch: 1
   Loop: 1
@@ -247,9 +328,8 @@ MonoBehaviour:
   beatUnit: 4
   barLength: 4
   strongBeat: 1
-  downBeat: {fileID: 8300000, guid: cd0e1583fa6e4e04bb61d168109c8644, type: 3}
-  offBeat: {fileID: 8300000, guid: e77eaf1e490aa5a4cbc26408793f32b7, type: 3}
   childSource: {fileID: 82080467128339272}
+  downbeat: {fileID: 82923753543714876}
   delay: 0.02
   loopSampleRange: 15000
 --- !u!114 &114595346359449680

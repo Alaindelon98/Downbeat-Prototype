@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.44657898, g: 0.4964133, b: 0.5748178, a: 1}
+  m_IndirectSpecularColor: {r: 0.44657844, g: 0.49641222, b: 0.57481694, a: 1}
 --- !u!157 &3
 LightmapSettings:
   m_ObjectHideFlags: 0
@@ -2880,7 +2880,7 @@ GameObject:
   - component: {fileID: 857357201}
   m_Layer: 0
   m_Name: Door
-  m_TagString: End
+  m_TagString: Platform
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -8827,6 +8827,14 @@ CompositeCollider2D:
         Y: -420000000
       - X: 990000000
         Y: -430000000
+    - - X: 880000000
+        Y: -450000000
+      - X: 880000000
+        Y: -440000000
+      - X: 890000000
+        Y: -440000000
+      - X: 890000000
+        Y: -450000000
     - - X: 1470000000
         Y: -520000000
       - X: 1470000000
@@ -8847,14 +8855,6 @@ CompositeCollider2D:
         Y: -470000000
       - X: 1480000000
         Y: -520000000
-    - - X: 880000000
-        Y: -450000000
-      - X: 880000000
-        Y: -440000000
-      - X: 890000000
-        Y: -440000000
-      - X: 890000000
-        Y: -450000000
     - - X: 1090000000
         Y: -600000000
       - X: 1090000000
@@ -9811,10 +9811,6 @@ CompositeCollider2D:
       - {x: 92, y: -42}
       - {x: 99, y: -42}
       - {x: 99, y: -43}
-    - - {x: 88, y: -45}
-      - {x: 88, y: -44}
-      - {x: 89, y: -44}
-      - {x: 89, y: -45}
     - - {x: 147, y: -52}
       - {x: 147, y: -47}
       - {x: 136, y: -47}
@@ -9825,6 +9821,10 @@ CompositeCollider2D:
       - {x: 147, y: -47}
       - {x: 148, y: -47}
       - {x: 148, y: -52}
+    - - {x: 88, y: -45}
+      - {x: 88, y: -44}
+      - {x: 89, y: -44}
+      - {x: 89, y: -45}
     - - {x: 109, y: -60}
       - {x: 109, y: -59}
       - {x: 112, y: -59}
@@ -133212,6 +133212,8 @@ MonoBehaviour:
   startImmediately: 0
   waitBarCounter: 0
   tilemap: {fileID: 1779475609}
+  renderer: {fileID: 0}
+  IsSpriteRenderer: 0
 --- !u!1001 &1819060290
 Prefab:
   m_ObjectHideFlags: 0
@@ -134059,6 +134061,21 @@ Prefab:
       value: 0.09
       objectReference: {fileID: 0}
     - target: {fileID: 82080467128339272, guid: 7b327f6da72712545ac1db7508b29fb2,
+        type: 2}
+      propertyPath: m_PlayOnAwake
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 114595346359449680, guid: 7b327f6da72712545ac1db7508b29fb2,
+        type: 2}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 82988748700645442, guid: 7b327f6da72712545ac1db7508b29fb2,
+        type: 2}
+      propertyPath: Loop
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 82923753543714876, guid: 7b327f6da72712545ac1db7508b29fb2,
         type: 2}
       propertyPath: m_PlayOnAwake
       value: 0

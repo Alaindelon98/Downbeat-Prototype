@@ -491,6 +491,11 @@ Prefab:
       propertyPath: m_IsActive
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 212417309875875704, guid: c1ab2cffb1ba1cd4489da0a5b19b7fcd,
+        type: 2}
+      propertyPath: m_MaskInteraction
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: c1ab2cffb1ba1cd4489da0a5b19b7fcd, type: 2}
   m_IsPrefabParent: 0
@@ -24734,6 +24739,10 @@ Prefab:
     - target: {fileID: 212720978481135376, guid: 4bb8f992fb302ea459ce16914f8bfecb,
         type: 2}
       propertyPath: m_MaskInteraction
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1083759312327814, guid: 4bb8f992fb302ea459ce16914f8bfecb, type: 2}
+      propertyPath: m_IsActive
       value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
@@ -111343,7 +111352,7 @@ GameObject:
   - component: {fileID: 1229104930}
   m_Layer: 0
   m_Name: Square
-  m_TagString: Untagged
+  m_TagString: Platform
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -113674,7 +113683,7 @@ Prefab:
       objectReference: {fileID: 1267736594}
     - target: {fileID: 1045806790492094, guid: abcc1189ecf994a46abcec7f4dd61e1b, type: 2}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 4799413757019156, guid: abcc1189ecf994a46abcec7f4dd61e1b, type: 2}
       propertyPath: m_RootOrder
@@ -128693,33 +128702,14 @@ Prefab:
       propertyPath: m_RootOrder
       value: 3
       objectReference: {fileID: 0}
-    - target: {fileID: 1747949684553042, guid: 7b327f6da72712545ac1db7508b29fb2, type: 2}
-      propertyPath: m_Name
-      value: GameBeatManager
-      objectReference: {fileID: 0}
     - target: {fileID: 114595346359449680, guid: 7b327f6da72712545ac1db7508b29fb2,
         type: 2}
       propertyPath: spectrumParent
       value: 
       objectReference: {fileID: 868836665}
-    - target: {fileID: 114350164634019236, guid: 7b327f6da72712545ac1db7508b29fb2,
-        type: 2}
-      propertyPath: childSource
-      value: 
-      objectReference: {fileID: 2141805962}
     - target: {fileID: 114595346359449680, guid: 7b327f6da72712545ac1db7508b29fb2,
         type: 2}
       propertyPath: m_Enabled
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 82988748700645442, guid: 7b327f6da72712545ac1db7508b29fb2,
-        type: 2}
-      propertyPath: m_PlayOnAwake
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 82080467128339272, guid: 7b327f6da72712545ac1db7508b29fb2,
-        type: 2}
-      propertyPath: m_PlayOnAwake
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 82988748700645442, guid: 7b327f6da72712545ac1db7508b29fb2,
@@ -128732,11 +128722,11 @@ Prefab:
       propertyPath: m_audioClip
       value: 
       objectReference: {fileID: 8300000, guid: 9fe3135805d5e25459934a3655a7d3a6, type: 3}
+    - target: {fileID: 82923753543714876, guid: 7b327f6da72712545ac1db7508b29fb2,
+        type: 2}
+      propertyPath: m_PlayOnAwake
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 7b327f6da72712545ac1db7508b29fb2, type: 2}
   m_IsPrefabParent: 0
---- !u!82 &2141805962 stripped
-AudioSource:
-  m_PrefabParentObject: {fileID: 82080467128339272, guid: 7b327f6da72712545ac1db7508b29fb2,
-    type: 2}
-  m_PrefabInternal: {fileID: 2141805961}

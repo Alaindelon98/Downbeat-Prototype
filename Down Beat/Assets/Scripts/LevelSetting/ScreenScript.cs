@@ -87,10 +87,7 @@ public class ScreenScript : MonoBehaviour
 
         int nextSceneIndex = SceneManager.GetActiveScene().buildIndex + 1;
 
-        if(nextSceneIndex == 5)
-        {
-            nextSceneIndex = 0;
-        }
+       
         //Debug.Log(nextSceneIndex);
 
         SceneManager.LoadScene(nextSceneIndex);

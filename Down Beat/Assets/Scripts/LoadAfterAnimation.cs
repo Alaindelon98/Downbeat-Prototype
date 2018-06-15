@@ -27,7 +27,7 @@ public class LoadAfterAnimation : MonoBehaviour {
     {
         int nextSceneIndex = SceneManager.GetActiveScene().buildIndex + 1;
 
-        if (nextSceneIndex == 5)
+        if (nextSceneIndex == 10)
         {
             nextSceneIndex = 0;
         }
