@@ -573,6 +573,33 @@ Prefab:
       propertyPath: amountVisual
       value: 100
       objectReference: {fileID: 0}
+    - target: {fileID: 82988748700645442, guid: 7b327f6da72712545ac1db7508b29fb2,
+        type: 2}
+      propertyPath: Loop
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 7b327f6da72712545ac1db7508b29fb2, type: 2}
   m_IsPrefabParent: 0
+--- !u!1 &1995506804 stripped
+GameObject:
+  m_PrefabParentObject: {fileID: 1747949684553042, guid: 7b327f6da72712545ac1db7508b29fb2,
+    type: 2}
+  m_PrefabInternal: {fileID: 1995506803}
+--- !u!82 &1995506805 stripped
+AudioSource:
+  m_PrefabParentObject: {fileID: 82988748700645442, guid: 7b327f6da72712545ac1db7508b29fb2,
+    type: 2}
+  m_PrefabInternal: {fileID: 1995506803}
+--- !u!114 &1995506806
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1995506804}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f6a291f6b3a32c44e9fa7b969cd7eb9b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  song: {fileID: 1995506805}
