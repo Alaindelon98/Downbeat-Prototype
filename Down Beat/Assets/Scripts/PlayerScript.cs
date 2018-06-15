@@ -320,7 +320,14 @@ public class PlayerScript : MonoBehaviour {
 
             if (rb.velocity.y < 0)
             {
-                rb.velocity += Vector2.up * Physics2D.gravity.y * (fallMultiplier - 1) * Time.deltaTime;
+                Vector2 vel = rb.velocity;
+
+
+                vel += Vector2.up * Physics2D.gravity.y * (fallMultiplier - 1) * Time.deltaTime;
+
+                Mathf.Clamp(vel.y, -30, 0);
+                rb.velocity = vel;
+                Debug.Log(rb.velocity.y);
             }
 
             else if (rb.velocity.y > 0)

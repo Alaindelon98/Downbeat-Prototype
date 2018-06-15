@@ -449,6 +449,11 @@ Prefab:
       propertyPath: looping
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 198776245999385020, guid: 403d899c0de731f46afbe1de837d3014,
+        type: 2}
+      propertyPath: lengthInSec
+      value: 6
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 403d899c0de731f46afbe1de837d3014, type: 2}
   m_IsPrefabParent: 0
