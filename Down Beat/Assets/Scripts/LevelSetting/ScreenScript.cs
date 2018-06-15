@@ -13,6 +13,7 @@ public class ScreenScript : MonoBehaviour
 	public float zoomVariation = 0.05f;
     public bool startMuffledSong = false;
     public bool returnFromMuffled = false;
+    public bool startEndingMood = false;
     public AudioSource EndingLevel;
     public Animator FadeAnimator;
 
@@ -104,8 +105,13 @@ public class ScreenScript : MonoBehaviour
             BeatManager.ChangeSong(true);
             spectrum.SetActive(false);
         }
+        if (startEndingMood)
+        {
+            BeatManager.mySource.volume = 0;
+        }
 
-        else if(newScreen.returnFromMuffled)
+
+        else if (newScreen.returnFromMuffled)
         {
             BeatManager.ChangeSong(false);
             spectrum.SetActive(true);

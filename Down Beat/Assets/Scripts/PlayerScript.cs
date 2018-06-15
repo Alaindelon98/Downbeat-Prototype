@@ -141,6 +141,12 @@ public class PlayerScript : MonoBehaviour {
 
         switch (newState)
         {
+            case PlayerStates.ending:
+
+                rb.bodyType = RigidbodyType2D.Static;
+
+                break;
+
             case PlayerStates.alive:
                 //Debug.Log("New state alive");
                 myStream.Play();
