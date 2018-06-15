@@ -12,11 +12,12 @@ public class individualRockScript : MonoBehaviour {
     private BoxCollider2D col;
     private float endPos;
     private Vector3 startPos;
+    public GameObject lavaPrefab;
 
     public FallingRockScript rockManager;
 
-    private bool killedPlayer;
-
+    private bool killedPlayer, copyFalling;
+    private GameObject myCopy;
 	void Start () {
         col = GetComponent<BoxCollider2D>();
 
@@ -42,12 +43,38 @@ public class individualRockScript : MonoBehaviour {
             //if (col.offset.y <= -0.5f)
             if (transform.position.y <= endPos)
             {
-                //col.offset = new Vector2(0, -0.5f) ;
-                Vector3 finalPos = transform.position;
-                finalPos.y = endPos;
-                transform.position = finalPos;
-                isFalling = false;
-                fallen = true;
+                if (!copyFalling)
+                {
+                    //col.offset = new Vector2(0, -0.5f) ;
+                    Vector3 finalPos = transform.position;
+                    finalPos.y = endPos;
+                    transform.position = finalPos;
+                    isFalling = false;
+                    fallen = true;
+                    Debug.Log("Fallen");
+                    myCopy = Instantiate(lavaPrefab, transform.position, transform.rotation);
+                    copyFalling = true;
+                    myCopy.transform.parent = this.transform;
+                }
+            }
+        }
+
+        else
+        {
+            
+            if (copyFalling)
+            {
+                Debug.Log("FallingCopy");
+                Vector3 newCopyPos = transform.position;
+                newCopyPos.y -= fallSpeed * Time.deltaTime;
+                myCopy.transform.position = newCopyPos;
+                Debug.Log(myCopy.transform.position);
+
+                if (myCopy.transform.position.y <= (endPos - (endPos - startPos.y)))
+                {
+                    Debug.Log("don't fall");
+                    copyFalling = false;
+                }
             }
         }
 
@@ -79,6 +106,8 @@ public class individualRockScript : MonoBehaviour {
         killedPlayer = false;
         isFalling = false;
         fallen = false;
+
+        Destroy(myCopy);
 
     }
 }
