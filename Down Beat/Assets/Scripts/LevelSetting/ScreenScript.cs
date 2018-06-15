@@ -33,7 +33,7 @@ public class ScreenScript : MonoBehaviour
 	{
         rocksManager = GetComponentInChildren<FallingRockScript>();
 
-        spectrum = Camera.main.transform.GetChild(2).gameObject;
+        spectrum = Camera.main.transform.GetChild(1).gameObject;
         maxSize = Camera.main.orthographicSize;
 		minSize = maxSize - zoomVariation;
     }
