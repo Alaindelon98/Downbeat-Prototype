@@ -72,6 +72,12 @@ public class ScreenScript : MonoBehaviour
                 GameManagerScript.player.ChangePlayerState(PlayerScript.PlayerStates.ending);
                  StartCoroutine(ChangeLevel());
                 break;
+            case "EndGame":
+                EndingLevel.Play();
+                FadeAnimator.SetTrigger("EndGame");
+                GameManagerScript.player.ChangePlayerState(PlayerScript.PlayerStates.ending);
+                StartCoroutine(ChangeLevel());
+                break;
         }
     }
 

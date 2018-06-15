@@ -15,6 +15,7 @@ TagManager:
   - Crystal
   - Platform
   - End
+  - EndGame
   layers:
   - Default
   - TransparentFX

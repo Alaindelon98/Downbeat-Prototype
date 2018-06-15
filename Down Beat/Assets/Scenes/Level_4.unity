@@ -1658,7 +1658,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 1392697493037612, guid: abcc1189ecf994a46abcec7f4dd61e1b, type: 2}
       propertyPath: m_TagString
-      value: End
+      value: EndGame
       objectReference: {fileID: 0}
     - target: {fileID: 4721042681594006, guid: abcc1189ecf994a46abcec7f4dd61e1b, type: 2}
       propertyPath: m_RootOrder
@@ -24363,6 +24363,8 @@ MonoBehaviour:
   startImmediately: 0
   waitBarCounter: 0
   tilemap: {fileID: 589970005}
+  renderer: {fileID: 0}
+  IsSpriteRenderer: 0
 --- !u!1 &619931338
 GameObject:
   m_ObjectHideFlags: 0
@@ -128446,6 +128448,16 @@ Prefab:
         type: 2}
       propertyPath: m_Color.b
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 114593248488830394, guid: 226c939e4048f964b99eb74ca723e13d,
+        type: 2}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 114593248488830394, guid: 226c939e4048f964b99eb74ca723e13d,
+        type: 2}
+      propertyPath: m_Color.a
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 226c939e4048f964b99eb74ca723e13d, type: 2}

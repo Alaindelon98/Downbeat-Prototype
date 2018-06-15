@@ -97057,6 +97057,11 @@ Prefab:
       propertyPath: spreadCustomCurve.m_RotationOrder
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 82779688288883606, guid: 6c82f1583239f3144a27873cbe40d7c8,
+        type: 2}
+      propertyPath: m_audioClip
+      value: 
+      objectReference: {fileID: 8300000, guid: 2a153524a7ed3e543b36ed70ab12f876, type: 3}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 6c82f1583239f3144a27873cbe40d7c8, type: 2}
   m_IsPrefabParent: 0
@@ -108370,6 +108375,8 @@ MonoBehaviour:
   startImmediately: 0
   waitBarCounter: 0
   tilemap: {fileID: 1776501156}
+  renderer: {fileID: 0}
+  IsSpriteRenderer: 0
 --- !u!1001 &1778473878
 Prefab:
   m_ObjectHideFlags: 0
