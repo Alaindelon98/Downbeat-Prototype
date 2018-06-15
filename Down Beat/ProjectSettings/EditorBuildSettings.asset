@@ -15,6 +15,9 @@ EditorBuildSettings:
     path: Assets/Scenes/Menu.unity
     guid: c0d6c1b359b4cee478bf330aca846886
   - enabled: 1
+    path: Assets/Scenes/Cinematic.unity
+    guid: c36125bc672b94c4aaeeaaf812a019ac
+  - enabled: 1
     path: Assets/Scenes/Level_1.unity
     guid: 089531647493fbe47ad58fd20994ad41
   - enabled: 1
@@ -35,6 +38,9 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Level_4.unity
     guid: 992558e6f3bc427419945c8cb08ab4d5
+  - enabled: 1
+    path: Assets/Scenes/Cinematic - final.unity
+    guid: e107f1386a64b564b8137c81342ff7fe
   - enabled: 0
     path: Assets/Scenes/Cinematic - copia.unity
     guid: 3e1992fb5664e8a4eaf3f14c092789e4
