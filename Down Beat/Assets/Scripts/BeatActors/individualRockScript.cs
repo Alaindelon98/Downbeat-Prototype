@@ -55,13 +55,13 @@ public class individualRockScript : MonoBehaviour {
                     myCopy = Instantiate(lavaPrefab, transform.position, transform.rotation);
                     copyFalling = true;
                     myCopy.transform.parent = this.transform;
+                    myCopy.GetComponent<individualRockScript>().enabled = false;
                 }
             }
         }
 
         else
-        {
-            
+        { 
             if (copyFalling)
             {
                 Debug.Log("FallingCopy");
@@ -77,8 +77,6 @@ public class individualRockScript : MonoBehaviour {
                 }
             }
         }
-
-
 	}
 
     public void Drop(float _fallSpeed, float _endPos)

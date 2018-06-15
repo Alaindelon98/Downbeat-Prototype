@@ -129,7 +129,7 @@ public class enemyScript : BeatActor {
 
         //saltito 
 
-        Debug.Log(myRigidbody.velocity);
+        //Debug.Log(myRigidbody.velocity);
     }
     private void GestionateMovement()
     {
@@ -150,7 +150,7 @@ public class enemyScript : BeatActor {
 
         //Debug.Log("actspeed"+myRigidbody.velocity.x);
 
-        Debug.Log("dir" + direction);
+        //Debug.Log("dir" + direction);
         //myRigidbody.velocity = Vector2.up * jumpVelocity;
 
     }

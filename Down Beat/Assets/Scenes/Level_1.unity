@@ -694,7 +694,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 4258847097787810, guid: 67c9a77d4dcac9541aab1008c4fa83b5, type: 2}
       propertyPath: m_RootOrder
-      value: 9
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 61757537293598000, guid: 67c9a77d4dcac9541aab1008c4fa83b5,
         type: 2}
@@ -1723,7 +1723,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 4258847097787810, guid: 67c9a77d4dcac9541aab1008c4fa83b5, type: 2}
       propertyPath: m_RootOrder
-      value: 8
+      value: 10
       objectReference: {fileID: 0}
     - target: {fileID: 61757537293598000, guid: 67c9a77d4dcac9541aab1008c4fa83b5,
         type: 2}
@@ -1860,7 +1860,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 4258847097787810, guid: 67c9a77d4dcac9541aab1008c4fa83b5, type: 2}
       propertyPath: m_RootOrder
-      value: 6
+      value: 4
       objectReference: {fileID: 0}
     - target: {fileID: 61757537293598000, guid: 67c9a77d4dcac9541aab1008c4fa83b5,
         type: 2}
@@ -1978,7 +1978,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 4258847097787810, guid: 67c9a77d4dcac9541aab1008c4fa83b5, type: 2}
       propertyPath: m_RootOrder
-      value: 4
+      value: 8
       objectReference: {fileID: 0}
     - target: {fileID: 61757537293598000, guid: 67c9a77d4dcac9541aab1008c4fa83b5,
         type: 2}
@@ -6969,7 +6969,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 4258847097787810, guid: 67c9a77d4dcac9541aab1008c4fa83b5, type: 2}
       propertyPath: m_RootOrder
-      value: 7
+      value: 9
       objectReference: {fileID: 0}
     - target: {fileID: 61757537293598000, guid: 67c9a77d4dcac9541aab1008c4fa83b5,
         type: 2}
@@ -121155,7 +121155,7 @@ Prefab:
         type: 2}
       propertyPath: myScreen
       value: 
-      objectReference: {fileID: 1679640004}
+      objectReference: {fileID: 1762205485}
     - target: {fileID: 1870207766067792, guid: 67c9a77d4dcac9541aab1008c4fa83b5, type: 2}
       propertyPath: m_Name
       value: CheckPointPrefab (1)
@@ -134415,7 +134415,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 4258847097787810, guid: 67c9a77d4dcac9541aab1008c4fa83b5, type: 2}
       propertyPath: m_RootOrder
-      value: 10
+      value: 7
       objectReference: {fileID: 0}
     - target: {fileID: 61757537293598000, guid: 67c9a77d4dcac9541aab1008c4fa83b5,
         type: 2}
@@ -134659,13 +134659,13 @@ Transform:
   - {fileID: 1158254519}
   - {fileID: 1361336039}
   - {fileID: 1526611746}
-  - {fileID: 573027148}
-  - {fileID: 1483315743}
   - {fileID: 919776906}
-  - {fileID: 2066811211}
-  - {fileID: 1262212803}
+  - {fileID: 1483315743}
   - {fileID: 270517181}
   - {fileID: 2011435226}
+  - {fileID: 573027148}
+  - {fileID: 2066811211}
+  - {fileID: 1262212803}
   m_Father: {fileID: 0}
   m_RootOrder: 8
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}

@@ -19,7 +19,7 @@ public class EnemyDirection : MonoBehaviour
             //Debug.Log("Go left");
             myEnemy.direction *=-1;
            
-            Debug.Log("Turn from player");
+            //Debug.Log("Turn from player");
      
         }
         //Debug.Log("COLLISION");
