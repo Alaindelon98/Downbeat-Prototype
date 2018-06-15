@@ -113,7 +113,7 @@ public class ScreenScript : MonoBehaviour
         }
         if (startEndingMood)
         {
-            BeatManager.mySource.volume = 0;
+            BeatManager.muffledSource.volume = 0;
         }
 
 
