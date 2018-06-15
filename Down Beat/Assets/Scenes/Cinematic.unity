@@ -952,7 +952,7 @@ Prefab:
         type: 2}
       propertyPath: m_audioClip
       value: 
-      objectReference: {fileID: 8300000, guid: 7ec5e730f174ec947a1a753319b78194, type: 3}
+      objectReference: {fileID: 8300000, guid: ec0df7b37a261f04bb63021579e4654e, type: 3}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: d8662584446b0ce45a97f8c1b000dfe4, type: 2}
   m_IsPrefabParent: 0
@@ -1525,7 +1525,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &422280276
 Transform:
   m_ObjectHideFlags: 0
