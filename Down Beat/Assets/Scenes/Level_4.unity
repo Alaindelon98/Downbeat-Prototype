@@ -112602,7 +112602,7 @@ Prefab:
     - target: {fileID: 114002063736297426, guid: 59758267f53611b4c97bb96e1a467d47,
         type: 2}
       propertyPath: initialWaitBars
-      value: 0
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 114002063736297426, guid: 59758267f53611b4c97bb96e1a467d47,
         type: 2}
